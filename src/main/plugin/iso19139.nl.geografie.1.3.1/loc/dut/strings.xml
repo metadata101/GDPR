@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-  <understandResource>Information about the dataset</understandResource>
+  <understandResource>Informatie over de dataset</understandResource>
   <relatedResources>Related services and linked data</relatedResources>
-  <techInfo>Technical information</techInfo>
-  <contactInfo>Contact information</contactInfo>
+  <techInfo>Technische informatie</techInfo>
+  <contactInfo>Contact informatie</contactInfo>
   <mdContactInfo>Metadata contact</mdContactInfo>
-  <refDate>Reference date</refDate>
-  <temporalRef>Temporal information</temporalRef>
+  <refDate>Referentie datum</refDate>
+  <temporalRef>Temporele informatie</temporalRef>
   <constraintInfo>Access constraint information</constraintInfo>
 
   <!-- New strings added for the AngularJS editor -->
   <!-- View and tabs -->
   <advanced>Volledig</advanced>
   <default>Standaard</default>
+  <dutchprofile>Nederlands profiel</dutchprofile>
   <simple>Eenvoudig</simple>
   <inspire>INSPIRE</inspire>
   <resource>Bron</resource>
   <xml>XML</xml>
+
+  <Optional>Optionele elementen</Optional>
+  <Required>Verplichte elementen</Required>
+  <INSPIRE>INSPIRE elementen</INSPIRE>
+  
+  <metadataPointOfContact>Contactgegevens metadata</metadataPointOfContact>
+  <pointOfContact>Contactgegevens dataset</pointOfContact>
+ 
+	<organisationName>Organisatie</organisationName>
+	<electronicMailAddress>Email</electronicMailAddress>
+	<role>Rol</role>
+	<temporalRangeSection>Tijdsspanne</temporalRangeSection>
+	<beginPosition>Van</beginPosition>
+	<endPosition>Tot</endPosition>
+	<INSPIRE_theme>INSPIRE Thema 2</INSPIRE_theme>
+	<inspireTheme>INSPIRE Thema</inspireTheme>
+	<conformity>Conformiteitindicatie</conformity>
+	
+
+  
 </strings>
