@@ -3,6 +3,8 @@
                 xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all">
 
+  <xsl:import href="../../iso19139/layout/utility-tpl-multilingual.xsl"/>
+  
   <!-- Get the main metadata languages -->
   <xsl:template name="get-iso19139.nl.geografie.1.3.1-language">
     <xsl:call-template name="get-iso19139-language"/>
