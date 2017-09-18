@@ -99,8 +99,8 @@
 				<xs:sequence>
 					<xs:element name="distributorContact" type="gmd:CI_ResponsibleParty_PropertyType"/>
 					<xs:element name="distributionOrderProcess" type="gmd:MD_StandardOrderProcess_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<!-- <xs:element name="distributorFormat" type="gmd:MD_Format_PropertyType" minOccurs="0" maxOccurs="unbounded"/>--><!-- napMetadata: not used -->
-					<!-- <xs:element name="distributorTransferOptions" type="gmd:MD_DigitalTransferOptions_PropertyType" minOccurs="0" maxOccurs="unbounded"/>--><!-- napMetadata: not used -->
+					<xs:element name="distributorFormat" type="gmd:MD_Format_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="distributorTransferOptions" type="gmd:MD_DigitalTransferOptions_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -153,7 +153,7 @@
 					<xs:element name="amendmentNumber" type="gco:CharacterString_PropertyType" minOccurs="0"/>
 					<xs:element name="specification" type="gco:CharacterString_PropertyType" minOccurs="0"/>
 					<xs:element name="fileDecompressionTechnique" type="gco:CharacterString_PropertyType" minOccurs="0"/>
-					<!-- <xs:element name="formatDistributor" type="gmd:MD_Distributor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>--><!-- napMetadata: not used -->
+					<xs:element name="formatDistributor" type="gmd:MD_Distributor_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -169,16 +169,15 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	<!-- napMetadata: not used -->
 	<!-- ........................................................................ -->
-	<!-- <xs:element name="MD_DistributionUnits" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/> -->
+	<xs:element name="MD_DistributionUnits" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
 	<!-- ........................................................................ -->
-	<!-- <xs:complexType name="MD_DistributionUnits_PropertyType">
+	<xs:complexType name="MD_DistributionUnits_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:MD_DistributionUnits"/>
 		</xs:sequence>
 		<xs:attribute ref="gco:nilReason"/>
-		</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
 	<!-- ........................................................................ -->
 	<xs:element name="MD_MediumFormatCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>

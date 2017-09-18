@@ -20,7 +20,7 @@
 					<xs:element name="complianceCode" type="gco:Boolean_PropertyType" minOccurs="0"/>
 					<xs:element name="language" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="includedWithDataset" type="gco:Boolean_PropertyType"/>
-					<xs:element name="featureTypes" type="gco:GenericName_PropertyType" minOccurs="1" maxOccurs="unbounded"/><!-- napMetadata: Mandatory -->
+					<xs:element name="featureTypes" type="gco:GenericName_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="featureCatalogueCitation" type="gmd:CI_Citation_PropertyType" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>

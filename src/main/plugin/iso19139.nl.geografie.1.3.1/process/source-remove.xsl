@@ -4,7 +4,7 @@ Stylesheet used to remove a reference to a source record.
 -->
 <xsl:stylesheet version="2.0" xmlns:geonet="http://www.fao.org/geonetwork"
 	xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  exclude-result-prefixes="#all">
 
 	<!-- Source metadata record UUID -->
 	<xsl:param name="sourceUuid"/>

@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.isotc211.org/2005/gmd" elementFormDefault="qualified" version="0.1" 
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	xmlns:gco="http://www.isotc211.org/2005/gco" 
-	xmlns:gmd="http://www.isotc211.org/2005/gmd"
-	xmlns:napm="http://www.geoconnections.org/nap/napMetadataTools/napXsd/napm" >
+<xs:schema targetNamespace="http://www.isotc211.org/2005/gmd" elementFormDefault="qualified" version="0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd">
 	<!-- ================================= Annotation ================================ -->
 	<xs:annotation>
 		<xs:documentation>This file was generated from ISO TC/211 UML class diagrams == 01-26-2005 12:40:05 ====== </xs:documentation>
 	</xs:annotation>
 	<!-- ================================== Imports ================================== -->
 	<xs:import namespace="http://www.isotc211.org/2005/gco" schemaLocation="../gco/gco.xsd"/>
-	<xs:import namespace="http://www.geoconnections.org/nap/napMetadataTools/napXsd/napm" schemaLocation="../napm/napm.xsd"/>
 	<xs:include schemaLocation="../gmd/constraints.xsd"/>
 	<xs:include schemaLocation="../gmd/distribution.xsd"/>
 	<xs:include schemaLocation="../gmd/maintenance.xsd"/>
@@ -29,13 +23,13 @@
 					<xs:element name="abstract" type="gco:CharacterString_PropertyType"/>
 					<xs:element name="purpose" type="gco:CharacterString_PropertyType" minOccurs="0"/>
 					<xs:element name="credit" type="gco:CharacterString_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element name="status" type="gmd:MD_ProgressCode_PropertyType" minOccurs="1" maxOccurs="unbounded"/><!-- napMetadata: mandatory -->
+					<xs:element name="status" type="gmd:MD_ProgressCode_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="pointOfContact" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="resourceMaintenance" type="gmd:MD_MaintenanceInformation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="graphicOverview" type="gmd:MD_BrowseGraphic_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<!-- <xs:element name="resourceFormat" type="gmd:MD_Format_PropertyType" minOccurs="0" maxOccurs="unbounded"/> --><!-- napMetadata: not used -->
+					<xs:element name="resourceFormat" type="gmd:MD_Format_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="descriptiveKeywords" type="gmd:MD_Keywords_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<!-- <xs:element name="resourceSpecificUsage" type="gmd:MD_Usage_PropertyType" minOccurs="0" maxOccurs="unbounded"/> --><!-- napMetadata: not used -->
+					<xs:element name="resourceSpecificUsage" type="gmd:MD_Usage_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="resourceConstraints" type="gmd:MD_Constraints_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="aggregationInfo" type="gmd:MD_AggregateInformation_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
@@ -62,7 +56,7 @@
 				<xs:sequence>
 					<xs:element name="fileName" type="gco:CharacterString_PropertyType"/>
 					<xs:element name="fileDescription" type="gco:CharacterString_PropertyType" minOccurs="0"/>
-					<xs:element name="fileType" type="napm:napMD_FileFormatCode_PropertyType" minOccurs="0"/>
+					<xs:element name="fileType" type="gco:CharacterString_PropertyType" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -105,25 +99,24 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	<!-- napMetadata: not used -->
-	<!--<xs:complexType name="MD_ServiceIdentification_Type">
+	<xs:complexType name="MD_ServiceIdentification_Type">
 		<xs:annotation>
 			<xs:documentation>See 19119 for further info</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gmd:AbstractMD_Identification_Type"/>
 		</xs:complexContent>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- ........................................................................ -->
-	<!--<xs:element name="MD_ServiceIdentification" type="gmd:MD_ServiceIdentification_Type" substitutionGroup="gmd:AbstractMD_Identification"/> -->
+	<xs:element name="MD_ServiceIdentification" type="gmd:MD_ServiceIdentification_Type" substitutionGroup="gmd:AbstractMD_Identification"/>
 	<!-- ........................................................................ -->
-	<!--<xs:complexType name="MD_ServiceIdentification_PropertyType">
+	<xs:complexType name="MD_ServiceIdentification_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:MD_ServiceIdentification"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="MD_RepresentativeFraction_Type">
 		<xs:complexContent>
@@ -283,7 +276,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- ........................................................................ -->
-	<xs:element name="MD_TopicCategoryCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+	<xs:element name="MD_TopicCategoryCode" type="gmd:MD_TopicCategoryCode_Type" substitutionGroup="gco:CharacterString"/>
 	<!-- ........................................................................ -->
 	<xs:complexType name="MD_TopicCategoryCode_PropertyType">
 		<xs:sequence minOccurs="0">

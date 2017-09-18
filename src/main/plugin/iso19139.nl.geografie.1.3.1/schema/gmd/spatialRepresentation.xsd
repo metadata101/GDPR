@@ -134,7 +134,7 @@
 				<xs:sequence>
 					<xs:element name="checkPointAvailability" type="gco:Boolean_PropertyType"/>
 					<xs:element name="checkPointDescription" type="gco:CharacterString_PropertyType" minOccurs="0"/>
-					<xs:element name="cornerPoints" type="gss:GM_Point_PropertyType" minOccurs="2" maxOccurs="unbounded"/> <!-- napMetadata: Mandatory, minimum 2 corner points -->
+					<xs:element name="cornerPoints" type="gss:GM_Point_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="centerPoint" type="gss:GM_Point_PropertyType" minOccurs="0"/>
 					<xs:element name="pointInPixel" type="gmd:MD_PixelOrientationCode_PropertyType"/>
 					<xs:element name="transformationDimensionDescription" type="gco:CharacterString_PropertyType" minOccurs="0"/>

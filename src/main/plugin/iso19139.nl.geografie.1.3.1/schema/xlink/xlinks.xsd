@@ -4,9 +4,6 @@
 		<appinfo source="urn:opengis:specification:gml:schema-xlinks:v3.2.0">xlinks.xsd</appinfo>
 		<documentation>see GML 7.2</documentation>
 	</annotation>
-	<!-- ================================== Imports ================================== -->
-	<import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/xml.xsd"/>
-	
 	<!-- ==============================================================
        global declarations
   	=============================================================== -->

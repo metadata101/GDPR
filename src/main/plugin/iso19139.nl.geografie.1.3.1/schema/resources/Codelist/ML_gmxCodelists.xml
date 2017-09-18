@@ -73,7 +73,7 @@
 			</codeEntry>
 			<codeEntry>
 				<ML_CodeDefinition gml:id="CI_DateTypeCode_revision">
-					<gml:description>date identifies when the resource was examined or re-examined and imporved or amended</gml:description>
+					<gml:description>date identifies when the resource was examined or re-examined and improved or amended</gml:description>
 					<gml:identifier codeSpace="ISOTC211/19115">revision</gml:identifier>
 					<gml:name>revision</gml:name>
 					<alternativeExpression>
@@ -776,21 +776,6 @@
 		<ML_CodeListDictionary gml:id="Country">
 			<gml:description>Country : ISO 3166-2 (2 characters)</gml:description>
 			<gml:identifier codeSpace="ISO 3166-2">Country</gml:identifier>
-			<codeEntry>
-				<ML_CodeDefinition gml:id="Country_CAN">
-					<gml:description>Canada</gml:description>
-					<gml:identifier codeSpace="ISO 3166-2">CAN</gml:identifier>
-					<gml:name>Canada</gml:name>
-					<alternativeExpression>
-						<CodeAlternativeExpression gml:id="Country_CAN_fr" codeSpace="fra">
-							<gml:description>Canada</gml:description>
-							<gml:identifier codeSpace="ISO 3166-2">CAN</gml:identifier>
-							<gml:name>CAN</gml:name>
-							<locale xlink:href="#xpointer(//*[@id='fra'])"/>
-						</CodeAlternativeExpression>
-					</alternativeExpression>
-				</ML_CodeDefinition>
-			</codeEntry>
 			<codeEntry>
 				<ML_CodeDefinition gml:id="Country_UK">
 					<gml:description>United Kingdom</gml:description>

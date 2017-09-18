@@ -75,7 +75,7 @@
     <xsl:param name="s" as="xs:string"/>
     <xsl:param name="e" as="xs:string"/>
     <xsl:param name="n" as="xs:string"/>
-    <xsl:param name="description" as="xs:string?"/>
+    <xsl:param name="description" as="xs:string"/>
 
     <gmd:EX_Extent>
       <xsl:if test="normalize-space($description)!=''">

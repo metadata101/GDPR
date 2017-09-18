@@ -11,7 +11,8 @@ attached it to the metadata for data.
 										xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 										xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 										xmlns:xlink="http://www.w3.org/1999/xlink"
-										xmlns:date="http://exslt.org/dates-and-times">
+										xmlns:date="http://exslt.org/dates-and-times"
+										exclude-result-prefixes="#all">
 
 	<!-- ============================================================================= -->
 	

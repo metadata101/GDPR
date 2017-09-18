@@ -4,7 +4,7 @@ Stylesheet used to add a reference to a related record using aggregation info.
 -->
 <xsl:stylesheet version="2.0" xmlns:geonet="http://www.fao.org/geonetwork"
 	xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  exclude-result-prefixes="#all">
 	
 	<!-- The uuid of the target record -->
 	<xsl:param name="uuidref"/>

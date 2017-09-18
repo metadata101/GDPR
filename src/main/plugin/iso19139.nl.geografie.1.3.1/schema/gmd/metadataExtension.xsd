@@ -10,8 +10,7 @@
 	<!-- ########################################################################### -->
 	<!-- ########################################################################### -->
 	<!-- ================================== Classes ================================= -->
-	<!-- napMetadata: not used -->
-	<!-- <xs:complexType name="MD_ExtendedElementInformation_Type">
+	<xs:complexType name="MD_ExtendedElementInformation_Type">
 		<xs:annotation>
 			<xs:documentation>New metadata element, not found in ISO 19115, which is required to describe geographic data</xs:documentation>
 		</xs:annotation>
@@ -34,19 +33,19 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- ........................................................................ -->
-	<!-- <xs:element name="MD_ExtendedElementInformation" type="gmd:MD_ExtendedElementInformation_Type"/> -->
+	<xs:element name="MD_ExtendedElementInformation" type="gmd:MD_ExtendedElementInformation_Type"/>
 	<!-- ........................................................................ -->
-	<!-- <xs:complexType name="MD_ExtendedElementInformation_PropertyType">
+	<xs:complexType name="MD_ExtendedElementInformation_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:MD_ExtendedElementInformation"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
-	<!-- <xs:complexType name="MD_MetadataExtensionInformation_Type">
+	<xs:complexType name="MD_MetadataExtensionInformation_Type">
 		<xs:annotation>
 			<xs:documentation>Information describing metadata extensions.</xs:documentation>
 		</xs:annotation>
@@ -58,43 +57,43 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- ........................................................................ -->
-	<!-- <xs:element name="MD_MetadataExtensionInformation" type="gmd:MD_MetadataExtensionInformation_Type"/> -->
+	<xs:element name="MD_MetadataExtensionInformation" type="gmd:MD_MetadataExtensionInformation_Type"/>
 	<!-- ........................................................................ -->
-	<!-- <xs:complexType name="MD_MetadataExtensionInformation_PropertyType">
+	<xs:complexType name="MD_MetadataExtensionInformation_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:MD_MetadataExtensionInformation"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
-	<!-- <xs:simpleType name="MD_ObligationCode_Type">
+	<xs:simpleType name="MD_ObligationCode_Type">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="mandatory"/>
 			<xs:enumeration value="optional"/>
 			<xs:enumeration value="conditional"/>
 		</xs:restriction>
-	</xs:simpleType> -->
+	</xs:simpleType>
 	<!-- ........................................................................ -->
-	<!-- <xs:element name="MD_ObligationCode" type="gmd:MD_ObligationCode_Type" substitutionGroup="gco:CharacterString"/> -->
+	<xs:element name="MD_ObligationCode" type="gmd:MD_ObligationCode_Type" substitutionGroup="gco:CharacterString"/>
 	<!-- ........................................................................ -->
-	<!-- <xs:complexType name="MD_ObligationCode_PropertyType">
+	<xs:complexType name="MD_ObligationCode_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:MD_ObligationCode"/>
 		</xs:sequence>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
 	<!-- ........................................................................ -->
-	<!-- <xs:element name="MD_DatatypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/> -->
+	<xs:element name="MD_DatatypeCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
 	<!-- ........................................................................ -->
-	<!-- <xs:complexType name="MD_DatatypeCode_PropertyType">
+	<xs:complexType name="MD_DatatypeCode_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:MD_DatatypeCode"/>
 		</xs:sequence>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
 </xs:schema>

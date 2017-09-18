@@ -23,7 +23,13 @@
   <!-- Dispatch to the current profile mode -->
   <xsl:template name="dispatch-iso19139.nl.geografie.1.3.1">
     <xsl:param name="base" as="node()"/>
-    <xsl:apply-templates mode="mode-iso19139" select="$base"/>
+    <xsl:param name="overrideLabel" as="xs:string" required="no" select="''"/>
+    <xsl:param name="refToDelete" as="node()?" required="no"/>
+
+    <xsl:apply-templates mode="mode-iso19139" select="$base">
+      <xsl:with-param name="overrideLabel" select="$overrideLabel"/>
+      <xsl:with-param name="refToDelete" select="$refToDelete"/>
+    </xsl:apply-templates>
   </xsl:template>
 
 
@@ -58,25 +64,25 @@
     <xsl:call-template name="get-iso19139-language">
     </xsl:call-template>
   </xsl:template>
-  
+
   <xsl:template name="get-iso19139.nl.geografie.1.3.1-other-languages-as-json">
     <xsl:call-template name="get-iso19139-other-languages-as-json">
     </xsl:call-template>
-  </xsl:template>  
-  
+  </xsl:template>
+
   <xsl:template name="get-iso19139.nl.geografie.1.3.1-other-languages">
     <xsl:call-template name="get-iso19139-other-languages">
     </xsl:call-template>
-  </xsl:template>  
-  
+  </xsl:template>
+
   <xsl:template name="get-iso19139.nl.geografie.1.3.1-extents-as-json">
     <xsl:call-template name="get-iso19139-extents-as-json">
     </xsl:call-template>
   </xsl:template>
-  
+
   <xsl:template name="get-iso19139.nl.geografie.1.3.1-online-source-config">
     <xsl:call-template name="get-iso19139-online-source-config">
     </xsl:call-template>
   </xsl:template>
-   
+
 </xsl:stylesheet>

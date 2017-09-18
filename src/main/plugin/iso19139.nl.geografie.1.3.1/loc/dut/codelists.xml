@@ -1406,25 +1406,25 @@ toegankelijk</label>
 	</codelist>
 	<!-- ==================================================== -->
 	<codelist name="gmd:MD_ScopeCode">
-		<entry>
+		<entry hideInEditMode="true">
 			<code>attribute</code>
 			<label>attribute</label>
 			<description>information applies to the attribute class</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>attributeType</code>
 			<label>attributeType</label>
 			<description>information applies to the characteristic of a feature</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>collectionHardware</code>
 			<label>collectionHardware</label>
 			<description>information applies to the collection hardware class</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>collectionSession</code>
 			<label>collectionSession</label>
 			<description>information applies to the collection session</description>
@@ -1443,19 +1443,19 @@ dataset.</description>
 			<description>Informatie heeft betrekking op de serie.</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>nonGeographicDataset</code>
 			<label>nonGeographicDataset</label>
 			<description>information applies to non-geographic data</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>dimensionGroup</code>
 			<label>dimensionGroup</label>
 			<description>information applies to a dimension group</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>feature</code>
 			<label>feature</label>
 			<description>information applies to a feature</description>
@@ -1467,25 +1467,25 @@ dataset.</description>
 			<description>information applies to a feature type</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>propertyType</code>
 			<label>propertyType</label>
 			<description>information applies to a property type</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>fieldSession</code>
 			<label>fieldSession</label>
 			<description>information applies to a field session</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>software</code>
 			<label>software</label>
 			<description>information applies to a computer program or routine</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>service</code>
 			<label>service</label>
 			<description>information applies to a capability which a service provider entity makes
@@ -1493,14 +1493,14 @@ dataset.</description>
 				such as a use case</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>model</code>
 			<label>model</label>
 			<description>information applies to a copy or imitation of an existing or hypothetical
 				object</description>
 		</entry>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
+		<entry hideInEditMode="true">
 			<code>tile</code>
 			<label>tile</label>
 			<description>information applies to a tile, a spatial subset of geographic
@@ -1632,7 +1632,7 @@ natuurlijke reserves, vuilopslag.</description>
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<entry>
 			<code>geoscientificInformation</code>
-			<label>Geo wetenschappelijke data</label>
+			<label>geo wetenschappelijke data</label>
 			<description>Data die behoort tot een
 aardwetenschap. Vb: geologie, mineralen, structuur van
 de aarde, zwaartekrachtskaart,

@@ -150,22 +150,21 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	<!-- napMetadata: not used-->
-	<!-- <xs:complexType name="DQ_TemporalValidity_Type">
+	<xs:complexType name="DQ_TemporalValidity_Type">
 		<xs:complexContent>
 			<xs:extension base="gmd:AbstractDQ_TemporalAccuracy_Type"/>
 		</xs:complexContent>
-	</xs:complexType>-->
+	</xs:complexType>
 	<!-- ........................................................................ -->
-	<!--<xs:element name="DQ_TemporalValidity" type="gmd:DQ_TemporalValidity_Type" substitutionGroup="gmd:AbstractDQ_TemporalAccuracy"/>-->
+	<xs:element name="DQ_TemporalValidity" type="gmd:DQ_TemporalValidity_Type" substitutionGroup="gmd:AbstractDQ_TemporalAccuracy"/>
 	<!-- ........................................................................ -->
-	<!--<xs:complexType name="DQ_TemporalValidity_PropertyType">
+	<xs:complexType name="DQ_TemporalValidity_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:DQ_TemporalValidity"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
 	<xs:complexType name="DQ_TemporalConsistency_Type">
 		<xs:complexContent>

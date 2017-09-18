@@ -1915,19 +1915,21 @@
 			<option show="y" value="OGC:WCTS">OGC-WCTS Web Coordinate Transformation Service</option>
 			<option show="y" value="OGC:WPS">OGC-WPS Web Processing Service</option>
 			<option show="y" value="OGC:WMC">OGC-WMC Web Map Context (ver 1.1)</option>
+			<option show="y" value="OGC:OWS-C">OGC-OWS Context</option>
 			<option show="y" value="OGC:KML">OGC-KML Keyhole Markup Language</option>
 			<option show="y" value="OGC:GML">OGC-GML Geography Markup Language</option>
 			<option show="y" value="OGC:WFS-G">OGC-WFS-G Gazzetteer Service</option>
 			<option show="y" value="OGC:SOS">OGC-SOS Sensor Observation Service</option>
 			<option show="y" value="OGC:SPS">OGC-SPS Sensor Planning Service</option>
 			<option show="y" value="OGC:SAS">OGC-SAS Sensor Alert Service</option>
-			<option show="y" value="OGC:SAS">OGC-WNS Web Notification Service</option>
+			<option show="y" value="OGC:WNS">OGC-WNS Web Notification Service</option>
 			<option show="y" value="OGC:ODS">OGC-ODS OpenLS Directory Service</option>
 			<option show="y" value="OGC:OGS">OGC-ODS OpenLS Gateway Service</option>
 			<option show="y" value="OGC:OUS">OGC-ODS OpenLS Utility Service</option>
 			<option show="y" value="OGC:OPS">OGC-ODS OpenLS Presentation Service</option>
 			<option show="y" value="OGC:ORS">OGC-ODS OpenLS Route Service</option>
-			<option show="y" value="INSPIRE-Atom">INSPIRE Atom</option>
+			<option show="y" value="OGC:GPKG">OGC-GPKG GeoPackage</option>
+			<option show="y" value="INSPIRE Atom">INSPIRE Atom</option>
 			<option show="y" value="UKST">Unknown Service Type</option>
 		</helper>
 	</element>

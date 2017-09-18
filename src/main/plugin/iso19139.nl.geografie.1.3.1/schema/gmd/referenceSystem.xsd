@@ -36,7 +36,7 @@
 		<xs:complexContent>
 			<xs:extension base="gco:AbstractObject_Type">
 				<xs:sequence>
-					<xs:element name="referenceSystemIdentifier" type="gmd:RS_Identifier_PropertyType" minOccurs="1"/><!-- napMetadata: Mandatory -->
+					<xs:element name="referenceSystemIdentifier" type="gmd:RS_Identifier_PropertyType" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -73,8 +73,7 @@
 		<xs:attribute ref="gco:nilReason"/>
 	</xs:complexType>
 	<!-- =========================================================================== -->
-	<!-- napMetadata: not used -->
-	<!-- <xs:complexType name="AbstractRS_ReferenceSystem_Type" abstract="true">
+	<xs:complexType name="AbstractRS_ReferenceSystem_Type" abstract="true">
 		<xs:annotation>
 			<xs:documentation>Description of the spatial and temporal reference systems used in the dataset</xs:documentation>
 		</xs:annotation>
@@ -86,16 +85,16 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- ........................................................................ -->
-	<!-- <xs:element name="AbstractRS_ReferenceSystem" type="gmd:AbstractRS_ReferenceSystem_Type" abstract="true"/> -->
+	<xs:element name="AbstractRS_ReferenceSystem" type="gmd:AbstractRS_ReferenceSystem_Type" abstract="true"/>
 	<!-- ........................................................................ -->
-	<!-- <xs:complexType name="RS_ReferenceSystem_PropertyType">
+	<xs:complexType name="RS_ReferenceSystem_PropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="gmd:AbstractRS_ReferenceSystem"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="gco:ObjectReference"/>
 		<xs:attribute ref="gco:nilReason"/>
-	</xs:complexType> -->
+	</xs:complexType>
 	<!-- =========================================================================== -->
 </xs:schema>

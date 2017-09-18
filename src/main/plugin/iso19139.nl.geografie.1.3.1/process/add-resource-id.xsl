@@ -14,6 +14,7 @@
     <!-- i18n information -->
     <xsl:variable name="add-resource-id-loc">
         <msg id="a" xml:lang="eng">Current record does not contain resource identifier. Add the following identifier: </msg>
+		<msg id="a" xml:lang="eng">Huidig record bevat geen resource identifier. Voeg deze identifier toe: </msg>
         <msg id="a" xml:lang="fre">Cette fiche ne contient pas d'identifiant pour la ressource. Ajouter l'identifiant suivant :</msg>
     </xsl:variable>
     
