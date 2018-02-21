@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	elementFormDefault="qualified" targetNamespace="http://gdpr"
-	xmlns:gdpr="http://gdpr"
-  xmlns:gmd="http://www.isotc211.org/2005/gmd" 
-   xmlns:gml="http://www.opengis.net/gml"
-	xmlns:gco="http://www.isotc211.org/2005/gco">
+	xmlns:gdpr="http://gdpr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gml="http://www.opengis.net/gml" xmlns:gco="http://www.isotc211.org/2005/gco">
 	<xs:import namespace="http://www.isotc211.org/2005/gco"
 		schemaLocation="../../../iso19139/schema/gco/gco.xsd" />
-  <xs:import namespace="http://www.opengis.net/gml"
-    schemaLocation="../../../iso19139/schema/gml/gml.xsd" />
-  <xs:import namespace="http://www.isotc211.org/2005/gmd"
-    schemaLocation="../../../iso19139/schema/gmd/gmd.xsd" />
+	<xs:import namespace="http://www.opengis.net/gml"
+		schemaLocation="../../../iso19139/schema/gml/gml.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gmd"
+		schemaLocation="../../../iso19139/schema/gmd/gmd.xsd" />
 
 
 
@@ -27,12 +25,26 @@
 	<!-- ====================================================================== -->
 	<!-- Add elements to gmd:contentInfo -->
 	<!-- ====================================================================== -->
+  <xs:element name="MD_Metadata" type="gdpr:MD_Metadata_Type" />
 
- 	<xs:element name="contentInfo" type="gdpr:contentInfo_Type"
+  <xs:complexType name="MD_Metadata_Type">
+    <xs:complexContent>
+      <xs:extension base="gmd:MD_Metadata_Type">
+        <xs:sequence>
+          <xs:element name="MD_ContentInfo" type="gdpr:MD_ContentInfo_Type"
+            minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute ref="gco:isoType" use="required" fixed="gmd:MD_Metadata" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+	<xs:element name="MD_ContentInfo" type="gdpr:MD_ContentInfo_Type"
 		substitutionGroup="gmd:AbstractMD_ContentInformation" />
-	<xs:complexType name="GDPR_MD_ContentInformation_PropertyType">
+
+	<xs:complexType name="MD_ContentInfo_Type">
 		<xs:complexContent>
-			<xs:extension base="gmd:MD_ContentInformation_PropertyType">
+			<xs:extension base="gmd:AbstractMD_ContentInformation_Type">
 				<xs:sequence>
 					<xs:element name="MD_GdprInfo" type="gdpr:MD_GdprInfoType"
 						minOccurs="0" maxOccurs="1" />
@@ -41,18 +53,14 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
- 
 
-	<!-- Custom elements -->
-	
-  <xs:element name="MD_GdprInfoType">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="gdpr:purpose" minOccurs="0"  maxOccurs="unbounded" />
-        <xs:element ref="gdpr:involves" minOccurs="0"  maxOccurs="unbounded" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+	<xs:complexType name="MD_GdprInfoType">
+		<xs:sequence>
+			<xs:element ref="gdpr:purpose" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element ref="gdpr:involves" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:element name="involves">
 		<xs:complexType>
 			<xs:sequence>
@@ -148,5 +156,5 @@
 				<xs:element ref="gco:CharacterString" />
 			</xs:sequence>
 		</xs:complexType>
-	</xs:element> 
+	</xs:element>
 </xs:schema>
