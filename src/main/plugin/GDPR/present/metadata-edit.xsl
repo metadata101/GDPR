@@ -8,12 +8,12 @@
   exclude-result-prefixes="gmd gco gml gts srv xlink exslt geonet">
 
   <!-- main template - the way into processing iso19139.fra -->
-  <xsl:template name="metadata-iso19139.nl.geografie.1.3.1view-simple">
+  <xsl:template name="metadata-GDPRview-simple">
     <xsl:call-template name="metadata-iso19139view-simple"/>
   </xsl:template>
 
 
-  <xsl:template name="view-with-header-iso19139.nl.geografie.1.3.1">
+  <xsl:template name="view-with-header-GDPR">
     <xsl:param name="tabs"/>
 
     <xsl:call-template name="view-with-header-iso19139">
@@ -21,7 +21,7 @@
     </xsl:call-template>
   </xsl:template>
 
-  <xsl:template name="metadata-iso19139.nl.geografie.1.3.1">
+  <xsl:template name="metadata-GDPR">
     <xsl:param name="schema"/>
     <xsl:param name="edit" select="false()"/>
     <xsl:param name="embedded"/>
@@ -34,7 +34,7 @@
   </xsl:template>
 
 
-  <xsl:template name="iso19139.nl.geografie.1.3.1CompleteTab">
+  <xsl:template name="GDPRCompleteTab">
     <xsl:param name="tabLink"/>
     <xsl:param name="schema"/>
 

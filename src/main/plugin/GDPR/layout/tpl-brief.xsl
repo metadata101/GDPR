@@ -14,13 +14,13 @@
 
   <xsl:include href="utility-tpl.xsl"/>
 
-  <xsl:template name="iso19139.nl.geografie.1.3.1Brief">
+  <xsl:template name="GDPRBrief">
     <metadata>
       <xsl:call-template name="iso19139-brief"/>
     </metadata>
   </xsl:template>
 
-  <xsl:template name="iso19139.nl.geografie.1.3.1-brief">
+  <xsl:template name="GDPR-brief">
     <xsl:call-template name="iso19139-brief"/>
   </xsl:template>
 </xsl:stylesheet>

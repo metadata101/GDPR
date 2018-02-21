@@ -6,14 +6,14 @@
 
   <xsl:include href="utility-tpl-multilingual.xsl"/>
 
-  <xsl:template name="get-iso19139.nl.geografie.1.3.1-online-source-config">
+  <xsl:template name="get-GDPR-online-source-config">
     <xsl:param name="pattern"/>
     <xsl:call-template name="get-iso19139-online-source-config">
       <xsl:with-param name="pattern" select="$pattern"/>
     </xsl:call-template>
   </xsl:template>
   
-  <xsl:template name="get-iso19139.nl.geografie.1.3.1-is-service">
+  <xsl:template name="get-GDPR-is-service">
     <xsl:call-template name="get-iso19139-is-service">
     </xsl:call-template>
   </xsl:template>

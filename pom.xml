@@ -5,11 +5,11 @@
   <parent>
     <artifactId>schemas</artifactId>
     <groupId>org.geonetwork-opensource</groupId>
-    <version>3.0.4-SNAPSHOT</version>
+    <version>3.1.398-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>schema-iso19139.nl.geografie.1.3.1</artifactId>
+  <artifactId>schema-iso19139.nl.gdpr</artifactId>
   <name>GeoNetwork schema plugin for iso19139.nl.geografie.1.3.1</name>
 
   <dependencies>

@@ -9,7 +9,7 @@
 
 	<xsl:import href="../../iso19139/present/metadata-iso19139-fop.xsl"/>
 	
-	<xsl:template name="iso19139.nl.geografie.1.3.1Brief">
+	<xsl:template name="GDPRBrief">
 		<metadata>
 			<xsl:choose>
 				<xsl:when test="geonet:info/isTemplate='s'">
@@ -25,7 +25,7 @@
 	</xsl:template>
 
 
-	<xsl:template name="iso19139.nl.geografie.1.3.1CompleteTab">
+	<xsl:template name="GDPRCompleteTab">
 		<xsl:param name="tabLink"/>
 		<xsl:param name="schema"/>
 
@@ -36,7 +36,7 @@
 
 	</xsl:template>
 
-	<xsl:template name="metadata-iso19139.nl.geografie.1.3.1">
+	<xsl:template name="metadata-GDPR">
 		<xsl:param name="schema"/>
 		<xsl:param name="edit" select="false()"/>
 		<xsl:param name="embedded"/>
@@ -48,6 +48,6 @@
 		</xsl:apply-templates>
 	</xsl:template>
 
-	<xsl:template name="iso19139.nl.geografie.1.3.1-javascript"/>
+	<xsl:template name="GDPR-javascript"/>
 
 </xsl:stylesheet>

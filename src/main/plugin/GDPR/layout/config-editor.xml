@@ -6,6 +6,7 @@
         xmlns:gmd="http://www.isotc211.org/2005/gmd"
         xmlns:gmx="http://www.isotc211.org/2005/gmx"
         xmlns:srv="http://www.isotc211.org/2005/srv"
+        xmlns:gdpr="http://gdpr"
         xmlns:gml="http://www.opengis.net/gml"
         xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -326,6 +327,7 @@
     <view name="default" default="true" upAndDownControlHidden="true">
 
       <tab id="default" default="true" mode="flat">
+      <section xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_GdprInfo"></section>
 
         <section name="Basis">
 
