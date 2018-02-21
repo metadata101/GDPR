@@ -22,11 +22,10 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<gdpr:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco"
+<gmd:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco"
   xmlns:gml="http://www.opengis.net/gml"
   xmlns:gmd="http://www.isotc211.org/2005/gmd"
-  xmlns:gdpr="http://gdpr"
-  gco:isoType="gmd:MD_Metadata">
+  xmlns:gdpr="http://gdpr">
   <gmd:fileIdentifier>
     <gco:CharacterString>7a818ae0-fb7d-4676-85f8-3d483aa9571f</gco:CharacterString>
   </gmd:fileIdentifier>
@@ -210,55 +209,57 @@
       </gmd:extent>
     </gmd:MD_DataIdentification>
   </gmd:identificationInfo>
-  <gdpr:MD_ContentInfo gco:isoType="gmd:contentInfo">
-    <gdpr:MD_GdprInfo>
-      <gdpr:purpose>
-        <gdpr:MD_Purpose>
-          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
-          <gdpr:legalBasis codeListValue="value1" codeList="http://standaarden.overheid.nl/#CI_LegalBasis"/>
-        </gdpr:MD_Purpose>
-      </gdpr:purpose>
-      <gdpr:purpose>
-        <gdpr:MD_Purpose>
-          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
-          <gdpr:legalBasis codeListValue="value2" codeList="http://standaarden.overheid.nl/#CI_LegalBasis"/>
-        </gdpr:MD_Purpose>
-      </gdpr:purpose>
-      <gdpr:purpose>
-        <gdpr:MD_Purpose>
-          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
-          <gdpr:legalBasis codeListValue="value3" codeList="http://standaarden.overheid.nl/#CI_LegalBasis"/>
-        </gdpr:MD_Purpose>
-      </gdpr:purpose>
-      <gdpr:involves>
-        <gdpr:MD_Involved>
-          <gdpr:name><gco:CharacterString /></gdpr:name>
-          <gdpr:data>
-            <gdpr:MD_Data>
-              <gdpr:name><gco:CharacterString /></gdpr:name>
-              <gdpr:purpose><gco:CharacterString /></gdpr:purpose>
-              <gdpr:storagePeriod codeListValue="value4" codeList="http://standaarden.overheid.nl/#CI_StoragePeriod"/>
-              <gdpr:source><gco:CharacterString /></gdpr:source>
-              <gdpr:required><gco:CharacterString /></gdpr:required>
-              <gdpr:specialData codeListValue="value5" codeList="http://standaarden.overheid.nl/#CI_SpecialData"/>
-              <gdpr:specialData codeListValue="value6" codeList="http://standaarden.overheid.nl/#CI_SpecialData"/>
-              <gdpr:specialData codeListValue="value7" codeList="http://standaarden.overheid.nl/#CI_SpecialData"/>
-            </gdpr:MD_Data>
-          </gdpr:data>
-          <gdpr:data>
-            <gdpr:MD_Data>
-              <gdpr:name><gco:CharacterString /></gdpr:name>
-            </gdpr:MD_Data>
-          </gdpr:data>
-        </gdpr:MD_Involved>
-      </gdpr:involves>
-      <gdpr:involves>
-        <gdpr:MD_Involved>
-          <gdpr:name><gco:CharacterString /></gdpr:name>
-        </gdpr:MD_Involved>
-      </gdpr:involves>
-    </gdpr:MD_GdprInfo>
-  </gdpr:MD_ContentInfo>
+  <gmd:contentInfo>
+	  <gdpr:MD_ContentInfo>
+	    <gdpr:MD_GdprInfo>
+	      <gdpr:purpose>
+	        <gdpr:MD_Purpose>
+	          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
+	          <gdpr:legalBasis codeListValue="value1" codeList="http://standaarden.overheid.nl/#CI_LegalBasis"/>
+	        </gdpr:MD_Purpose>
+	      </gdpr:purpose>
+	      <gdpr:purpose>
+	        <gdpr:MD_Purpose>
+	          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
+	          <gdpr:legalBasis codeListValue="value2" codeList="http://standaarden.overheid.nl/#CI_LegalBasis"/>
+	        </gdpr:MD_Purpose>
+	      </gdpr:purpose>
+	      <gdpr:purpose>
+	        <gdpr:MD_Purpose>
+	          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
+	          <gdpr:legalBasis codeListValue="value3" codeList="http://standaarden.overheid.nl/#CI_LegalBasis"/>
+	        </gdpr:MD_Purpose>
+	      </gdpr:purpose>
+	      <gdpr:involves>
+	        <gdpr:MD_Involved>
+	          <gdpr:name><gco:CharacterString /></gdpr:name>
+	          <gdpr:data>
+	            <gdpr:MD_Data>
+	              <gdpr:name><gco:CharacterString /></gdpr:name>
+	              <gdpr:purpose><gco:CharacterString /></gdpr:purpose>
+	              <gdpr:storagePeriod codeListValue="value4" codeList="http://standaarden.overheid.nl/#CI_StoragePeriod"/>
+	              <gdpr:source><gco:CharacterString /></gdpr:source>
+	              <gdpr:required><gco:CharacterString /></gdpr:required>
+	              <gdpr:specialData codeListValue="value5" codeList="http://standaarden.overheid.nl/#CI_SpecialData"/>
+	              <gdpr:specialData codeListValue="value6" codeList="http://standaarden.overheid.nl/#CI_SpecialData"/>
+	              <gdpr:specialData codeListValue="value7" codeList="http://standaarden.overheid.nl/#CI_SpecialData"/>
+	            </gdpr:MD_Data>
+	          </gdpr:data>
+	          <gdpr:data>
+	            <gdpr:MD_Data>
+	              <gdpr:name><gco:CharacterString /></gdpr:name>
+	            </gdpr:MD_Data>
+	          </gdpr:data>
+	        </gdpr:MD_Involved>
+	      </gdpr:involves>
+	      <gdpr:involves>
+	        <gdpr:MD_Involved>
+	          <gdpr:name><gco:CharacterString /></gdpr:name>
+	        </gdpr:MD_Involved>
+	      </gdpr:involves>
+	    </gdpr:MD_GdprInfo>
+	  </gdpr:MD_ContentInfo>
+  </gmd:contentInfo>
   <gmd:distributionInfo>
     <gmd:MD_Distribution>
       <gmd:distributionFormat>
@@ -318,4 +319,4 @@
       </gmd:transferOptions>
     </gmd:MD_Distribution>
   </gmd:distributionInfo>
-</gdpr:MD_Metadata>
+</gmd:MD_Metadata>

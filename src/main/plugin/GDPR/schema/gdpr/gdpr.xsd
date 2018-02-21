@@ -25,20 +25,6 @@
 	<!-- ====================================================================== -->
 	<!-- Add elements to gmd:contentInfo -->
 	<!-- ====================================================================== -->
-  <xs:element name="MD_Metadata" type="gdpr:MD_Metadata_Type" />
-
-  <xs:complexType name="MD_Metadata_Type">
-    <xs:complexContent>
-      <xs:extension base="gmd:MD_Metadata_Type">
-        <xs:sequence>
-          <xs:element name="MD_ContentInfo" type="gdpr:MD_ContentInfo_Type"
-            minOccurs="1" maxOccurs="1" />
-        </xs:sequence>
-        <xs:attribute ref="gco:isoType" use="required" fixed="gmd:MD_Metadata" />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-
 	<xs:element name="MD_ContentInfo" type="gdpr:MD_ContentInfo_Type"
 		substitutionGroup="gmd:AbstractMD_ContentInformation" />
 
