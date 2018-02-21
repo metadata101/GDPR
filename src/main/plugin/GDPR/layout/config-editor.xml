@@ -327,7 +327,6 @@
     <view name="default" default="true" upAndDownControlHidden="true">
 
       <tab id="default" default="true" mode="flat">
-      <section xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_GdprInfo"></section>
 
         <section name="Basis">
 

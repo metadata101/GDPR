@@ -22,7 +22,6 @@
   <xsl:template name="evaluate-GDPR">
     <xsl:param name="base" as="node()"/>
     <xsl:param name="in"/>
-   <xsl:message>GDPR EVALUATE</xsl:message>
    <!-- <xsl:message>in xml <xsl:copy-of select="$base"></xsl:copy-of></xsl:message>
     <xsl:message>search for <xsl:copy-of select="$in"></xsl:copy-of></xsl:message>-->
     <xsl:variable name="nodeOrAttribute" select="saxon:evaluate(concat('$p1', $in), $base)"/>
@@ -48,7 +47,6 @@
     <xsl:param name="base" as="node()"/>
     <xsl:param name="in"/>
    
-   <xsl:message>GDPR BOOLEAN</xsl:message>
     <xsl:value-of select="saxon:evaluate(concat('$p1', $in), $base)"/>
   </xsl:template>
 </xsl:stylesheet>

@@ -17,4 +17,9 @@
     <xsl:call-template name="get-iso19139-is-service">
     </xsl:call-template>
   </xsl:template>
+
+  <xsl:template name="get-GDPR-extents-as-json">
+    <xsl:call-template name="get-iso19139-extents-as-json">
+    </xsl:call-template>
+  </xsl:template>
 </xsl:stylesheet>
