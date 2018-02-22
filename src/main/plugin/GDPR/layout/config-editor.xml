@@ -143,7 +143,6 @@
     <name>gmd:citedResponsibleParty</name>
     <name>gmd:dataQualityInfo</name>
     <name>gmd:contentInfo</name>
-    <name>gdpr:contentInfo</name>
     <name>gmd:distributionFormat</name>
     <name>gmd:referenceSystemInfo</name>
     <name>gmd:spatialResolution</name>
@@ -328,7 +327,6 @@
     <view name="default" default="true" upAndDownControlHidden="true">
 
       <tab id="default" default="true" mode="flat">
-      <section xpath="/gmd:MD_Metadata/gdpr:contentInfo/gdpr:MD_GdprInfo"></section>
 
         <section name="Basis">
 
@@ -2593,7 +2591,7 @@
                  in="/gmd:MD_Metadata"/>
       </tab>
       <tab id="contentInfo" toggle="true">
-        <section xpath="/gmd:MD_Metadata/gdpr:contentInfo" in="/gmd:MD_Metadata"/>
+        <section xpath="/gmd:MD_Metadata/gmd:contentInfo" or="contentInfo" in="/gmd:MD_Metadata"/>
       </tab>
       <tab id="portrayalCatalogueInfo" toggle="true">
         <section xpath="/gmd:MD_Metadata/gmd:portrayalCatalogueInfo" or="portrayalCatalogueInfo"
