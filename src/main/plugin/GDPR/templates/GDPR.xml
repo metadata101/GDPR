@@ -210,8 +210,8 @@
     </gmd:MD_DataIdentification>
   </gmd:identificationInfo>
   <gmd:contentInfo>
-	  <gdpr:MD_ContentInfo>
-	    <gdpr:MD_GdprInfo>
+    <gdpr:MD_ContentInfo>
+	
 	      <gdpr:purpose>
 	        <gdpr:MD_Purpose>
 	          <gdpr:abstract><gco:CharacterString /></gdpr:abstract>
@@ -257,7 +257,7 @@
 	          <gdpr:name><gco:CharacterString /></gdpr:name>
 	        </gdpr:MD_Involved>
 	      </gdpr:involves>
-	    </gdpr:MD_GdprInfo>
+	    
 	  </gdpr:MD_ContentInfo>
   </gmd:contentInfo>
   <gmd:distributionInfo>

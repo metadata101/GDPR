@@ -4,11 +4,11 @@
 	xmlns:gdpr="http://gdpr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
 	xmlns:gml="http://www.opengis.net/gml" xmlns:gco="http://www.isotc211.org/2005/gco">
 	<xs:import namespace="http://www.isotc211.org/2005/gco"
-		schemaLocation="../../../iso19139/schema/gco/gco.xsd" />
+		schemaLocation="../gco/gco.xsd" />
 	<xs:import namespace="http://www.opengis.net/gml"
-		schemaLocation="../../../iso19139/schema/gml/gml.xsd" />
+		schemaLocation="../gml/gml.xsd" />
 	<xs:import namespace="http://www.isotc211.org/2005/gmd"
-		schemaLocation="../../../iso19139/schema/gmd/gmd.xsd" />
+		schemaLocation="../gmd/gmd.xsd" />
 
 
 
@@ -32,19 +32,11 @@
 		<xs:complexContent>
 			<xs:extension base="gmd:AbstractMD_ContentInformation_Type">
 				<xs:sequence>
-					<xs:element name="MD_GdprInfo" type="gdpr:MD_GdprInfoType"
-						minOccurs="0" maxOccurs="1" />
+					<xs:element ref="gdpr:purpose" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element ref="gdpr:involves" minOccurs="0" maxOccurs="unbounded" />
 				</xs:sequence>
-				<xs:attribute ref="gco:isoType" use="required" fixed="gmd:contentInfo" />
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="MD_GdprInfoType">
-		<xs:sequence>
-			<xs:element ref="gdpr:purpose" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element ref="gdpr:involves" minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
 	</xs:complexType>
 
 	<xs:element name="involves">
