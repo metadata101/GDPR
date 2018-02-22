@@ -49,7 +49,7 @@
 	<xs:element name="MD_Involved">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="gdpr:name" />
+				<xs:element name="name" type="gco:CharacterString_PropertyType" />
 				<xs:element minOccurs="0" ref="gdpr:data" />
 			</xs:sequence>
 		</xs:complexType>
@@ -64,11 +64,11 @@
 	<xs:element name="MD_Data">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="gdpr:name" />
-				<xs:element ref="gdpr:purpose" />
+				<xs:element name="name" type="gco:CharacterString_PropertyType" />
+				<xs:element name="purpose" type="gco:CharacterString_PropertyType" />
 				<xs:element ref="gdpr:storagePeriod" />
-				<xs:element ref="gdpr:source" />
-				<xs:element ref="gdpr:required" />
+				<xs:element name="source" type="gco:CharacterString_PropertyType" />
+				<xs:element name="required" type="gco:CharacterString_PropertyType" />
 				<xs:element maxOccurs="unbounded" ref="gdpr:specialData" />
 			</xs:sequence>
 		</xs:complexType>
@@ -77,20 +77,6 @@
 		<xs:complexType>
 			<xs:attribute name="codeList" use="required" type="xs:anyURI" />
 			<xs:attribute name="codeListValue" use="required" type="xs:NCName" />
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="source">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="gco:CharacterString" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="required">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="gco:CharacterString" />
-			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="specialData">
@@ -102,7 +88,6 @@
 	<xs:element name="purpose">
 		<xs:complexType>
 			<xs:choice>
-				<xs:element ref="gco:CharacterString" />
 				<xs:element ref="gdpr:MD_Purpose" />
 			</xs:choice>
 		</xs:complexType>
@@ -110,15 +95,8 @@
 	<xs:element name="MD_Purpose">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="gdpr:abstract" />
+				<xs:element name="abstract" type="gco:CharacterString_PropertyType" />
 				<xs:element ref="gdpr:legalBasis" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="abstract">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="gco:CharacterString" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -126,13 +104,6 @@
 		<xs:complexType>
 			<xs:attribute name="codeList" use="required" type="xs:anyURI" />
 			<xs:attribute name="codeListValue" use="required" type="xs:NCName" />
-		</xs:complexType>
-	</xs:element>
-	<xs:element name="name">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="gco:CharacterString" />
-			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
