@@ -42,7 +42,7 @@
 	<xs:element name="involves">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="gdpr:MD_Involved" />
+				<xs:element minOccurs="0" ref="gdpr:MD_Involved" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -57,7 +57,7 @@
 	<xs:element name="data">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="gdpr:MD_Data" />
+				<xs:element minOccurs="0" ref="gdpr:MD_Data" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -65,11 +65,11 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="name" type="gco:CharacterString_PropertyType" />
-				<xs:element name="purpose" type="gco:CharacterString_PropertyType" />
-				<xs:element ref="gdpr:storagePeriod" />
-				<xs:element name="source" type="gco:CharacterString_PropertyType" />
-				<xs:element name="required" type="gco:CharacterString_PropertyType" />
-				<xs:element maxOccurs="unbounded" ref="gdpr:specialData" />
+				<xs:element minOccurs="0" name="purpose" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" ref="gdpr:storagePeriod" />
+				<xs:element minOccurs="0" name="source" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" name="required" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="gdpr:specialData" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -88,15 +88,15 @@
 	<xs:element name="purpose">
 		<xs:complexType>
 			<xs:choice>
-				<xs:element ref="gdpr:MD_Purpose" />
+				<xs:element minOccurs="0" ref="gdpr:MD_Purpose" />
 			</xs:choice>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="MD_Purpose">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="abstract" type="gco:CharacterString_PropertyType" />
-				<xs:element ref="gdpr:legalBasis" />
+				<xs:element minOccurs="0" name="abstract" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" ref="gdpr:legalBasis" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
