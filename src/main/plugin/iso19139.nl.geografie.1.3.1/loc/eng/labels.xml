@@ -3006,4 +3006,45 @@
     <element name="gmd:DS_InitiativeTypeCode">
         <label>Initiative Type</label>
     </element>
+    
+    <!-- Gdpr -->    
+    <element name="gdpr:purpose">
+        <label>Purpose</label>
+    </element>
+    <element name="gdpr:MD_Purpose">
+        <label>Metadata Purpose</label>
+    </element>
+    <element name="gdpr:abstract">
+        <label>Abstract</label>
+    </element>
+    <element name="gdpr:legalBasis">
+        <label>Legal Basis</label>
+    </element>
+    <element name="gdpr:name">
+        <label>Name</label>
+    </element>
+    <element name="gdpr:storagePeriod">
+        <label>Storage Period</label>
+    </element>
+    <element name="gdpr:source">
+        <label>Source</label>
+    </element>
+    <element name="gdpr:required">
+        <label>Required</label>
+    </element>
+    <element name="gdpr:specialData">
+        <label>Special Data</label>
+    </element>
+    <element name="gdpr:involves">
+        <label>Involves</label>
+    </element>
+    <element name="gdpr:MD_Involved">
+        <label>Metadata Involved</label>
+    </element>
+    <element name="gdpr:MD_Data">
+        <label>Metadata Data</label>
+    </element>
+    <element name="gdpr:data">
+        <label>Data</label>
+    </element>
 </labels>

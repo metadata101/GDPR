@@ -6,6 +6,7 @@
         xmlns:gmd="http://www.isotc211.org/2005/gmd"
         xmlns:gmx="http://www.isotc211.org/2005/gmx"
         xmlns:srv="http://www.isotc211.org/2005/srv"
+        xmlns:gdpr="http://gdpr"
         xmlns:gml="http://www.opengis.net/gml"
         xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -256,8 +257,6 @@
       <name ancestor="gmd:CI_Address">gmd:administrativeArea</name>
       <name ancestor="gmd:CI_Address">gmd:postalCode</name>
       <name ancestor="gmd:CI_Address">gmd:electronicMailAddress</name>
-      <name ancestor="gmd:CI_Citation">gmd:title</name>
-      <name ancestor="gmd:CI_Citation">gmd:alternateTitle</name>
     </exclude>
   </multilingualFields>
 

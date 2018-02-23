@@ -87,7 +87,7 @@
                   select="gmd:identificationInfo/*/gmd:graphicOverview[1]/gmd:MD_BrowseGraphic/gmd:fileName"/>
     <xsl:value-of select="$value/gco:CharacterString"/>
   </xsl:template>
-  
+
   <xsl:template mode="getMetadataHeader" match="gmd:MD_Metadata">
   </xsl:template>
 
@@ -211,7 +211,7 @@
           <!-- Org name may be multilingual -->
           <xsl:apply-templates mode="render-value"
                                select="*/gmd:organisationName"/>
-          <xsl:if test="normalize-space(*/gmd:individualName)">                               
+          <xsl:if test="normalize-space(*/gmd:individualName)">
             -
             <xsl:value-of select="*/gmd:individualName"/>
           </xsl:if>
@@ -260,7 +260,7 @@
                   <xsl:value-of select="$addressitem"/>
                   <br/>
                 </xsl:if>
-                
+
               </xsl:for-each>
             </xsl:for-each>
           </address>
@@ -359,12 +359,12 @@
               <xsl:value-of select="*/gmd:linkage/gmd:URL"/>
         </xsl:variable>
         <a href="{*/gmd:linkage/gmd:URL}" target="_blank">
-          <xsl:value-of select="normalize-space($linkText)"/> 
+          <xsl:value-of select="normalize-space($linkText)"/>
           <xsl:if test="$linkText = ''">
             <xsl:value-of select="*/gmd:linkage/gmd:URL"/>
           </xsl:if>
           <xsl:if test="$linkText != ''">
-             (<xsl:value-of select="*/gmd:linkage/gmd:URL"/>) 
+             (<xsl:value-of select="*/gmd:linkage/gmd:URL"/>)
           </xsl:if>
         </a>
         <p>
@@ -377,7 +377,7 @@
   <!-- Identifier -->
   <xsl:template mode="render-field"
                 match="*[(gmd:RS_Identifier or gmd:MD_Identifier) and
-                  */gmd:code/gco:CharacterString != '']"
+                (*/gmd:code/gco:CharacterString != '' or  */gmd:code/gmx:Anchor != '')]"
                 priority="100">
     <xsl:param name="xpath" select="''" as="xs:string" required="no"/>
     <xsl:variable name="xpath2">
@@ -719,7 +719,7 @@
   <!-- ... URL -->
   <xsl:template mode="render-value"
                 match="gmd:URL">
-    <a href="{.}">
+    <a href="{.}" target="_blank">
       <xsl:value-of select="."/>
     </a>
   </xsl:template>
@@ -808,6 +808,28 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
+  <xsl:template mode="render-value"
+                match="*[gmx:Anchor]">
+    <xsl:apply-templates mode="render-value" select="gmx:Anchor" />
+  </xsl:template>
+
+
+  <xsl:template mode="render-value"
+                match="gmx:Anchor">
+
+    <xsl:choose>
+      <xsl:when test="string(@xlink:href) and starts-with(@xlink:href, 'http')">
+        <a href="{@xlink:href}" target="_blank">
+          <xsl:value-of select="normalize-space(.)"/>
+        </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="normalize-space(.)"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
 
   <xsl:template mode="render-value"
                 match="@gco:nilReason[. = 'withheld']"

@@ -493,47 +493,43 @@
 			/gmd:MD_Keywords/gmd:keyword">
 
 			<!-- Controlled originating vocabulary -->
-
-<sch:let name="quote" value="&quot;'&quot;"/>
-			<sch:assert id="INSPIRE Trefwoorden (ISO nr. 53)" test="((normalize-space(current())='Administratieve eenheden'
+		<sch:let name="quote" value="&quot;'&quot;"/>
+			<sch:assert id="INSPIRE Trefwoorden (ISO nr. 53)" test="((normalize-space(./gco:CharacterString)='Administratieve eenheden')
+		        or (normalize-space(gco:CharacterString)='Adressen')
+		        or (normalize-space(gco:CharacterString)='Atmosferische omstandigheden')
+		        or (normalize-space(gco:CharacterString)='Beschermde gebieden'
 )
-		        or (normalize-space(current())='Adressen'
+		        or (normalize-space(gco:CharacterString)='Biogeografische gebieden'
 )
-		        or (normalize-space(current())='Atmosferische omstandigheden'
-)
-		        or (normalize-space(current())='Beschermde gebieden'
-)
-		        or (normalize-space(current())='Biogeografische gebieden'
-)
-		        or (normalize-space(current())='Bodem')
-		         or (normalize-space(current())='Bodemgebruik')
-		         or (normalize-space(current())='Energiebronnen')
-		         or (normalize-space(current())='Faciliteiten voor landbouw en aquacultuur')
-		         or (normalize-space(current())='Faciliteiten voor productie en industrie')
-		        or (normalize-space(current())=concat('Gebieden met natuurrisico',$quote,'s'))
-		         or (normalize-space(current())='Gebiedsbeheer, gebieden waar beperkingen gelden, gereguleerde gebieden en rapportage-eenheden')
-		         or (normalize-space(current())='Gebouwen')
-		         or (normalize-space(current())='Geografisch rastersysteem')
-		         or (normalize-space(current())='Geografische namen')
-		         or (normalize-space(current())='Geologie')
-		         or (normalize-space(current())='Habitats en biotopen')
-		         or (normalize-space(current())='Hoogte')
-		         or (normalize-space(current())='Hydrografie')
-		         or (normalize-space(current())='Kadastrale percelen')
-		         or (normalize-space(current())='Landgebruik')
-		         or (normalize-space(current())='Menselijke gezondheid en veiligheid')
-		         or (normalize-space(current())='Meteorologische geografische kenmerken')
-		         or (normalize-space(current())='Milieubewakingsvoorzieningen')
-		         or (normalize-space(current())='Minerale bronnen')
-		         or (normalize-space(current())='Nutsdiensten en overheidsdiensten')
-		         or (normalize-space(current())='Oceanografische geografische kenmerken')
-		         or (normalize-space(current())='Orthobeeldvorming')
-		         or (normalize-space(current())='Spreiding van de bevolking — demografie')
-		         or (normalize-space(current())='Spreiding van soorten')
-		         or (normalize-space(current())='Statistische eenheden')
-		         or (normalize-space(current())='Systemen voor verwijzing door middel van coördinaten')
-		         or (normalize-space(current())='Vervoersnetwerken')
-		         or (normalize-space(current())='Zeegebieden'))">
+		        or (normalize-space(gco:CharacterString)='Bodem')
+		         or (normalize-space(gco:CharacterString)='Bodemgebruik')
+		         or (normalize-space(gco:CharacterString)='Energiebronnen')
+		         or (normalize-space(gco:CharacterString)='Faciliteiten voor landbouw en aquacultuur')
+		         or (normalize-space(gco:CharacterString)='Faciliteiten voor productie en industrie')
+		        or (normalize-space(gco:CharacterString)=concat('Gebieden met natuurrisico',$quote,'s'))
+		         or (normalize-space(gco:CharacterString)='Gebiedsbeheer, gebieden waar beperkingen gelden, gereguleerde gebieden en rapportage-eenheden')
+		         or (normalize-space(gco:CharacterString)='Gebouwen')
+		         or (normalize-space(gco:CharacterString)='Geografisch rastersysteem')
+		         or (normalize-space(gco:CharacterString)='Geografische namen')
+		         or (normalize-space(gco:CharacterString)='Geologie')
+		         or (normalize-space(gco:CharacterString)='Habitats en biotopen')
+		         or (normalize-space(gco:CharacterString)='Hoogte')
+		         or (normalize-space(gco:CharacterString)='Hydrografie')
+		         or (normalize-space(gco:CharacterString)='Kadastrale percelen')
+		         or (normalize-space(gco:CharacterString)='Landgebruik')
+		         or (normalize-space(gco:CharacterString)='Menselijke gezondheid en veiligheid')
+		         or (normalize-space(gco:CharacterString)='Meteorologische geografische kenmerken')
+		         or (normalize-space(gco:CharacterString)='Milieubewakingsvoorzieningen')
+		         or (normalize-space(gco:CharacterString)='Minerale bronnen')
+		         or (normalize-space(gco:CharacterString)='Nutsdiensten en overheidsdiensten')
+		         or (normalize-space(gco:CharacterString)='Oceanografische geografische kenmerken')
+		         or (normalize-space(gco:CharacterString)='Orthobeeldvorming')
+		         or (normalize-space(gco:CharacterString)='Spreiding van de bevolking — demografie')
+		         or (normalize-space(gco:CharacterString)='Spreiding van soorten')
+		         or (normalize-space(gco:CharacterString)='Statistische eenheden')
+		         or (normalize-space(gco:CharacterString)='Systemen voor verwijzing door middel van coördinaten')
+		         or (normalize-space(gco:CharacterString)='Vervoersnetwerken')
+		         or (normalize-space(gco:CharacterString)='Zeegebieden'))">
 Deze keywords  moeten uit GEMET- INSPIRE themes thesaurus komen. gevonden keywords: <sch:value-of select="."/></sch:assert>
 
 		<!--eind  Controlled originating vocabulary -  -->
