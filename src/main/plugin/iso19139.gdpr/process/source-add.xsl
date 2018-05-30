@@ -22,21 +22,6 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+  <xsl:import href="../../iso19139/process/source-add.xsl"/>
+</xsl:stylesheet>

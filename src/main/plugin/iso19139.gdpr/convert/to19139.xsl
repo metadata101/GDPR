@@ -22,21 +22,17 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<xsl:stylesheet version="2.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	exclude-result-prefixes="#all">
 
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+
+	<!-- identity template -->
+	<xsl:template match="@*|node()">
+		<xsl:copy copy-namespaces="no">
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template>
+
+</xsl:stylesheet>

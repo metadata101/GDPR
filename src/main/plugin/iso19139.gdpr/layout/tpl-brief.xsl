@@ -22,21 +22,27 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                xmlns:gco="http://www.isotc211.org/2005/gco"
+                xmlns:srv="http://www.isotc211.org/2005/srv"
+                xmlns:gmx="http://www.isotc211.org/2005/gmx"
+                xmlns:gml="http://www.opengis.net/gml"
+                xmlns:gn="http://www.fao.org/geonetwork"
+                xmlns:gn-fn-core="http://geonetwork-opensource.org/xsl/functions/core"
+                xmlns:gn-fn-iso19139="http://geonetwork-opensource.org/xsl/functions/profiles/iso19139"
+                exclude-result-prefixes="#all"
+                version="2.0">
 
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+  <xsl:include href="utility-tpl.xsl"/>
+
+  <xsl:template name="iso19139.gdprBrief">
+    <metadata>
+      <xsl:call-template name="iso19139-brief"/>
+    </metadata>
+  </xsl:template>
+
+  <xsl:template name="iso19139.gdpr-brief">
+    <xsl:call-template name="iso19139-brief"/>
+  </xsl:template>
+</xsl:stylesheet>

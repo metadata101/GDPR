@@ -22,21 +22,18 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+<strings>
+  <schematron.title>Geonetwork Validation Rules</schematron.title>
+  <M500>[Język] - Język metadanych jest nie zdefiniowany i inny język jest zadeklarowany - nie wolno
+    zdefiniować języka głównego metadanych w sekcji innego języka.
+  </M500>
+  <alert.M500>
+    <div>Sprawdź czy język główny metadanych nie jest zdefiniowany w innych językach(w gmd:locale).
+      <br/>
+      <span class="validationReportSuggestion">Sugestie: Zdefiniuj język główny metadanych lub usuń
+        definicje innych języków.
+      </span>
+    </div>
+  </alert.M500>
+  <report.M500>Język główny metadanych:</report.M500>
+</strings>

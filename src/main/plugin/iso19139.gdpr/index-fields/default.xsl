@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
   ~ Copyright (C) 2001-2016 Food and Agriculture Organization of the
   ~ United Nations (FAO-UN), United Nations World Food Programme (WFP)
@@ -22,21 +22,19 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<xsl:stylesheet xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                xmlns:gco="http://www.isotc211.org/2005/gco"
+                xmlns:gml="http://www.opengis.net/gml"
+                xmlns:srv="http://www.isotc211.org/2005/srv"
+                xmlns:geonet="http://www.fao.org/geonetwork"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:gmx="http://www.isotc211.org/2005/gmx"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:util="java:org.fao.geonet.util.XslUtil"
+                xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                version="2.0"
+                exclude-result-prefixes="#all">
 
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+  <xsl:import href="../../iso19139/index-fields/default.xsl" />
+</xsl:stylesheet>

@@ -22,21 +22,21 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+<strings>
+  <schematron.title>Geonetwork Validation Rules</schematron.title>
+  <M500>[Language] - la lingua del metadato non è definita e sono dichiarati in altre lingue e la
+    lingua principale per il metadato NON DEVE essere definita nella sezione lingua.
+  </M500>
+  <alert.M500>
+    <div>Verifica se la lingua principale non è impostata quando sono definite più lingue (es.
+      gmd:locale)
+      (vedi la sezione Vista Avanzata / Metadato).
+      <br/>
+      <span class="validationReportSuggestion">Suggerimento: Definire una lingua principale per il
+        metadato
+        oppure eliminare le altre lingue.
+      </span>
+    </div>
+  </alert.M500>
+  <report.M500>La lingua principale per il metadato è:</report.M500>
+</strings>

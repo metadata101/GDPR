@@ -22,21 +22,27 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://www.springframework.org/schema/beans"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                xmlns:gco="http://www.isotc211.org/2005/gco"
+                xmlns:gn="http://www.fao.org/geonetwork"
+                xmlns:xslutil="java:org.fao.geonet.util.XslUtil"
+                version="2.0"
+                exclude-result-prefixes="#all">
 
-  <bean id="iso19139.gdprSchemaPlugin"
-        class="org.fao.geonet.schema.iso19139.ISO19139SchemaPlugin">
-    <property name="savedQueries">
-      <list>
-        <bean class="org.fao.geonet.kernel.schema.SavedQuery">
-          <property name="id" value="wfs-indexing-config"/>
-          <property name="xpath"
-                    value="*//gmd:CI_OnlineResource[contains(gmd:protocol/gco:CharacterString, '{{protocol}}') and gmd:name/gco:CharacterString = '{{name}}' and (gmd:linkage/gmd:URL = '{{url}}' or gmd:linkage/gmd:URL = translate('{{url}}', 'wfs', 'wms'))]/gmd:applicationProfile/gco:CharacterString/text()"/>
-        </bean>
-      </list>
-    </property>
-  </bean>
-</beans>
+
+  <!-- Get the main metadata languages -->
+  <xsl:template name="get-iso19139.gdpr-language">
+    <xsl:call-template name="get-iso19139-language"/>
+  </xsl:template>
+
+  <!-- Get the list of other languages in JSON -->
+  <xsl:template name="get-iso19139.gdpr-other-languages-as-json">
+    <xsl:call-template name="get-iso19139-other-languages-as-json"/>
+  </xsl:template>
+
+  <!-- Get the list of other languages -->
+  <xsl:template name="get-iso19139.gdpr-other-languages">
+    <xsl:call-template name="get-iso19139-other-languages"/>
+  </xsl:template>
+
+</xsl:stylesheet>
