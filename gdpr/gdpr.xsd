@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://gdpr"
+	xmlns:gdpr="http://gdpr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gml="http://www.opengis.net/gml" xmlns:gco="http://www.isotc211.org/2005/gco">
+	<xs:import namespace="http://www.isotc211.org/2005/gco"
+		schemaLocation="../gco/gco.xsd" />
+	<xs:import namespace="http://www.opengis.net/gml"
+		schemaLocation="../gml/gml.xsd" />
+	<xs:import namespace="http://www.isotc211.org/2005/gmd"
+		schemaLocation="../gmd/gmd.xsd" />
+
+
+
+	<!-- ================================= Annotation ================================ -->
+	<xs:annotation>
+		<xs:documentation>
+			This file contains extensions of the ISO19139 GDPR
+			for the dutch flavour.
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ====================================================================== -->
+
+
+	<!-- ====================================================================== -->
+	<!-- Add elements to gmd:contentInfo -->
+	<!-- ====================================================================== -->
+	<xs:element name="MD_ContentInfo" type="gdpr:MD_ContentInfo_Type"
+		substitutionGroup="gmd:AbstractMD_ContentInformation" />
+
+	<xs:complexType name="MD_ContentInfo_Type">
+		<xs:complexContent>
+			<xs:extension base="gmd:AbstractMD_ContentInformation_Type">
+				<xs:sequence>
+					<xs:element ref="gdpr:purpose" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element ref="gdpr:involves" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="involves">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="gdpr:MD_Involved" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MD_Involved">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" ref="gdpr:data" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="data">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="gdpr:MD_Data" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MD_Data">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" name="purpose" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" ref="gdpr:storagePeriod" />
+				<xs:element minOccurs="0" name="source" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" name="required" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="gdpr:specialData" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="storagePeriod">
+		<xs:complexType>
+			<xs:attribute name="codeList" use="required" type="xs:anyURI" />
+			<xs:attribute name="codeListValue" use="required" type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="specialData">
+		<xs:complexType>
+			<xs:attribute name="codeList" use="required" type="xs:anyURI" />
+			<xs:attribute name="codeListValue" use="required" type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="purpose">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element minOccurs="0" ref="gdpr:MD_Purpose" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MD_Purpose">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="abstract" type="gco:CharacterString_PropertyType" />
+				<xs:element minOccurs="0" ref="gdpr:legalBasis" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="legalBasis">
+		<xs:complexType>
+			<xs:attribute name="codeList" use="required" type="xs:anyURI" />
+			<xs:attribute name="codeListValue" use="required" type="xs:NCName" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
