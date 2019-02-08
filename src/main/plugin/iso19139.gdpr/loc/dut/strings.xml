@@ -39,6 +39,10 @@
   <simple>Eenvoudig</simple>
   <inspire>INSPIRE</inspire>
   <inspire_sds>SDS</inspire_sds>
+  <gdpr-vw>GDPR</gdpr-vw>
+  <intro>Intro</intro>
+  <verantwoordelijke>Verantwoordelijke</verantwoordelijke>
+  <verwerkers>Verwerkers</verwerkers>
 
   <overviews>Overviews</overviews>
   <metadataInXML>XML</metadataInXML>
