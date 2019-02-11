@@ -952,6 +952,7 @@
   <!-- ==================================================== -->
   <element name="gmd:edition">
     <label>Versie</label>
+    <btnLabel>Versie toevoegen</btnLabel>
     <description>versie cq editie.</description>
   </element>
   <!-- ==================================================== -->
@@ -969,6 +970,7 @@
   <!-- ==================================================== -->
   <element name="gmd:environmentDescription">
     <label>Systeem omschrijving</label>
+    <btnLabel>Voeg systeem omschrijving toe</btnLabel>
     <description>omschrijving van de omgeving waarin de dataset wordt
       bewerkt zoals de software, OS, bestandsnamen en de omvang van de
       dataset.
@@ -1145,7 +1147,7 @@
   </element>
   <!-- ==================================================== -->
   <element name="gmd:fileIdentifier">
-    <label>Metadata ID</label>
+    <label>Meldingsnummer</label>
     <description>Unieke ID voor de metadata file.</description>
   </element>
   <!-- ==================================================== -->
@@ -2494,6 +2496,7 @@
   <!-- ==================================================== -->
   <element name="gmd:supplementalInformation">
     <label>Aanvullende informatie</label>
+    <btnLabel>Voeg aanvullende informatie toe</btnLabel>
     <description>Aanvullende informatie over de data, bijvoorbeeld
       documentatie of handleiding.
     </description>
@@ -2516,6 +2519,7 @@
   <!-- ==================================================== -->
   <element name="gmd:title">
     <label>Titel</label>
+    <btnLabel>Titel toevoegen</btnLabel>
     <description>Titel</description>
     <condition>mandatory</condition>
   </element>
@@ -2766,6 +2770,15 @@
       * nS indicates the number of
       seconds
     </description>
+  </element>
+
+  <element name="gco:CharacterString">
+    <label>Text</label>
+    <description/>
+  </element>
+  <element name="gco:nilReason">
+    <label>Nil reason</label>
+    <description/>
   </element>
 
   <!-- ==================================================== -->
@@ -3304,6 +3317,10 @@
         <label>Bewaartermijn</label>
         <description>Geef aan hoe lang de gegevens maximaal bewaard mogen worden</description>
     </element>
+    <element name="gdpr:CI_StoragePeriodCode">
+      <label>Bewaartermijn code</label>
+      <description>Geef aan hoe lang de gegevens maximaal bewaard mogen worden</description>
+    </element>
     <element name="gdpr:source">
         <label>Bron</label>
         <description>De bron van de gegevens</description>
@@ -3314,8 +3331,12 @@
     </element>
     <element name="gdpr:specialData">
         <label>Bijzondere gegevens</label>
-        <btnLabel>Voeg categorie bijzondere gegevens toe</btnLabel>
+      <btnLabel>Voeg categorie bijzondere gegevens toe</btnLabel>
         <description>U dient aan te geven of er gegevenssoorten worden verwerkt die vallen onder de definitie van “bijzondere categorieen van persoonsgegevens” (zie hiervoor de artikelen 9 en 10 AVG en de paragraaf 3.1 van de Uitvoeringswet AVG)</description>
+    </element>
+    <element name="gdpr:CI_SpecialDataCode">
+      <label>Bijzondere gegevens code</label>
+      <description>U dient aan te geven of er gegevenssoorten worden verwerkt die vallen onder de definitie van “bijzondere categorieen van persoonsgegevens” (zie hiervoor de artikelen 9 en 10 AVG en de paragraaf 3.1 van de Uitvoeringswet AVG)</description>
     </element>
     <element name="gdpr:involves">
         <label>Betrokkenen</label>
@@ -3355,10 +3376,12 @@
     </element>
     <element name="gdpr:responsibilityDivision">
       <label>Verdeling verantwoordelijkheden</label>
+      <btnLabel>Voeg divisie verantwoordelijkheid toe</btnLabel>
       <description>Bij meer dan 1 verwerkingsverantwoordelijke moet er een onderlinge regeling tussen de verantwoordelijken zijn, waarin zij hun respectieve verantwoordelijkheden hebben vastgesteld voor het nakomen van de verplichtingen van de AVG. </description>
     </element>
     <element name="gdpr:hasAutomaticDecisionMaking">
       <label>Geautomatiseerde besluitvorming</label>
+      <btnLabel>Voeg geautomatiseerde besluitvorming toe</btnLabel>
       <description>Is er sprake van geautomatiseerde besluitvorming?</description>
     </element>
     <element name="gdpr:logic">

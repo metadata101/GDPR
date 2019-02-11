@@ -52,6 +52,21 @@
   </xsl:template>
 
 
+  <!--
+   Display contact as table when mode is flat (eg. simple view) or if using xsl mode
+   Match first node (or added one)
+ -->
+  <xsl:template mode="mode-iso19139.gdpr"
+                match="*[
+                        *[1]/name() = $editorConfig/editor/tableFields/table/@for and
+                        (1 or @gn:addedObj = 'true') and
+                        $isFlatMode]"
+                priority="2000">
+
+    <xsl:message>TABLE FORMAT: <xsl:value-of select="name()" /></xsl:message>
+    <xsl:call-template name="iso19139-table"/>
+  </xsl:template>
+
   <!-- Boxed element
 
       Details about the last line :
@@ -61,7 +76,8 @@
       * and not(gco:CharacterString): Don't take into account those having gco:CharacterString (eg. multilingual elements)
   -->
   <xsl:template mode="mode-iso19139.gdpr" priority="200"
-                match="gdpr:*">
+                match="gdpr:*[name() = $editorConfig/editor/fieldsWithFieldset/name or @gco:isoType = $editorConfig/editor/fieldsWithFieldset/name]|
+                gdpr:*[namespace-uri(.) != $gnUri and $isFlatMode = false() and gmd:* and not(gco:CharacterString) and not(gmd:URL)]">
     <xsl:param name="schema" select="$schema" required="no"/>
     <xsl:param name="labels" select="$labels" required="no"/>
     <xsl:param name="refToDelete" required="no"/>
@@ -69,6 +85,8 @@
 
     <xsl:variable name="xpath" select="gn-fn-metadata:getXPath(.)"/>
     <xsl:variable name="isoType" select="if (../@gco:isoType) then ../@gco:isoType else ''"/>
+
+    <xsl:message>BOXED element iso19139.gdpr: <xsl:value-of select="name()" /></xsl:message>
 
     <xsl:variable name="attributes">
       <!-- Create form for all existing attribute (not in gn namespace)
@@ -100,7 +118,7 @@
         <!-- Process child of those element. Propagate schema
         and labels to all subchilds (eg. needed like iso19110 elements
         contains gmd:* child. -->
-        <xsl:apply-templates mode="mode-GDPR" select="*">
+        <xsl:apply-templates mode="mode-iso19139.gdpr" select="*">
           <xsl:with-param name="schema" select="$schema"/>
           <xsl:with-param name="labels" select="$labels"/>
         </xsl:apply-templates>
@@ -128,7 +146,8 @@
   </xsl:template>
 
 
-  <xsl:template mode="mode-iso19139.gdpr" priority="200" match="*[*/@codeList]">
+  <!-- Override template in iso19139 to use schema codelists instead of fixed iso19139 codelists -->
+  <xsl:template mode="mode-iso19139" priority="500" match="*[*/@codeList]">
     <xsl:param name="schema" select="$schema" required="no"/>
     <xsl:param name="labels" select="$labels" required="no"/>
     <xsl:param name="codelists" select="$codelists" required="no"/>
@@ -169,6 +188,47 @@
 
   </xsl:template>
 
+  <xsl:template mode="mode-iso19139.gdpr" priority="500" match="*[*/@codeList]">
+    <xsl:param name="schema" select="$schema" required="no"/>
+    <xsl:param name="labels" select="$labels" required="no"/>
+    <xsl:param name="codelists" select="$codelists" required="no"/>
+    <xsl:param name="overrideLabel" select="''" required="no"/>
+
+
+    <xsl:variable name="xpath" select="gn-fn-metadata:getXPath(.)"/>
+    <xsl:variable name="isoType" select="if (@gco:isoType) then @gco:isoType else ''"/>
+    <xsl:variable name="elementName" select="name()"/>
+    <xsl:variable name="labelConfig">
+      <xsl:choose>
+        <xsl:when test="$overrideLabel != ''">
+          <element>
+            <label><xsl:value-of select="$overrideLabel"/></label>
+          </element>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:copy-of select="gn-fn-metadata:getLabel($schema, name(), $labels, name(), '', $xpath)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:call-template name="render-element">
+      <xsl:with-param name="label" select="$labelConfig/*[1]"/>
+      <xsl:with-param name="value" select="*[1]/@codeListValue"/>
+      <xsl:with-param name="cls" select="local-name()"/>
+      <xsl:with-param name="xpath" select="$xpath"/>
+      <xsl:with-param name="type" select="gn-fn-iso19139:getCodeListType(name())"/>
+      <xsl:with-param name="name"
+                      select="if ($isEditing) then concat(*[1]/gn:element/@ref, '_codeListValue') else ''"/>
+      <xsl:with-param name="editInfo" select="*[1]/gn:element"/>
+      <xsl:with-param name="parentEditInfo" select="gn:element"/>
+      <xsl:with-param name="listOfValues"
+                      select="gn-fn-metadata:getCodeListValues($schema, name(*[@codeListValue]), $codelists, .)"/>
+      <xsl:with-param name="isFirst"
+                      select="count(preceding-sibling::*[name() = $elementName]) = 0"/>
+    </xsl:call-template>
+  </xsl:template>
+
+
   <!-- Template to display non existing element ie. geonet:child element
  of the metadocument. Display in editing mode only and if
  the editor mode is not flat mode. -->
@@ -203,6 +263,5 @@
       </xsl:call-template>
     </xsl:if>
   </xsl:template>
-
 
 </xsl:stylesheet>

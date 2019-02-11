@@ -1116,6 +1116,7 @@
   </element>
   <element name="gmd:edition" id="363.0">
     <label>Edition</label>
+    <btnLabel>Add edition</btnLabel>
     <description>Version of the cited resource</description>
   </element>
   <element name="gmd:editionDate" id="364.0">
@@ -1130,6 +1131,7 @@
   </element>
   <element name="gmd:environmentDescription" id="44.0">
     <label>Environment description</label>
+    <btnLabel>Add environment description</btnLabel>
     <description>Description of the dataset in the producer_s processing environment, including
       items such as the software, the computer operating system, file name, and the dataset
       size
@@ -1249,7 +1251,7 @@
     <description>Text description of the illustration</description>
   </element>
   <element name="gmd:fileIdentifier" id="2.0">
-    <label>File identifier</label>
+    <label>Meldingsnummer</label>
     <description>Unique identifier for this metadata file</description>
   </element>
   <element name="gmd:fileName" id="49.0">
@@ -2460,6 +2462,7 @@
   </element>
   <element name="gmd:supplementalInformation" id="46.0">
     <label>Supplemental Information</label>
+    <btnLabel>Add supplemental information</btnLabel>
     <description>Any other descriptive information about the dataset</description>
   </element>
   <element name="gmd:temporalElement" id="337.0">
@@ -2479,6 +2482,7 @@
   </element>
   <element name="gmd:title" id="360.0">
     <label>Title</label>
+    <btnLabel>Add title</btnLabel>
     <description>Name by which the cited resource is known</description>
     <condition>mandatory</condition>
   </element>
@@ -3391,7 +3395,7 @@
     <label>Scale</label>
   </element>
 
-   <!-- Gdpr -->
+  <!-- Gdpr -->
     <element name="gdpr:purpose">
         <label>Doel verwerking</label>
         <btnLabel>Doel toevoegen</btnLabel>
@@ -3421,6 +3425,10 @@
         <label>Bewaartermijn</label>
         <description>Geef aan hoe lang de gegevens maximaal bewaard mogen worden</description>
     </element>
+    <element name="gdpr:CI_StoragePeriodCode">
+      <label>Bewaartermijn code</label>
+      <description>Geef aan hoe lang de gegevens maximaal bewaard mogen worden</description>
+    </element>
     <element name="gdpr:source">
         <label>Bron</label>
         <description>De bron van de gegevens</description>
@@ -3433,6 +3441,10 @@
         <label>Bijzondere gegevens</label>
         <btnLabel>Voeg categorie bijzondere gegevens toe</btnLabel>
         <description>U dient aan te geven of er gegevenssoorten worden verwerkt die vallen onder de definitie van “bijzondere categorieen van persoonsgegevens” (zie hiervoor de artikelen 9 en 10 AVG en de paragraaf 3.1 van de Uitvoeringswet AVG)</description>
+    </element>
+    <element name="gdpr:CI_SpecialDataCode">
+      <label>Bijzondere gegevens code</label>
+      <description>U dient aan te geven of er gegevenssoorten worden verwerkt die vallen onder de definitie van “bijzondere categorieen van persoonsgegevens” (zie hiervoor de artikelen 9 en 10 AVG en de paragraaf 3.1 van de Uitvoeringswet AVG)</description>
     </element>
     <element name="gdpr:involves">
         <label>Betrokkenen</label>
@@ -3472,10 +3484,12 @@
     </element>
     <element name="gdpr:responsibilityDivision">
       <label>Verdeling verantwoordelijkheden</label>
+      <btnLabel>Add responsible division</btnLabel>
       <description>Bij meer dan 1 verwerkingsverantwoordelijke moet er een onderlinge regeling tussen de verantwoordelijken zijn, waarin zij hun respectieve verantwoordelijkheden hebben vastgesteld voor het nakomen van de verplichtingen van de AVG. </description>
     </element>
     <element name="gdpr:hasAutomaticDecisionMaking">
       <label>Geautomatiseerde besluitvorming</label>
+      <btnLabel>Add automated decision-making</btnLabel>
       <description>Is er sprake van geautomatiseerde besluitvorming?</description>
     </element>
     <element name="gdpr:logic">

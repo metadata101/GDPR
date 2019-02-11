@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified" targetNamespace="http://gdpr"
+	elementFormDefault="qualified" targetNamespace="http://metadata101.org/gdpr"
 	xmlns:gdpr="http://metadata101.org/gdpr" 
   xmlns:gmd="http://www.isotc211.org/2005/gmd"
 	xmlns:gml="http://www.opengis.net/gml" 
