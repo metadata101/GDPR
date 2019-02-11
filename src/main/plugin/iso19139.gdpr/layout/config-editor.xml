@@ -3188,56 +3188,6 @@
         <text ref="txt_intro"/>
 
         <section name="gdpr">
-          <!-- isgdprplichtig -->
-          <!--Meldingsplichting-->
-          <field name="Meldingsplichtig" del="../../../.."
-                 xpath="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:pass[../gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString='Verordening (EU) 2016/679 van het Europees Parlement en de Raad van 27 april 2016 betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens en betreffende het vrije verkeer van die gegevens en tot intrekking van Richtlijn 95/46/EG']"/>
-
-          <!-- todo add if !already exists-->
-          <action type="add"
-                if="count(gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality/gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult/gmd:pass[../gmd:specification/gmd:CI_Citation/gmd:title/gco:CharacterString='Verordening (EU) 2016/679 van het Europees Parlement en de Raad van 27 april 2016 betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens en betreffende het vrije verkeer van die gegevens en tot intrekking van Richtlijn 95/46/EG'])=0"
-                btnLabel="addMeldingsplichtig"
-                  name="Meldingsplichtig"
-                  or="report"
-                  in="/gmd:MD_Metadata/gmd:dataQualityInfo/gmd:DQ_DataQuality">
-            <template>
-              <snippet>
-                <gmd:report>
-                  <gmd:DQ_DomainConsistency>
-                    <gmd:result>
-                      <gmd:DQ_ConformanceResult>
-                        <gmd:specification>
-                          <gmd:CI_Citation>
-                            <gmd:title>
-                              <gco:CharacterString>Verordening (EU) 2016/679 van het Europees Parlement en de Raad van 27 april 2016 betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens en betreffende het vrije verkeer van die gegevens en tot intrekking van Richtlijn 95/46/EG</gco:CharacterString>
-                            </gmd:title>
-                            <gmd:date>
-                              <gmd:CI_Date>
-                                <gmd:date>
-                                  <gco:Date>2016-04-27</gco:Date>
-                                </gmd:date>
-                                <gmd:dateType>
-                                  <gmd:CI_DateTypeCode
-                                    codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
-                                    codeListValue="publication"/>
-                                </gmd:dateType>
-                              </gmd:CI_Date>
-                            </gmd:date>
-                          </gmd:CI_Citation>
-                        </gmd:specification>
-                        <gmd:explanation>
-                          <gco:CharacterString></gco:CharacterString>
-                        </gmd:explanation>
-                        <gmd:pass>
-                          <gco:Boolean>true</gco:Boolean>
-                        </gmd:pass>
-                      </gmd:DQ_ConformanceResult>
-                    </gmd:result>
-                  </gmd:DQ_DomainConsistency>
-                </gmd:report>
-              </snippet>
-            </template>
-          </action>
 
           <!-- ds-registratienummer -->
           <field xpath="/gmd:MD_Metadata/gmd:fileIdentifier" />
