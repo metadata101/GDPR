@@ -3250,8 +3250,8 @@
                  or="title"
                  xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/gmd:title"/>
 
-          <!--Naamverwerking-->
-          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/gmd:abstract"/>
+          <!--Samenvatting-->
+          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:abstract" />
 
           <!--
           (dienst)

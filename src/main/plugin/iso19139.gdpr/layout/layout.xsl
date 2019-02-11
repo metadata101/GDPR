@@ -63,7 +63,6 @@
                         $isFlatMode]"
                 priority="2000">
 
-    <xsl:message>TABLE FORMAT: <xsl:value-of select="name()" /></xsl:message>
     <xsl:call-template name="iso19139-table"/>
   </xsl:template>
 
@@ -85,8 +84,6 @@
 
     <xsl:variable name="xpath" select="gn-fn-metadata:getXPath(.)"/>
     <xsl:variable name="isoType" select="if (../@gco:isoType) then ../@gco:isoType else ''"/>
-
-    <xsl:message>BOXED element iso19139.gdpr: <xsl:value-of select="name()" /></xsl:message>
 
     <xsl:variable name="attributes">
       <!-- Create form for all existing attribute (not in gn namespace)
