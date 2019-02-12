@@ -92,12 +92,8 @@
             </gmd:CI_Citation>
          </gmd:citation>
          <gmd:abstract>
-            <gco:CharacterString>Use this template to describe a static map (eg. PDF or image)
-          or an interactive map (eg. WMC).</gco:CharacterString>
+            <gco:CharacterString></gco:CharacterString>
          </gmd:abstract>
-         <gmd:credit>
-            <gco:CharacterString>-- Map credit --</gco:CharacterString>
-         </gmd:credit>
          <gmd:pointOfContact>
             <gmd:CI_ResponsibleParty>
                <gmd:organisationName gco:nilReason="missing">
