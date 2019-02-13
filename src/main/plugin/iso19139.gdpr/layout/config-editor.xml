@@ -527,7 +527,7 @@
       ttl_intro
       txt_intro-->
 
-      <tab id="intro" default="true" default="true">
+      <tab id="intro" default="true">
 
         <text ref="ttl_intro"/>
         <text ref="txt_intro"/>
