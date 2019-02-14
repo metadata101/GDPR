@@ -426,7 +426,9 @@
   <!-- View configuration -->
   <views>
    
-    <view name="default">
+    <view name="default" 
+      hideTimeInCalendar="true" upAndDownControlHidden="true" 
+      displayTooltips="true" displayTooltipsMode="icon">
       <sidePanel>
         <directive data-gn-onlinesrc-list=""/>
         <directive gn-geo-publisher=""
@@ -505,7 +507,9 @@
     </view>
     
 
-    <view name="gdpr-vw" displayTooltips="true" displayTooltipsMode="icon">
+    <view name="gdpr-vw" 
+      hideTimeInCalendar="true" upAndDownControlHidden="true" 
+      displayTooltips="true" displayTooltipsMode="icon">
 
       <thesaurusList>
         <thesaurus key="local.theme.automatic-decision" maxtags="1" widgetMode="checkboxes"/>

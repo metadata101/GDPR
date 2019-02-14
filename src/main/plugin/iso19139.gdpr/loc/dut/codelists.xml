@@ -259,6 +259,12 @@
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
+      <code>subprocessor</code>
+      <label>subverwerker</label>
+      <description>Partij die de data als onderaannemer heeft verwerkt, zodanig dat de data is gewijzigd.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
       <code>publisher</code>
       <label>uitgever</label>
       <description>Partij die de data publiceert.</description>
@@ -655,40 +661,37 @@
   </codelist>
   <!-- ==================================================== -->
   <codelist name="gmd:MD_ClassificationCode">
-    <entry>
-      <code>unclassified</code>
-      <label>vrij toegankelijk</label>
-      <description>Beschikbaar voor algemene ontsluiting.</description>
-    </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry>
-      <code>restricted</code>
-      <label>niet toegankelijk</label>
-      <description>Niet geschikt voor algemene ontsluiting.</description>
-    </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry>
-      <code>confidential</code>
-      <label>vertrouwelijk</label>
-      <description>Beschikbaar voor personen die vertrouwd kan omgaan met de informatie.
-      </description>
-    </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry>
-      <code>secret</code>
-      <label>geheim</label>
-      <description>Dient geheim en verborgen te worden gehouden voor iedereen behalve een
-        geselecteerde groep personen.
-      </description>
-    </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry>
-      <code>topSecret</code>
-      <label>zeer geheim</label>
-      <description>Hoogste geheimhouding verplicht.</description>
-    </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-  </codelist>
+		<entry>
+			<code>unclassified</code>
+			<label>01. openbaar</label>
+			<description>Alle informatie die algemeen toegankelijk is binnen en buiten de organisatie. Openbare gegevens mogen geen persoonsgegevens, medische gegevens, of bedrijfs- of procesgegevens of informatie van derden bevatten waaraan nog geen officiële openbaarheid is verleend.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>restricted</code>
+			<label>02. intern/besloten</label>
+			<description>Informatie die toegankelijk mag zijn voor alle medewerkers of - op basis van noodzakelijkheid - die van samenwerkingspartners of leveranciers. Dit is ter beoordeling van de eigenaar van de betreffende informatie of verantwoordelijk manager.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>confidential</code>
+			<label>03. Vertrouwelijk</label>
+			<description>Indien kennisname door niet-geautoriseerden schade kan toebrengen aan de belangen van de organisatie en/of burgers.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>secret</code>
+			<label>04. departementaal vertrouwelijk</label>
+			<description>Indien kennisname door niet geautoriseerden schade kan toebrengen aan de belangen van één of meerdere ministeries.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+		<entry>
+			<code>topSecret</code>
+			<label>05. staatsgeheim (confidentieel)</label>
+			<description>Indien kennisname door niet geautoriseerden (ernstige) schade kan toebrengen aan een van de vitale belangen van de Staat of zijn bondgenoten.</description>
+		</entry>
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+	</codelist>
   <!-- ==================================================== -->
   <codelist name="gmd:MD_CoverageContentTypeCode">
     <entry>

@@ -284,6 +284,12 @@
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
+      <code>subprocessor</code>
+      <label>subverwerker</label>
+      <description>Partij die de data als onderaannemer heeft verwerkt, zodanig dat de data is gewijzigd.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
       <code>publisher</code>
       <label>Publisher</label>
       <description>Party who published the resource</description>
