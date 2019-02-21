@@ -29,5 +29,5 @@
   <xs:include schemaLocation="schema/gmd/metadataApplication.xsd"/>
   <xs:import namespace="http://www.isotc211.org/2005/srv" schemaLocation="schema/srv/srv.xsd"/>
   <xs:import namespace="http://www.isotc211.org/2005/gmx" schemaLocation="schema/gmx/gmx.xsd"/>
-  <xs:import namespace="http://metadata101.org/gdpr" schemaLocation="schema/gdpr/gdpr.xsd"/>
+  <xs:import namespace="https://metadata101.github.io/GDPR" schemaLocation="schema/gdpr/gdpr.xsd"/>
 </xs:schema>

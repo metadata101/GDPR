@@ -79,7 +79,7 @@
           uri="schema/xlink/xlinks.xsd"/>
 
   <!-- GDPR -->
-  <system systemId="http://metadata101.org/gdpr/gdpr.xsd"
+  <system systemId="https://metadata101.github.io/GDPR/gdpr.xsd"
           uri="schema/gdpr/gdpr.xsd"/>
 
 </catalog>
