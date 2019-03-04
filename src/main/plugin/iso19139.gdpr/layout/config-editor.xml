@@ -507,7 +507,7 @@
     </view>
     
 
-    <view name="gdpr-vw" 
+    <view name="advanced"
       hideTimeInCalendar="true" upAndDownControlHidden="true" 
       displayTooltips="true" displayTooltipsMode="icon">
 
@@ -955,7 +955,7 @@
     </view> <!-- name="gdpr-vw" -->
 
 
-    <view name="advanced">
+    <view name="complete">
       <sidePanel>
         <directive data-gn-onlinesrc-list=""/>
         <directive gn-geo-publisher=""

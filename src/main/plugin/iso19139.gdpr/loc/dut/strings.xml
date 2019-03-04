@@ -34,12 +34,12 @@
 
   <!-- New strings added for the AngularJS editor -->
   <!-- View and tabs -->
-  <advanced>Volledig</advanced>
+  <complete>Volledig</complete>
   <default>Standaard</default>
   <simple>Eenvoudig</simple>
   <inspire>INSPIRE</inspire>
   <inspire_sds>SDS</inspire_sds>
-  <gdpr-vw>GDPR</gdpr-vw>
+  <advanced>GDPR</advanced>
 
   <!-- GDPR view tabs -->
   <intro>Introductie</intro>
