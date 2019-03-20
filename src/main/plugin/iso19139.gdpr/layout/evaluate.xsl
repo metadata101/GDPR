@@ -34,7 +34,7 @@
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:gml="http://www.opengis.net/gml"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:gdpr="http://metadata101.org/gdpr"
+                xmlns:gdpr="https://metadata101.github.io/GDPR"
                 xmlns:gn="http://www.fao.org/geonetwork"
                 xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
                 xmlns:gn-fn-iso19139="http://geonetwork-opensource.org/xsl/functions/profiles/iso19139"

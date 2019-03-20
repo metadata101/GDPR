@@ -29,7 +29,7 @@
                 xmlns:srv="http://www.isotc211.org/2005/srv"
                 xmlns:gml="http://www.opengis.net/gml"
                 xmlns:gn="http://www.fao.org/geonetwork"
-                xmlns:gdpr="http://metadata101.org/gdpr"
+                xmlns:gdpr="https://metadata101.github.io/GDPR"
                 xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
                 xmlns:gn-fn-iso19139="http://geonetwork-opensource.org/xsl/functions/profiles/iso19139"
                 version="2.0"
@@ -43,7 +43,7 @@
     <xsl:param name="schema" select="$schema" required="no"/>
     <xsl:param name="labels" select="$labels" required="no"/>
     <xsl:param name="refToDelete" required="no"/>
-
+    
     <xsl:apply-templates mode="mode-iso19139.gdpr" select="*">
       <xsl:with-param name="schema" select="$schema"/>
       <xsl:with-param name="labels" select="$labels"/>

@@ -25,7 +25,7 @@
 
 <codelists 
   xmlns:gmd="http://www.isotc211.org/2005/gmd"
-  xmlns:gdpr="http://metadata101.org/gdpr">
+  xmlns:gdpr="https://metadata101.github.io/GDPR">
   <!-- ==================================================== -->
   <codelist name="gmd:CI_DateTypeCode">
     <entry>
