@@ -28,6 +28,7 @@
                 xmlns:gmx="http://www.isotc211.org/2005/gmx"
                 xmlns:gml="http://www.opengis.net/gml"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns:tr="java:org.fao.geonet.api.records.formatters.SchemaLocalizations"
                 xmlns:gn-fn-render="http://geonetwork-opensource.org/xsl/functions/render"
                 xmlns:gn-fn-metadata="http://geonetwork-opensource.org/xsl/functions/metadata"
@@ -268,6 +269,24 @@
     </dl>
   </xsl:template>
 
+  <xsl:template mode="render-field"
+                match="*[gmx:Anchor]"
+                priority="50">
+    <xsl:param name="fieldName" select="''" as="xs:string"/>
+
+    <dl>
+      <dt>
+        <xsl:value-of select="if ($fieldName)
+                                then $fieldName
+                                else tr:node-label(tr:create($schema), name(), null)"/>
+      </dt>
+      <dd>
+        <xsl:apply-templates mode="render-value" select="."/>
+        <xsl:apply-templates mode="render-value" select="@*"/>
+      </dd>
+    </dl>
+  </xsl:template>
+
   <!-- Some elements are only containers so bypass them -->
   <xsl:template mode="render-field"
                 match="*[
@@ -279,7 +298,6 @@
     <xsl:apply-templates mode="render-value" select="@*"/>
     <xsl:apply-templates mode="render-field" select="*"/>
   </xsl:template>
-
 
   <!-- Some major sections are boxed -->
   <xsl:template mode="render-field"
@@ -763,6 +781,20 @@
      <xsl:call-template name="addLineBreaksAndHyperlinks">
        <xsl:with-param name="txt" select="$txt"/>
      </xsl:call-template>
+  </xsl:template>
+
+  <xsl:template mode="render-value"
+                match="*[gmx:Anchor]">
+
+    <xsl:variable name="txt">
+      <xsl:apply-templates mode="localised" select=".">
+        <xsl:with-param name="langId" select="$langId"/>
+      </xsl:apply-templates>
+    </xsl:variable>
+
+    <a href="{gmx:Anchor/@xlink:href}">
+      <xsl:value-of select="$txt"/>
+    </a>
   </xsl:template>
 
   <xsl:template mode="render-value"
