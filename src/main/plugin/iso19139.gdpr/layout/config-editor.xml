@@ -48,7 +48,7 @@
     <for name="gmd:orderingInstructions" use="textarea"/>
     <for name="gmd:otherConstraints" use="textarea"/>
     <for name="gmd:statement" use="textarea"/>
-    <for name="gmd:supplementalInformation" use="textarea"/>
+    <!--<for name="gmd:supplementalInformation" use="textarea"/>-->
     <for name="gmd:specificUsage" use="textarea"/>
     <for name="gmd:userNote" use="textarea"/>
     <for name="gmd:useLimitation" use="textarea"/>
@@ -76,6 +76,15 @@
     <for name="gmd:country" use="data-gn-country-picker"/>
 
     <for name="gmd:referenceSystemInfo" addDirective="data-gn-crs-selector"/>
+
+    <!-- Example of data-gn-field-upload-div directive:
+       data-allow-modify-xlink="true": allows to modify the xlink href (defaults to false)
+
+    -->
+     <for name="gdpr:piaUrl" use="data-gn-field-upload-div">
+       <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+     </for>
+
 
 
     <!--
