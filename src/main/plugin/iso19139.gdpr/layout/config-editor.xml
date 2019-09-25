@@ -425,9 +425,9 @@
 
   <!-- View configuration -->
   <views>
-   
-    <view name="default" 
-      hideTimeInCalendar="true" upAndDownControlHidden="true" 
+
+    <view name="default"
+      hideTimeInCalendar="true" upAndDownControlHidden="true"
       displayTooltips="true" displayTooltipsMode="icon">
       <sidePanel>
         <directive data-gn-onlinesrc-list=""/>
@@ -440,7 +440,7 @@
         <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
       </sidePanel>
 
-      <tab id="default" mode="flat">
+      <tab id="default" default="true" mode="flat">
         <section xpath="/gmd:MD_Metadata/gmd:identificationInfo"/>
         <section xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo"/>
         <section xpath="/gmd:MD_Metadata/gmd:spatialRepresentationInfo"/>
@@ -505,10 +505,10 @@
       </thesaurusList>
 
     </view>
-    
+
 
     <view name="advanced"
-      hideTimeInCalendar="true" upAndDownControlHidden="true" 
+      hideTimeInCalendar="true" upAndDownControlHidden="true"
       displayTooltips="true" displayTooltipsMode="icon">
 
       <thesaurusList>
