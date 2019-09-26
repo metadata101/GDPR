@@ -49,6 +49,8 @@
   <processors>Processors</processors>
   <processor>Processor</processor>
   <addProcessor>Add processor</addProcessor>
+  <subprocessor>Subprocessor</subprocessor>
+  <addSubProcessor>Add subprocessor</addSubProcessor>
   <purpose>Purpose</purpose>
   <involves>Involves</involves>
   <decision>Decision</decision>

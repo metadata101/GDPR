@@ -47,9 +47,11 @@
   <processors>Verwerkers</processors>
   <processor>Verwerker</processor>
   <addProcessor>Verwerker toevoegen</addProcessor>
+  <subprocessor>Subverwerker</subprocessor>
+  <addSubProcessor>Subverwerker toevoegen</addSubProcessor>
   <purpose>Doel</purpose>
   <involves>Betrokkenen</involves>
-  <decision>Desluitvorming</decision>
+  <decision>Besluitvorming</decision>
   <provision>Verstrekking</provision>
   <system>Systeem</system>
   <security>Beveiliging</security>

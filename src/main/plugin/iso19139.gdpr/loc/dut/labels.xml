@@ -3376,7 +3376,7 @@
     </element>
     <element name="gdpr:responsibilityDivision">
       <label>Verdeling verantwoordelijkheden</label>
-      <btnLabel>Voeg divisie verantwoordelijkheid toe</btnLabel>
+      <btnLabel>Voeg verdeling verantwoordelijkheid toe</btnLabel>
       <description>Bij meer dan 1 verwerkingsverantwoordelijke moet er een onderlinge regeling tussen de verantwoordelijken zijn, waarin zij hun respectieve verantwoordelijkheden hebben vastgesteld voor het nakomen van de verplichtingen van de AVG. </description>
     </element>
     <element name="gdpr:hasAutomaticDecisionMaking">
