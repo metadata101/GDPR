@@ -49,7 +49,7 @@
   <addProcessor>Verwerker toevoegen</addProcessor>
   <purpose>Doel</purpose>
   <involves>Betrokkenen</involves>
-  <decision>Desluitvorming</decision>
+  <decision>Besluitvorming</decision>
   <provision>Verstrekking</provision>
   <system>Systeem</system>
   <security>Beveiliging</security>
