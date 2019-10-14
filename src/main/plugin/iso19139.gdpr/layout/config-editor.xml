@@ -60,6 +60,104 @@
     <for name="gco:Real" use="number"/>
     <for name="gco:Boolean" use="checkbox"/>
 
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:hasSecurity"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:hasSecurity"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+             xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:transmitPrivateNetwork"
+             use="data-gn-checkbox-with-nilreason">
+          <directiveAttributes
+            data-tag-name="gdpr:transmitPrivateNetwork"
+            data-nilreason="eval#@gco:nilReason"
+            data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:transmitPublicNetwork"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:transmitPublicNetwork"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:encryptedTransmit"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:encryptedTransmit"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:encryptedStorage"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:encryptedStorage"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:pseudonimization"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:pseudonimization"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:inControl"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:inControl"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:requiresPIA"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:requiresPIA"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:outsideEU"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:outsideEU"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:appropriateProtectionLevel"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:appropriateProtectionLevel"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:hasAutomaticDecisionMaking"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:hasAutomaticDecisionMaking"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+    </for>
 
     <for name="gco:Date" use="data-gn-date-picker"/>
     <for name="gco:DateTime" use="data-gn-date-picker"/>
@@ -814,7 +912,7 @@
               </snippet>
             </template>
           </action>
-   
+
          <field name="subprocessor"
                  xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[contains(gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue,'subprocessor')]"
                  templateModeOnly="true" notDisplayedIfMissing="true"
@@ -894,7 +992,7 @@
             </template>
           </action>
         </section> <!-- name="subprocessors" -->
-      
+
       </tab> <!-- id="processors" -->
 
 
