@@ -38,8 +38,8 @@
   <xsl:import href="../../iso19139/layout/utility-fn.xsl"/>
   <xsl:import href="utility-tpl.xsl"/>
 
-  <xsl:template mode="csv" match="gmd:MD_Metadata|*[@gco:isoType='gmd:MD_Metadata']"
-                priority="2">
+  <xsl:template mode="csv" match="gmd:MD_Metadata[count(gmd:contentInfo/gdpr:MD_ContentInfo) > 0]|*[@gco:isoType='gmd:MD_Metadata' and count(gmd:contentInfo/gdpr:MD_ContentInfo) > 0]"
+                priority="3">
     <xsl:variable name="langId" select="gn-fn-iso19139:getLangId(., $lang)"/>
     <xsl:variable name="info" select="gn:info"/>
 
