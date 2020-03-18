@@ -185,7 +185,7 @@
       <for name="gdpr:responsibilityDivision" use="data-gn-field-upload-div">
        <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
      </for>
-     <for name="gdpr:processorAgreement" use="data-gn-field-upload-div">
+     <for name="gmd:contactInstructions" use="data-gn-field-upload-div">
        <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
      </for>
 
@@ -454,6 +454,7 @@
         <col label="gmd:organisationName"/>
         <col label="gmd:individualName"/>
         <col label="gmd:electronicMailAddress"/>
+        <col label="gmd:contactInformation"/> 
         <col label="gmd:role"/>
         <col/>
       </header>
@@ -461,6 +462,7 @@
         <col xpath="gmd:organisationName"/>
         <col xpath="gmd:individualName"/>
         <col xpath="gmd:contactInfo/*/gmd:address/*/gmd:electronicMailAddress"/>
+        <col xpath="gmd:contactInfo/*/gmd:contactInformation"/>
         <col xpath="gmd:role"/>
         <col del=".."/>
       </row>
@@ -849,6 +851,9 @@
                      use="email" required="true"/>
                 <key label="positionName" required="false" tooltip="gmd:positionName"
                      xpath="gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" />
+                <key label="contactInformation" required="false" tooltip="gmd:contactInformation"
+                     xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
+                    gmd:CI_Contact/gmd:contactInformation/gmx:Anchor" />
               </values>
               <snippet>
                 <gmd:pointOfContact>
@@ -878,6 +883,7 @@
                         <gn:copy select="gmd:onlineResource"/>
                         <gn:copy select="gmd:hoursOfService"/>
                         <gn:copy select="gmd:contactInstructions"/>
+                        <gmd:contactInstructions><gmx:Anchor xlink:href="">{{contactInformation}}</gmx:Anchor></gmd:contactInstructions>
                       </gmd:CI_Contact>
                     </gmd:contactInfo>
                     <gn:copy select="gmd:role"/>

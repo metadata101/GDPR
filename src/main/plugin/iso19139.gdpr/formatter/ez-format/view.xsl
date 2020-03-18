@@ -134,14 +134,21 @@
       </Doorgifte>
 
       <Verwerkers>
-        <xsl:for-each select="gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:provision/gdpr:MD_Provision">
+        <xsl:for-each select="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue='processor']">
+          
         <Verwerker>
-          <!-- TODO: Define names -->
-          <ReceiverType><xsl:value-of select="gdpr:receiverType/gdpr:CI_ReceiverTypeCode/@codeListValue" /></ReceiverType>
-          <Description><xsl:value-of select="gdpr:description/gco:CharacterString" /></Description>
-          <ProcessorAgreement><xsl:value-of select="gdpr:processorAgreement/gco:CharacterString" /></ProcessorAgreement>
+            <Naam><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString" /></Naam>
+            <Adres><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:deliveryPoint/gco:CharacterString" /></Adres>
+            <Nr>1</Nr> <!-- TODO: This information is not available in the iso19139 address element -->
+            <PostCode1><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:postalCode/gco:CharacterString" /></PostCode1>
+            <Plaats1><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:city/gco:CharacterString" /></Plaats1>
+            <Land1><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:country/gco:CharacterString" /></Land1>
+            <Telefoonnr><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:phone/*/gmd:voice/gco:CharacterString" /></Telefoonnr>
+            <Faxnr><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:phone/*/gmd:facsimile/gco:CharacterString" /></Faxnr>
+            <Emailadres><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:address/*/gmd:electronicMailAddress/gco:CharacterString" /></Emailadres>
+            <Verwerkersovereenkomst><xsl:value-of select="gmd:CI_ResponsibleParty/gmd:contactInfo/*/gmd:contactInstructions/gmx:Anchor" /></Verwerkersovereenkomst>
+          </xsl:for-each>
         </Verwerker>
-        </xsl:for-each>
       </Verwerkers>
     </Verwerking>
 
