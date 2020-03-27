@@ -1963,6 +1963,12 @@
     <description>Naam van de verantwoordelijke organisatie</description>
     <condition>conditional</condition>
   </element>
+  <element name="gmd:contactInformation">
+    <label>Verwerkers overeenkomst</label>
+    <description>
+      Upload of verwijs naar de laatste versie van de verwerkersovereenkomst
+    </description>
+  </element>
   <!-- ==================================================== -->
   <element name="gmd:orientationParameterAvailability">
     <label>Beschikbaarheid orientatie parameters</label>

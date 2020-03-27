@@ -144,7 +144,7 @@
     <p><br/>U kunt aan de verwerking ook nog opmerkingen toevoegen. De opmerkingen die u toevoegt hebben betrekking op de desbetreffende verwerking en zijn voor intern gebruik, d.w.z. zij worden niet gepubliceerd. Het kan bijvoorbeeld gaan om geheugensteuntjes, mededelingen en mutatiedata, maar ook om verwijzingen naar andere verwerkingen, of verwijzingen naar documenten zoals een PIA, een verwerkersovereenkomst, een vastgestelde regeling bij meerdere verwerkingsverantwoordelijken, beheermaatregelen op grond van een GEB/PIA, datalekken met het informatiesysteem e.d.<br/></p>
   </txt_slot>
 
-
+  <responsibilityDivision>Responsibility</responsibilityDivision>
 
   <keywordFrom>Keywords - </keywordFrom>
   <resource>Resource</resource>
@@ -333,4 +333,5 @@
 
   <sds-section-custodian>Responsible custodian</sds-section-custodian>
   <sds-addOperation>Add Operation</sds-addOperation>
+
 </strings>

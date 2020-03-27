@@ -226,39 +226,5 @@
   </xsl:template>
 
 
-  <!-- Template to display non existing element ie. geonet:child element
- of the metadocument. Display in editing mode only and if
- the editor mode is not flat mode. -->
-  <xsl:template mode="mode-iso19139.gdpr" match="gn:child" priority="2000">
-    <xsl:param name="schema" select="$schema" required="no"/>
-    <xsl:param name="labels" select="$labels" required="no"/>
-
-
-    <xsl:variable name="name" select="concat(@prefix, ':', @name)"/>
-    <xsl:variable name="flatModeException"
-                  select="gn-fn-metadata:isFieldFlatModeException($viewConfig, $name)"/>
-
-
-    <!-- TODO: this should be common to all schemas -->
-    <xsl:if test="$isEditing and
-      (not($isFlatMode) or $flatModeException)">
-
-      <xsl:variable name="directive"
-                    select="gn-fn-metadata:getFieldAddDirective($editorConfig, $name)"/>
-      <xsl:variable name="label"
-                    select="gn-fn-metadata:getLabel($schema, $name, $labels, name(..), '', '')"/>
-
-      <xsl:call-template name="render-element-to-add">
-        <!-- TODO: add xpath and isoType to get label ? -->
-        <xsl:with-param name="label" select="$label/label"/>
-        <xsl:with-param name="btnLabel" select="if ($label/btnLabel) then $label/btnLabel else ''"/>
-        <xsl:with-param name="btnClass" select="if ($label/btnClass) then $label/btnClass else ''"/>
-        <xsl:with-param name="directive" select="$directive"/>
-        <xsl:with-param name="childEditInfo" select="."/>
-        <xsl:with-param name="parentEditInfo" select="../gn:element"/>
-        <xsl:with-param name="isFirst" select="count(preceding-sibling::*[name() = $name]) = 0"/>
-      </xsl:call-template>
-    </xsl:if>
-  </xsl:template>
 
 </xsl:stylesheet>
