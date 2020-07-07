@@ -28,7 +28,7 @@
   <name>iso19139.gdpr</name>
   <id>4a761165-611a-4c0a-a468-5f79325f47b2</id>
   <version>1.0</version>
-  <appMinorVersionSupported>3.6.0</appMinorVersionSupported>
+  <appMinorVersionSupported>3.10.0</appMinorVersionSupported>
   <title>GDPR extension to ISO 19139</title>
   <description>Extension of ISO 19139 to capture GDPR Registry properties</description>
   <standardUrl>http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=53798</standardUrl>
