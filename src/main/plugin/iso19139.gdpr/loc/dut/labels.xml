@@ -2731,6 +2731,11 @@
     <description>Als in 2007-09-12 (YYYY-MM-DD)</description>
   </element>
 
+  <element name="gco:Boolean">
+    <label>Ja/Nee</label>
+    <description>Als in 2007-09-12 (YYYY-MM-DD)</description>
+  </element>
+
   <!-- ==================================================== -->
 
   <element name="gco:DateTime">
@@ -3305,6 +3310,10 @@
         <label>Rechtsgrond</label>
         <description>Verwerking van gegevens is ten aanzien van de betrokkene alleen dan rechtmatig, indien er een rechtsgrond bestaat.</description>
     </element>
+    <element name="gdpr:explanation">
+        <label>Uitleg</label>
+        <description>Uitleg bij de rechtsgrond tot verwerking</description>
+    </element>
     <element name="gdpr:name" context="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:involves/gdpr:MD_Involved/gdpr:name">
         <label>Omschrijving betrokkene</label>
         <description>Omschrijving van het type betrokkene, waarvan gegevens vastgelegd worden</description>
@@ -3417,6 +3426,10 @@
   <label>Maatregelen</label>
   <description>Welke maatregelen heeft u genomen om de persoonsgegevens te beschermen?</description>
   </element>
+  <element name="gdpr:inControl">
+  <label>Gecontroleerd</label>
+  <description>Worden maatregelen gecontroleerd?</description>
+  </element>
   <element name="gdpr:accessParty">
   <label>Wie heeft toegang tot de persoonsgegevens?</label>
   <description>Meerdere antwoorden mogelijk</description>
@@ -3495,7 +3508,7 @@
     <element name="gdpr:provision">
       <label>Verstrekking</label>
       <btnLabel>Ontvanger toevoegen</btnLabel>
-      <description>Wie kunnen ontvangers zijn? De ontvanger kan zowel een persoon binnen de organisatie van de verantwoordelijke zijn als een persoon buiten de organisatie van de verantwoordelijke (verwerker of derde). Is er sprake van een hiërarchische relatie tot de verwerkingsverantwoordelijke dan vindt de gegevensverwerking plaats binnen de organisatie van de verwerkingsverantwoordelijke en onder diens rechtstreeks gezag. Let op dat dit niet altijd personen zijn die rechtstreeks toegang hebben tot de persoonsgegevens in verwerking. Valt de persoon niet onder rechtstreeks gezag van de verantwoordelijke maar is er wel sprake van een (contractuele) relatie met de verwerkingsverantwoordelijke met betrekking tot de te verwerken persoonsgegevens, dan kan die persoon worden aangemerkt als verwerker. Valt de persoon niet onder rechtstreeks gezag van de verantwoordelijke en is er evenmin sprake van een ‘verwerkersrelatie’, dan is de persoon als derde aan te merken (zie artikel 4, onder 10, AVG). In tegenstelling tot de verwerker zal de ‘derde’ de gegevens veelal voor eigen behoefte verwerken. De beschrijving die u geeft van de ontvangers moet een zo nauwkeurig mogelijk beeld geven van de categorieën van ontvangers. Dit betekent dat de verstrekkingen zo mogelijk individueel dienen te worden vermeld. Gaat het echter om groepen van ontvangers, dan moeten deze worden beschreven. De ontvangers mogen in categorieën worden gegroepeerd, voor zover dat nog een goed beeld weergeeft van de verwerking</description>
+      <description>Wie kunnen ontvangers zijn? De ontvanger kan zowel een persoon binnen de organisatie van de verantwoordelijke zijn als een persoon buiten de organisatie van de verantwoordelijke (verwerker of derde). Is er sprake van een hiërarchische relatie tot de verwerkingsverantwoordelijke dan vindt de gegevensverwerking plaats binnen de organisatie van de verwerkingsverantwoordelijke en onder diens rechtstreeks gezag. Let op dat dit niet altijd personen zijn die rechtstreeks toegang hebben tot de persoonsgegevens in verwerking.Valt de persoon niet onder rechtstreeks gezag van de verantwoordelijke maar is er wel sprake van een (contractuele) relatie met de verwerkingsverantwoordelijke met betrekking tot de te verwerken persoonsgegevens, dan kan die persoon worden aangemerkt als verwerker. Valt de persoon niet onder rechtstreeks gezag van de verantwoordelijke en is er evenmin sprake van een ‘verwerkersrelatie’, dan is de persoon als derde aan te merken (zie artikel 4, onder 10, AVG).In tegenstelling tot de verwerker zal de ‘derde’ de gegevens veelal voor eigen behoefte verwerken.De beschrijving die u geeft van de ontvangers moet een zo nauwkeurig mogelijk beeld geven van de categorieën van ontvangers. Dit betekent dat de verstrekkingen zo mogelijk individueel dienen te worden vermeld. Gaat het echter om groepen van ontvangers, dan moeten deze worden beschreven. De ontvangers mogen in categorieën worden gegroepeerd, voor zover dat nog een goed beeld weergeeft van de verwerking</description>
     </element>
     <element name="gdpr:transmission">
       <label>Doorgifte</label>
@@ -3512,7 +3525,7 @@ Binnen de EU is het niveau van gegevensbescherming op grond van de AVG gelijk. D
     <element name="gdpr:pia">
       <label>GegevensEffectBeoordeling (GEB)</label>
       <btnLabel>GEB toevoegen</btnLabel>
-      <description>Wanneer moet een gegevensbeschermingseffectbeoordeling worden uitgevoerd? De verwerkingsverantwoordelijke is verplicht een gegevensbeschermingseffectbeoordeling uit te voeren voor verwerkingen die waarschijnlijk een hoog risico inhouden voor de rechten en vrijheden van natuurlijke personen (de betrokkenen). De rijksoverheid is daarnaast verplicht een gegevensbeschermingseffectbeoordeling uit te voeren bij de ontwikkeling van beleid en regelgeving waaruit verwerkingen van persoonsgegevens voortvloeien. Zie hiervoor de Model gegevensbeschermingseffectbeoordeling rijksdienst (PIA).Wanneer is er sprake van een ‘hoog risico’? </description>
+      <description>Wanneer moet een gegevensbeschermingseffectbeoordeling worden uitgevoerd? De verwerkingsverantwoordelijke is verplicht een gegevensbeschermingseffectbeoordeling uit te voeren voor verwerkingen die waarschijnlijk een hoog risico inhouden voor de rechten en vrijheden van natuurlijke personen (de betrokkenen). De rijksoverheid is daarnaast verplicht een gegevensbeschermingseffectbeoordeling uit te voeren bij de ontwikkeling van beleid en regelgeving waaruit verwerkingen van persoonsgegevens voortvloeien. Zie hiervoor de Model gegevensbeschermingseffectbeoordeling rijksdienst (PIA).Wanneer is er sprake van een ‘hoog risico’?</description>
     </element>
     <element name="gdpr:requiresPIA">
       <label>Is GEB noodzakelijk?</label>
