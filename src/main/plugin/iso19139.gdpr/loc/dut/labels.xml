@@ -969,9 +969,9 @@
   </element>
   <!-- ==================================================== -->
   <element name="gmd:environmentDescription">
-    <label>Systeem omschrijving</label>
-    <btnLabel>Voeg systeem omschrijving toe</btnLabel>
-    <description>omschrijving van de omgeving waarin de dataset wordt
+    <label>Proces omschrijving</label>
+    <btnLabel>Voeg proces omschrijving toe</btnLabel>
+    <description>Omschrijving van de omgeving waarin de dataset wordt
       bewerkt zoals de software, OS, bestandsnamen en de omvang van de
       dataset.
     </description>

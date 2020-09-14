@@ -48,6 +48,13 @@
         gewijzigd.
       </description>
     </entry>
+    <entry>
+      <code>deprecation</code>
+      <label>vernietiging</label>
+      <description>
+        Datum waarop de dataset vernietigd of overgedragen dient te worden, ook wel beslisjaar genoemd.
+      </description>
+    </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
   </codelist>
   <!-- ==================================================== -->
@@ -1400,8 +1407,8 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>obsolete</code>
-      <label>niet relevant</label>
-      <description>Data is niet langer relevant.</description>
+      <label>vernietigd</label>
+      <description>Data is vernietigd.</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
@@ -2410,6 +2417,16 @@
       <code>permanent</code>
       <label>12. B Permanent bewaren</label>
     </entry>    
+  </codelist>
+  <codelist name="gdpr:CI_GroundForStorageCode">
+    <entry>
+      <code></code>
+      <label></label>
+    </entry>
+    <entry>
+      <code></code>
+      <label></label>
+    </entry>
   </codelist>
   <codelist name="gdpr:CI_ProcesTypeCode">
     <entry>

@@ -97,6 +97,7 @@
           <xs:element name="name" type="gco:CharacterString_PropertyType" />
           <xs:element minOccurs="0" name="goal" type="gco:CharacterString_PropertyType" />
           <xs:element minOccurs="0" name="storagePeriod" type="gdpr:CI_StoragePeriod_PropertyType"/>
+          <xs:element minOccurs="0" name="groundForStorage" type="gdpr:CI_GroundForStorage_PropertyType"/>
           <xs:element minOccurs="0" name="source" type="gco:CharacterString_PropertyType" />
           <xs:element minOccurs="0" name="required" type="gco:CharacterString_PropertyType" />
           <xs:element minOccurs="0" maxOccurs="unbounded"  name="specialData" type="gdpr:CI_SpecialData_PropertyType"/>
@@ -273,6 +274,15 @@
   <xs:complexType name="CI_StoragePeriod_PropertyType">
     <xs:sequence minOccurs="0">
       <xs:element ref="gdpr:CI_StoragePeriodCode"/>
+    </xs:sequence>
+    <xs:attribute ref="gco:nilReason"/>
+  </xs:complexType>
+  <!-- ........................................................................ -->
+  <xs:element name="CI_GroundForStorageCode" type="gco:CodeListValue_Type" substitutionGroup="gco:CharacterString"/>
+  <!-- ........................................................................ -->
+  <xs:complexType name="CI_GroundForStorage_PropertyType">
+    <xs:sequence minOccurs="0">
+      <xs:element ref="gdpr:CI_GroundForStorageCode"/>
     </xs:sequence>
     <xs:attribute ref="gco:nilReason"/>
   </xs:complexType>

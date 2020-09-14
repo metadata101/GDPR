@@ -540,88 +540,7 @@
   <!-- View configuration -->
   <views>
 
-    <view name="default"
-      hideTimeInCalendar="true" upAndDownControlHidden="true"
-      displayTooltips="true" displayTooltipsMode="icon">
-      <sidePanel>
-        <directive data-gn-onlinesrc-list=""/>
-        <directive gn-geo-publisher=""
-                   data-ng-if="gnCurrentEdit.geoPublisherConfig"
-                   data-config="{{gnCurrentEdit.geoPublisherConfig}}"
-                   data-lang="lang"/>
-        <directive data-gn-validation-report=""/>
-        <directive data-gn-suggestion-list=""/>
-        <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
-      </sidePanel>
-
-      <tab id="default" default="true" mode="flat">
-        <section xpath="/gmd:MD_Metadata/gmd:identificationInfo"/>
-        <section xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo"/>
-        <section xpath="/gmd:MD_Metadata/gmd:spatialRepresentationInfo"/>
-        <section xpath="/gmd:MD_Metadata/gmd:distributionInfo"/>
-        <section xpath="/gmd:MD_Metadata/gmd:dataQualityInfo"/>
-        <section name="gmd:MD_Metadata">
-          <field xpath="/gmd:MD_Metadata/gmd:fileIdentifier"/>
-          <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:characterSet"/>
-          <field xpath="/gmd:MD_Metadata/gmd:parentIdentifier" or="parentIdentifier"
-                 in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel" or="hierarchyLevel"
-                 in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevelName" or="hierarchyLevelName"
-                 in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:dateStamp"/>
-          <field xpath="/gmd:MD_Metadata/gmd:metadataStandardName"/>
-          <field xpath="/gmd:MD_Metadata/gmd:metadataStandardVersion"/>
-          <field xpath="/gmd:MD_Metadata/gmd:contact" or="contact" in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:dataSetURI" or="dataSetURI" in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:locale" or="locale" in="/gmd:MD_Metadata"/>
-          <field xpath="/gmd:MD_Metadata/gmd:series"/>
-          <field xpath="/gmd:MD_Metadata/gmd:describes"/>
-          <field xpath="/gmd:MD_Metadata/gmd:propertyType"/>
-          <field xpath="/gmd:MD_Metadata/gmd:featureType"/>
-          <field xpath="/gmd:MD_Metadata/gmd:featureAttribute"/>
-        </section>
-      </tab>
-
-      <!-- Elements that should not use the "flat" mode -->
-      <flatModeExceptions>
-        <for name="gmd:descriptiveKeywords"/>
-        <for name="gmd:keyword"/>
-        <for name="gmd:spatialResolution"/>
-        <for name="gmd:pointOfContact"/>
-        <for name="gmd:distributor"/>
-        <for name="gmd:distributionFormat"/>
-        <for name="gmd:contact"/>
-        <for name="gmd:processor"/>
-        <for name="gmd:topicCategory"/>
-        <for name="srv:parameters"/>
-      </flatModeExceptions>
-
-      <!--
-      To configure the type of transformations
-      or the number of keyword allowed for e
-      thesaurus define a specific configuration:
-
-      eg. only 2 INSPIRE themes with Anchor.
-
-      <thesaurusList>
-        <thesaurus key="external.theme.inspire-theme"
-                   maxtags="2"
-                   fieldset="false"
-                   transformations="to-iso19139-keyword-with-anchor"/>
-      </thesaurusList>
-      -->
-
-      <thesaurusList>
-        <thesaurus key="external.none.allThesaurus"
-                   fieldset="false"/>
-      </thesaurusList>
-
-    </view>
-
-
-    <view name="advanced"
+    <view name="simple"
       hideTimeInCalendar="true" upAndDownControlHidden="true"
       displayTooltips="true" displayTooltipsMode="icon">
 
@@ -1152,8 +1071,7 @@
 
     </view> <!-- name="gdpr-vw" -->
 
-
-    <view name="complete">
+    <view name="advanced">
       <sidePanel>
         <directive data-gn-onlinesrc-list=""/>
         <directive gn-geo-publisher=""
