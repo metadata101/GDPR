@@ -47,8 +47,7 @@
  * select : select box with size set to the number of items if lower than 7 entries.
 
 -->
-<codelists 
-  xmlns:gmd="http://www.isotc211.org/2005/gmd"
+<codelists xmlns:gmd="http://www.isotc211.org/2005/gmd"
   xmlns:gdpr="https://metadata101.github.io/GDPR">
   <!-- ==================================================== -->
   <codelist name="gmd:CI_DateTypeCode">
@@ -1649,8 +1648,7 @@
       <description></description>
     </entry>
   </codelist>
-  <codelist name="gmd:MD_ScopeCode"
-            displayIf="/ancestor::node()[name()='gmd:MD_Metadata']/gmd:identificationInfo/srv:SV_ServiceIdentification">
+  <codelist name="gmd:MD_ScopeCode" displayIf="/ancestor::node()[name()='gmd:MD_Metadata']/gmd:identificationInfo/srv:SV_ServiceIdentification">
     <entry>
       <code>service</code>
       <label>Service</label>
@@ -2401,6 +2399,278 @@
       <label>12. B Permanent</label>
     </entry>
   </codelist>
+  <codelist name="gdpr:CI_GroundForStorageCode">
+    <entry>
+      <code>1</code>
+      <label>Preparing, developing, evaluating and advising on policy</label>
+    </entry>
+    <entry>
+      <code>1.1</code>
+      <label>Giving of policy advice / setting up executive organization</label>
+    </entry>
+    <entry>
+      <code>1.2</code>
+      <label>Advising enforcement of laws and regulations</label>
+    </entry>
+    <entry>
+      <code>1.3</code>
+      <label>Drafting long-term (research) programs</label>
+    </entry>
+    <entry>
+      <code>1.4</code>
+      <label>Develop standards, methods, protocols, indicators etc.</label>
+    </entry>
+    <entry>
+      <code>1.5</code>
+      <label>Meeting in which RIVM is chairman and / or secretary</label>
+    </entry>
+    <entry>
+      <code>1.6</code>
+      <label>Answering parliament questions and questions / complaints that (can) lead to policy changes</label>
+    </entry>
+    <entry>
+      <code>1.7</code>
+      <label>Meeting in which RIVM is not a chairman and / or secretary</label>
+    </entry>
+    <entry>
+      <code>2</code>
+      <label>Implementing policy	</label>
+    </entry>
+    <entry>
+      <code>2.1</code>
+      <label>Coordinating nationwide, conducting directives (eg Population surveys, National vaccination program, monitoring networks)</label>
+    </entry>
+    <entry>
+      <code>2.2</code>
+      <label>End products of information campaigns and content of websites</label>
+    </entry>
+    <entry>
+      <code>2.3</code>
+      <label>Other products of information campaigns and content of websites</label>
+    </entry>
+    <entry>
+      <code>3</code>
+      <label>Conducting research</label>
+    </entry>
+    <entry>
+      <code>3.1</code>
+      <label>Initiate research, determine design research design and results</label>
+    </entry>
+    <entry>
+      <code>3.2</code>
+      <label>Testing research plans (with people and test animals)</label>
+    </entry>
+    <entry>
+      <code>3.3</code>
+      <label>Reporting and publishing of (interim) results</label>
+    </entry>
+    <entry>
+      <code>3.4</code>
+      <label>Testing research questions / advising on the execution of research</label>
+    </entry>
+    <entry>
+      <code>4</code>
+      <label>Support implementation of policy and research</label>
+    </entry>
+    <entry>
+      <code>4.1</code>
+      <label>Granting of subsidies</label>
+    </entry>
+    <entry>
+      <code>4.2</code>
+      <label>Granting permits and exemptions</label>
+    </entry>
+    <entry>
+      <code>4.3</code>
+      <label>Setting and awarding prizes (eg Innovation Prize)</label>
+    </entry>
+    <entry>
+      <code>4.4</code>
+      <label>Provide education and information to professionals</label>
+    </entry>
+    <entry>
+      <code>4.5</code>
+      <label>Periodic collection of data</label>
+    </entry>
+    <entry>
+      <code>4.6</code>
+      <label>Periodic collection of data for file formation / treatment contact with patients and customers</label>
+    </entry>
+    <entry>
+      <code>4.7</code>
+      <label>Receiving and managing materials for future research (eg Blood and food samples)</label>
+    </entry>
+    <entry>
+      <code>5</code>
+      <label>Enforcement of policy</label>
+    </entry>
+    <entry>
+      <code>5.1</code>
+      <label>Perform checks / keep supervision</label>
+    </entry>
+    <entry>
+      <code>5.2</code>
+      <label>Complaints and reports about possible abuses</label>
+    </entry>
+    <entry>
+      <code>5.3</code>
+      <label>Construction and management of registers (eg of diseases, hazardous substances)</label>
+    </entry>
+    <entry>
+      <code>6</code>
+      <label>Handling of crises and disasters</label>
+    </entry>
+    <entry>
+      <code>6.1</code>
+      <label>Preparing for crises and disasters</label>
+    </entry>
+    <entry>
+      <code>6.2</code>
+      <label>Preparing and executing crisis communication</label>
+    </entry>
+    <entry>
+      <code>6.3</code>
+      <label>Advice on dealing in case of crises and disasters for decisionmaking</label>
+    </entry>
+    <entry>
+      <code>6.4</code>
+      <label>Perform measurements to determine crisis situations</label>
+    </entry>
+    <entry>
+      <code>6.5</code>
+      <label>Preparing overviews and prognoses</label>
+    </entry>
+    <entry>
+      <code>6.6</code>
+      <label>Conduct research after crises and disasters to determine long-term consequences</label>
+    </entry>
+    <entry>
+      <code>6.7</code>
+      <label>Operational preparation for crises and disasters</label>
+    </entry>
+    <entry>
+      <code>7</code>
+      <label>Focusing, organizing and justifying the organization</label>
+    </entry>
+    <entry>
+      <code>7.1</code>
+      <label>Setting, changing or canceling organizational units, committees, working and steering groups</label>
+    </entry>
+    <entry>
+      <code>7.2</code>
+      <label>Recording and reporting on objectives, tasks and organization (eg Annual accounts, annual plan, annual report)</label>
+    </entry>
+    <entry>
+      <code>7.3</code>
+      <label>Developing policies on quality assurance and international cooperation</label>
+    </entry>
+    <entry>
+      <code>7.4</code>
+      <label>Develop, establish, certify and maintain procedures and regulations with regard to safe working</label>
+    </entry>
+    <entry>
+      <code>7.5</code>
+      <label>Consultation on RIVM / sector / domain level</label>
+    </entry>
+    <entry>
+      <code>7.6</code>
+      <label>Housing (eg Requirements and building history)</label>
+    </entry>
+    <entry>
+      <code>7.7</code>
+      <label>Consultation with / by the Personnel Representatives</label>
+    </entry>
+    <entry>
+      <code>7.8</code>
+      <label>Meeting at the center / project / team / department level</label>
+    </entry>
+    <entry>
+      <code>7.9</code>
+      <label>Save, transfer, destroy and alienate information</label>
+    </entry>
+    <entry>
+      <code>8</code>
+      <label>Supporting the organization</label>
+    </entry>
+    <entry>
+      <code>8.1</code>
+      <label>Execute the budget (eg purchasing, payments etc)</label>
+    </entry>
+    <entry>
+      <code>8.2</code>
+      <label>Providing information, answering public questions, handling complaints</label>
+    </entry>
+    <entry>
+      <code>8.3</code>
+      <label>Monthly, quarterly and progress reports</label>
+    </entry>
+    <entry>
+      <code>8.4</code>
+      <label>Internal information provision (internal news reports, personnel magazines etc)</label>
+    </entry>
+    <entry>
+      <code>8.5</code>
+      <label>Drawing up work plans, internal project plans and annual plans at the center / department level)</label>
+    </entry>
+    <entry>
+      <code>8.6</code>
+      <label>Permits / exemptions / third party permissions</label>
+    </entry>
+    <entry>
+      <code>8.7</code>
+      <label>Evaluating work and research</label>
+    </entry>
+    <entry>
+      <code>8.8</code>
+      <label>Develop, establish, certify, maintain and accredit procedures, rules, regulations and instruments to implement the organization policy</label>
+    </entry>
+    <entry>
+      <code>8.9</code>
+      <label>Check and improve compliance with regulations, regulations and regulations / carry out audits</label>
+    </entry>
+    <entry>
+      <code>8.10</code>
+      <label>Conducting facility services, personnel processes and secretarial support</label>
+    </entry>
+    <entry>
+      <code>8.11</code>
+      <label>Conducting legal proceedings / representing the Secretary in international proceedings</label>
+    </entry>
+    <entry>
+      <code>8.12</code>
+      <label>The conclusion of financial agreements</label>
+    </entry>
+    <entry>
+      <code>8.13</code>
+      <label>Executing PIOFACH management</label>
+    </entry>
+    <entry>
+      <code>9</code>
+      <label>Recording special working conditions</label>
+    </entry>
+    <entry>
+      <code>9.1</code>
+      <label>Reporting / applying for exemption or dispensation / intentions regarding work with hazardous substances</label>
+    </entry>
+    <entry>
+      <code>9.2</code>
+      <label>to report in writing information about working with hazardous substances</label>
+    </entry>
+    <entry>
+      <code>9.3</code>
+      <label>Establish and maintain a register of persons who work / come into contact with hazardous substances</label>
+    </entry>
+    <entry>
+      <code>9.4</code>
+      <label>Identify / evaluate hazards that employees are exposed to hazardous substances or biological agents</label>
+    </entry>
+
+    <entry>
+      <code>10</code>
+      <label>Not archiveworthy</label>
+    </entry>
+  </codelist>
+
   <codelist name="gdpr:CI_ProcesTypeCode">
     <entry>
       <code>primary</code>
@@ -2471,8 +2741,7 @@
       <label>11. Overige beveiligingsmaatregelen</label>
     </entry>
   </codelist>
-  <codelist
-    name="gdpr:CI_AccessPartyCode">
+  <codelist name="gdpr:CI_AccessPartyCode">
     <entry>
       <code>coworker</code>
       <label>1. Personeel dat onder leiding van de verantwoordelijke staat</label>

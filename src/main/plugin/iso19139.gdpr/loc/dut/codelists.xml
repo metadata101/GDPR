@@ -23,8 +23,7 @@
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
 
-<codelists 
-  xmlns:gmd="http://www.isotc211.org/2005/gmd"
+<codelists xmlns:gmd="http://www.isotc211.org/2005/gmd"
   xmlns:gdpr="https://metadata101.github.io/GDPR">
   <!-- ==================================================== -->
   <codelist name="gmd:CI_DateTypeCode">
@@ -668,37 +667,37 @@
   </codelist>
   <!-- ==================================================== -->
   <codelist name="gmd:MD_ClassificationCode">
-		<entry>
-			<code>unclassified</code>
-			<label>01. openbaar</label>
-			<description>Alle informatie die algemeen toegankelijk is binnen en buiten de organisatie. Openbare gegevens mogen geen persoonsgegevens, medische gegevens, of bedrijfs- of procesgegevens of informatie van derden bevatten waaraan nog geen officiële openbaarheid is verleend.</description>
-		</entry>
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
-			<code>restricted</code>
-			<label>02. intern/besloten</label>
-			<description>Informatie die toegankelijk mag zijn voor alle medewerkers of - op basis van noodzakelijkheid - die van samenwerkingspartners of leveranciers. Dit is ter beoordeling van de eigenaar van de betreffende informatie of verantwoordelijk manager.</description>
-		</entry>
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
-			<code>confidential</code>
-			<label>03. Vertrouwelijk</label>
-			<description>Indien kennisname door niet-geautoriseerden schade kan toebrengen aan de belangen van de organisatie en/of burgers.</description>
-		</entry>
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
-			<code>secret</code>
-			<label>04. departementaal vertrouwelijk</label>
-			<description>Indien kennisname door niet geautoriseerden schade kan toebrengen aan de belangen van één of meerdere ministeries.</description>
-		</entry>
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<entry>
-			<code>topSecret</code>
-			<label>05. staatsgeheim (confidentieel)</label>
-			<description>Indien kennisname door niet geautoriseerden (ernstige) schade kan toebrengen aan een van de vitale belangen van de Staat of zijn bondgenoten.</description>
-		</entry>
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-	</codelist>
+    <entry>
+      <code>unclassified</code>
+      <label>01. openbaar</label>
+      <description>Alle informatie die algemeen toegankelijk is binnen en buiten de organisatie. Openbare gegevens mogen geen persoonsgegevens, medische gegevens, of bedrijfs- of procesgegevens of informatie van derden bevatten waaraan nog geen officiële openbaarheid is verleend.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>restricted</code>
+      <label>02. intern/besloten</label>
+      <description>Informatie die toegankelijk mag zijn voor alle medewerkers of - op basis van noodzakelijkheid - die van samenwerkingspartners of leveranciers. Dit is ter beoordeling van de eigenaar van de betreffende informatie of verantwoordelijk manager.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>confidential</code>
+      <label>03. Vertrouwelijk</label>
+      <description>Indien kennisname door niet-geautoriseerden schade kan toebrengen aan de belangen van de organisatie en/of burgers.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>secret</code>
+      <label>04. departementaal vertrouwelijk</label>
+      <description>Indien kennisname door niet geautoriseerden schade kan toebrengen aan de belangen van één of meerdere ministeries.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>topSecret</code>
+      <label>05. staatsgeheim (confidentieel)</label>
+      <description>Indien kennisname door niet geautoriseerden (ernstige) schade kan toebrengen aan een van de vitale belangen van de Staat of zijn bondgenoten.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
   <!-- ==================================================== -->
   <codelist name="gmd:MD_CoverageContentTypeCode">
     <entry>
@@ -2416,16 +2415,334 @@
     <entry>
       <code>permanent</code>
       <label>12. B Permanent bewaren</label>
-    </entry>    
+    </entry>
   </codelist>
   <codelist name="gdpr:CI_GroundForStorageCode">
     <entry>
-      <code></code>
-      <label></label>
+      <code>1</code>
+      <label>1. Voorbereiden, ontwikkelen, evalueren van- en adviseren over beleid	</label>
     </entry>
     <entry>
-      <code></code>
-      <label></label>
+      <code>1.1</code>
+      <label>1.1 Geven van beleidsadvies / opzetten uitvoeringsorganisatie
+      </label>
+    </entry>
+    <entry>
+      <code>1.2</code>
+      <label>1.2 Advisering handhaving wet- en regelgeving
+      </label>
+    </entry>
+    <entry>
+      <code>1.3</code>
+      <label>1.3 Opstellen meerjaren (onderzoeks) programma's
+      </label>
+    </entry>
+    <entry>
+      <code>1.4</code>
+      <label>1.4 Ontwikkelen van normen, standaarden, methoden, protocollen, indicatoren etc.
+      </label>
+    </entry>
+    <entry>
+      <code>1.5</code>
+      <label>1.5 Overleg waarbij RIVM voorzitter en/of secretaris is
+      </label>
+    </entry>
+    <entry>
+      <code>1.6</code>
+      <label>1.6 Beantwoorden kamervragen en vragen/klachten die (kunnen) leiden tot beleidswijzigingen
+      </label>
+    </entry>
+    <entry>
+      <code>1.7</code>
+      <label>1.7 Overleg waarbij RIVM geen voorzitter en/of secretaris is
+      </label>
+    </entry>
+    <entry>
+      <code>2</code>
+      <label>2. Uitvoeren van beleid	</label>
+    </entry>
+    <entry>
+      <code>2.1</code>
+      <label>2.1 Landelijk coordineren, voeren van regie (bijv. Bevolkingsonderzoeken, Rijksvaccinatieprogramma, meetnetten)
+      </label>
+    </entry>
+    <entry>
+      <code>2.2</code>
+      <label>2.2 Eindproducten van voorlichtingscampagnes en content van websites
+      </label>
+    </entry>
+    <entry>
+      <code>2.3</code>
+      <label>2.3 Overige producten van voorlichtingscampagnes en content van websites
+      </label>
+    </entry>
+    <entry>
+      <code>3</code>
+      <label>3. Uitvoeren van onderzoek	</label>
+    </entry>
+    <entry>
+      <code>3.1</code>
+      <label>3.1 Initieren onderzoek, bepalen opzet onderzoeksopzet en -resultaten
+      </label>
+    </entry>
+    <entry>
+      <code>3.2</code>
+      <label>3.2 Toetsen onderzoeksplannen (met mensen en proefdieren)
+      </label>
+    </entry>
+    <entry>
+      <code>3.3</code>
+      <label>3.3 Rapporteren en publiceren van (tussen) resultaten
+      </label>
+    </entry>
+    <entry>
+      <code>3.4</code>
+      <label>3.4 Toetsen van onderzoeksvragen/adviseren over uitvoering van onderzoek
+      </label>
+    </entry>
+    <entry>
+      <code>4</code>
+      <label>4. Ondersteunen uitvoering van beleid en onderzoek	</label>
+    </entry>
+    <entry>
+      <code>4.1</code>
+      <label>4.1 Verlenen van subsidies
+      </label>
+    </entry>
+    <entry>
+      <code>4.2</code>
+      <label>4.2 Verlenen van vergunningen en ontheffingen
+      </label>
+    </entry>
+    <entry>
+      <code>4.3</code>
+      <label>4.3 Instellen en toekennen van prijzen (bijv. Innovatieprijs)
+      </label>
+    </entry>
+    <entry>
+      <code>4.4</code>
+      <label>4.4 Geven voorlichting en informatieverstrekking aan professionals
+      </label>
+    </entry>
+    <entry>
+      <code>4.5</code>
+      <label>4.5 Periodiek verzamelen van gegevens
+      </label>
+    </entry>
+    <entry>
+      <code>4.6</code>
+      <label>4.6 Periodiek verzamelen van gegevens t.b.v. dossiervorming / behandelcontact met patienten en klanten
+      </label>
+    </entry>
+    <entry>
+      <code>4.7</code>
+      <label>4.7 Ontvangst en beheer van materialen t.b.v. toekomstig onderzoek (bijv. Bloed- en voedselmonsters)
+      </label>
+    </entry>
+    <entry>
+      <code>5</code>
+      <label>5. Handhaving van beleid	</label>
+    </entry>
+    <entry>
+      <code>5.1</code>
+      <label>5.1 Uitvoeren controles/houden van toezicht
+      </label>
+    </entry>
+    <entry>
+      <code>5.2</code>
+      <label>5.2 Klachten en meldingen over mogelijke misstanden
+      </label>
+    </entry>
+    <entry>
+      <code>5.3</code>
+      <label>5.3 Aanleggen en beheren van registers (bijv. van ziekten, gevaarlijke stoffen)
+      </label>
+    </entry>
+    <entry>
+      <code>6</code>
+      <label>6. Afhandeling crises en rampen	</label>
+    </entry>
+    <entry>
+      <code>6.1</code>
+      <label>6.1 Voorbereiden op crises en rampen
+      </label>
+    </entry>
+    <entry>
+      <code>6.2</code>
+      <label>6.2 Voorbereiden en uitvoeren van crisiscommunicatie
+      </label>
+    </entry>
+    <entry>
+      <code>6.3</code>
+      <label>6.3 Advisering over het handelen in geval van crises en rampen  t.b.v. Besluitvorming
+      </label>
+    </entry>
+    <entry>
+      <code>6.4</code>
+      <label>6.4 Uitvoeren metingen ter bepaling van crisissituaties
+      </label>
+    </entry>
+    <entry>
+      <code>6.5</code>
+      <label>6.5 Opstellen van overzichten en prognoses
+      </label>
+    </entry>
+    <entry>
+      <code>6.6</code>
+      <label>6.6 Uitvoeren onderzoek na crises en rampen ter bepaling van lange termijn gevolgen
+      </label>
+    </entry>
+    <entry>
+      <code>6.7</code>
+      <label>6.7 Operationeel voorbereiden op crises en rampen
+      </label>
+    </entry>
+    <entry>
+      <code>7</code>
+      <label>7. Richten, inrichten en verantwoorden van de organisatie	</label>
+    </entry>
+    <entry>
+      <code>7.1</code>
+      <label>7.1 Instellen, wijzigen of opheffen van organisatie-eenheden, commissies, werk- en stuurgroepen
+      </label>
+    </entry>
+    <entry>
+      <code>7.2</code>
+      <label>7.2 Vastleggen van en rapporteren over doelstellingen, taken en organisatie (bijv. Jaarrekening, jaarplan, jaarverslag)
+      </label>
+    </entry>
+    <entry>
+      <code>7.3</code>
+      <label>7.3 Ontwikkelen van beleid over kwaliteitszorg en internationale samenwerking
+      </label>
+    </entry>
+    <entry>
+      <code>7.4</code>
+      <label>7.4 Ontwikkelen , vaststellen, certificeren en onderhouden van procedures en  voorschriften m.b.t. veilig werken
+      </label>
+    </entry>
+    <entry>
+      <code>7.5</code>
+      <label>7.5 Overleg op RIVM/sector/domeinniveau
+      </label>
+    </entry>
+    <entry>
+      <code>7.6</code>
+      <label>7.6 Huisvesting (bijv. Eisen en gebouwenhistorie)
+      </label>
+    </entry>
+    <entry>
+      <code>7.7</code>
+      <label>7.7 Overleg met/door de Ondernemingsraad
+      </label>
+    </entry>
+    <entry>
+      <code>7.8</code>
+      <label>7.8 Overleg op centrum/project/team/afdelingsniveau
+      </label>
+    </entry>
+    <entry>
+      <code>7.9</code>
+      <label>7.9 Bewaren, overdragen, vernietigen en vervreemden van informatie
+      </label>
+    </entry>
+    <entry>
+      <code>8</code>
+      <label>8. Ondersteunen van de organisatie	</label>
+    </entry>
+    <entry>
+      <code>8.1</code>
+      <label>8.1 Uitvoeren van de begroting (bijv. inkoop, betalingen etc)
+      </label>
+    </entry>
+    <entry>
+      <code>8.2</code>
+      <label>8.2 Verstrekken van inlichtingen, beantwoorden publieksvragen, afhandelen klachten
+      </label>
+    </entry>
+    <entry>
+      <code>83.</code>
+      <label>8.3 Interne informatievoorziening (interne nieuwsberichten, personeelsbladen etc)
+      </label>
+    </entry>
+    <entry>
+      <code>8.4</code>
+      <label>8.4 Maand-, kwartaal en voortgangsrapportages 
+      </label>
+    </entry>
+    <entry>
+      <code>8.5</code>
+      <label>8.5 Opstellen van werkplannen, interne projectplannen en jaarplannen op centrum/afdelingsniveau)
+      </label>
+    </entry>
+    <entry>
+      <code>8.6</code>
+      <label>8.6 Vergunningen/ontheffingen/toestemmingen  van derden
+      </label>
+    </entry>
+    <entry>
+      <code>8.7</code>
+      <label>8.7 Evalueren van werkzaamheden en onderzoeken
+      </label>
+    </entry>
+    <entry>
+      <code>8.8</code>
+      <label>8.8 Ontwikkelen, vaststellen, certificeren, onderhouden  en accrediteren van procedures, voorschriften en regelingen en instrumenten ter uitvoering van het organisatiebeleid
+      </label>
+    </entry>
+    <entry>
+      <code>8.9</code>
+      <label>8.9 Controleren en verbeteren van de naleving van voorschriften, voorschriften en regelingen/ uitvoeren audits
+      </label>
+    </entry>
+    <entry>
+      <code>8.10</code>
+      <label>8.10 Uitvoeren van facilitaire diensten, personele procesen en secretariele ondersteuning
+      </label>
+    </entry>
+    <entry>
+      <code>8.11</code>
+      <label>8.11 Het voeren van juridische procedures/vertegenwoordigen van de minister in internationale procedures
+      </label>
+    </entry>
+    <entry>
+      <code>8.12</code>
+      <label>8.12 Het sluiten van financiele overeenkomsten
+      </label>
+    </entry>
+    <entry>
+      <code>8.13</code>
+      <label>8.13 Het uitvoeren van PIOFACH beheer
+      </label>
+    </entry>
+    <entry>
+      <code>9</code>
+      <label>9. Vastleggen van bijzondere arbeidsomstandigheden	</label>
+    </entry>
+    <entry>
+      <code>9.1</code>
+      <label>9.1 Melden/aanvragen van vrijstelling of ontheffing/ voornemens inzake arbeid met gevaarlijke stoffen
+      </label>
+    </entry>
+    <entry>
+      <code>9.2</code>
+      <label>9.2 Schriftelijk melden van gegevens mbt werken met gevaarlijke stoffen
+      </label>
+    </entry>
+    <entry>
+      <code>9.3</code>
+      <label>9.3 Opzetten en bijhouden register van personen die werken/in aanraking komen met gevaarlijke stoffen
+      </label>
+    </entry>
+    <entry>
+      <code>9.4</code>
+      <label>9.4 Inventariseren/evalueren van gevaren voor werknemers die worden blootgesteld aan gevaarlijke stoffen of biologische agentia
+	
+      </label>
+    </entry>
+    <entry>
+      <code>10</code>
+      <label>10. Niet archiefwaardig</label>
     </entry>
   </codelist>
   <codelist name="gdpr:CI_ProcesTypeCode">
@@ -2498,8 +2815,7 @@
       <label>11. Overige beveiligingsmaatregelen</label>
     </entry>
   </codelist>
-  <codelist
-    name="gdpr:CI_AccessPartyCode">
+  <codelist name="gdpr:CI_AccessPartyCode">
     <entry>
       <code>coworker</code>
       <label>1. Personeel dat onder leiding van de verantwoordelijke staat</label>
