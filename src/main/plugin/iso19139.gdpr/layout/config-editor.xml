@@ -66,7 +66,7 @@
       <directiveAttributes
         data-tag-name="gdpr:hasSecurity"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -75,7 +75,7 @@
           <directiveAttributes
             data-tag-name="gdpr:transmitPrivateNetwork"
             data-nilreason="eval#@gco:nilReason"
-            data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+            data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -84,7 +84,7 @@
       <directiveAttributes
         data-tag-name="gdpr:transmitPublicNetwork"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -93,7 +93,7 @@
       <directiveAttributes
         data-tag-name="gdpr:encryptedTransmit"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -102,7 +102,7 @@
       <directiveAttributes
         data-tag-name="gdpr:encryptedStorage"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -111,7 +111,7 @@
       <directiveAttributes
         data-tag-name="gdpr:pseudonimization"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -120,7 +120,7 @@
       <directiveAttributes
         data-tag-name="gdpr:inControl"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -129,34 +129,34 @@
       <directiveAttributes
         data-tag-name="gdpr:requiresPIA"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
-         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:outsideEU"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:transmission/gdpr:MD_Transmission/gdpr:outsideEU"
          use="data-gn-checkbox-with-nilreason">
       <directiveAttributes
         data-tag-name="gdpr:outsideEU"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
-         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:appropriateProtectionLevel"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:transmission/gdpr:MD_Transmission/gdpr:appropriateProtectionLevel"
          use="data-gn-checkbox-with-nilreason">
       <directiveAttributes
         data-tag-name="gdpr:appropriateProtectionLevel"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Boolean"
-         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:hasAutomaticDecisionMaking"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:automaticDecisionMaking/gdpr:MD_AutomaticDecisionMaking/gdpr:hasAutomaticDecisionMaking"
          use="data-gn-checkbox-with-nilreason">
       <directiveAttributes
         data-tag-name="gdpr:hasAutomaticDecisionMaking"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "conformant", "false": "notConformant", "unknown": "notEvaluated"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
     </for>
 
     <for name="gco:Date" use="data-gn-date-picker"/>
