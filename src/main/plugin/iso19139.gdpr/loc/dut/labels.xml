@@ -3326,6 +3326,10 @@
         <label>Bewaartermijn</label>
         <description>Geef aan hoe lang de gegevens maximaal bewaard mogen worden</description>
     </element>
+    <element name="gdpr:groundForStorage">
+        <label>Grond voor bewaring</label>
+        <description>Geef de reden van bewaring</description>
+    </element>
     <element name="gdpr:CI_StoragePeriodCode">
       <label>Bewaartermijn code</label>
       <description>Geef aan hoe lang de gegevens maximaal bewaard mogen worden</description>
