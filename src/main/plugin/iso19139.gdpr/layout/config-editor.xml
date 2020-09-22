@@ -737,7 +737,7 @@
           verantwoordelijken
           text rolverdeling
           -->
-          <field del="." name="responsibilityDivision"
+          <field del="."
                  in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"
                  or="responsibilityDivision"
                  xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:responsibilityDivision" />
