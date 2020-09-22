@@ -124,8 +124,8 @@
     </for>
 
     <for name="gco:Boolean"
-         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:requiresPIA"
-         use="data-gn-checkbox-with-nilreason">
+        xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:pia/gdpr:MD_Pia/gdpr:requiresPIA"
+        use="data-gn-checkbox-with-nilreason">
       <directiveAttributes
         data-tag-name="gdpr:requiresPIA"
         data-nilreason="eval#@gco:nilReason"
