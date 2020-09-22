@@ -180,6 +180,9 @@
   <conformity>Conformity</conformity>
   <conformity_title>Title</conformity_title>
   <conformity_date>Date</conformity_date>
+  <true>Ja</true>
+  <false>Nee</false>
+  <unknown>Onbekend</unknown>
   <explanation>Explanation</explanation>
   <pass>Conformity</pass>
   <indeterminatePosition>Indeterminate position</indeterminatePosition>

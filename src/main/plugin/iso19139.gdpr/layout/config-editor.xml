@@ -66,7 +66,7 @@
       <directiveAttributes
         data-tag-name="gdpr:hasSecurity"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -75,7 +75,7 @@
           <directiveAttributes
             data-tag-name="gdpr:transmitPrivateNetwork"
             data-nilreason="eval#@gco:nilReason"
-            data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+            data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -84,7 +84,7 @@
       <directiveAttributes
         data-tag-name="gdpr:transmitPublicNetwork"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -93,7 +93,7 @@
       <directiveAttributes
         data-tag-name="gdpr:encryptedTransmit"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -102,7 +102,7 @@
       <directiveAttributes
         data-tag-name="gdpr:encryptedStorage"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -111,7 +111,7 @@
       <directiveAttributes
         data-tag-name="gdpr:pseudonimization"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -120,7 +120,7 @@
       <directiveAttributes
         data-tag-name="gdpr:inControl"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -129,7 +129,7 @@
       <directiveAttributes
         data-tag-name="gdpr:requiresPIA"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -138,7 +138,7 @@
       <directiveAttributes
         data-tag-name="gdpr:outsideEU"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -147,7 +147,7 @@
       <directiveAttributes
         data-tag-name="gdpr:appropriateProtectionLevel"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Boolean"
@@ -156,7 +156,7 @@
       <directiveAttributes
         data-tag-name="gdpr:hasAutomaticDecisionMaking"
         data-nilreason="eval#@gco:nilReason"
-        data-labels='{"true": "true", "false": "false", "unknown": "nill"}'/>
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
     </for>
 
     <for name="gco:Date" use="data-gn-date-picker"/>
@@ -175,9 +175,9 @@
 
     <for name="gmd:referenceSystemInfo" addDirective="data-gn-crs-selector"/>
 
-    <!-- Example of data-gn-field-upload-div directive:
+    <!-- 
+       Example of data-gn-field-upload-div directive:
        data-allow-modify-xlink="true": allows to modify the xlink href (defaults to false)
-
     -->
      <for name="gdpr:piaUrl" use="data-gn-field-upload-div">
        <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
@@ -188,7 +188,6 @@
      <for name="gmd:contactInstructions" use="data-gn-field-upload-div">
        <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
      </for>
-
 
     <!--
     Enable the following to use subtemplates for extent type.
