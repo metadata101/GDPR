@@ -11,7 +11,7 @@
 
   <artifactId>schema-iso19139.gdpr</artifactId>
   <name>GDPR extension to ISO 19139</name>
-  <version>3.10.4-0</version>
+  <version>3.10.5-SNAPSHOT</version>
 
   <dependencies>
     <dependency>
