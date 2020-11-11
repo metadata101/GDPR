@@ -416,6 +416,12 @@
       verantwoordelijke persoon of organisatie.
     </description>
   </element>
+  <element name="gmd:contactInstructions">
+    <label>Informatie</label>
+    <description>Informatie die nodig is om contact op te nemen met de
+      verantwoordelijke persoon of organisatie.
+    </description>
+  </element>
   <!-- ==================================================== -->
   <element name="gmd:CI_Date">
     <label>Datum</label>

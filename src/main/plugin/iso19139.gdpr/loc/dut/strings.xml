@@ -225,6 +225,7 @@
   <operatesOn>Coupled resource</operatesOn>
   <extent>Geographic bounding box</extent>
   <freeTextKeywords>Other keywords</freeTextKeywords>
+  <contactInformation>Informatie</contactInformation>
 
   <addCrs>Projection</addCrs>
   <addCrs4936>ETRS89-XYZ</addCrs4936>

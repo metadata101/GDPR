@@ -179,15 +179,25 @@
        Example of data-gn-field-upload-div directive:
        data-allow-modify-xlink="true": allows to modify the xlink href (defaults to false)
     -->
-     <for name="gdpr:piaUrl" use="data-gn-field-upload-div">
-       <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
-     </for>
-      <for name="gdpr:responsibilityDivision" use="data-gn-field-upload-div">
-       <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
-     </for>
-     <for name="gmd:contactInstructions" use="data-gn-field-upload-div">
-       <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
-     </for>
+    <for name="gdpr:abstract" use="textarea" />
+    <for name="gdpr:explanation" use="textarea" />
+    <for name="gdpr:outsideEUDetails" use="textarea" />
+    <for name="gmd:environmentDescription" use="textarea" />
+    <for name="gmd:supplementalInformation" use="textarea" />
+
+    <for name="gdpr:piaUrl" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+    <for name="gdpr:responsibilityDivision" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+    <for name="gdpr:processorAgreement" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+
+    <for name="gmd:contactInstructions" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
 
     <!--
     Enable the following to use subtemplates for extent type.
@@ -769,9 +779,9 @@
                      use="email" required="true"/>
                 <key label="positionName" required="false" tooltip="gmd:positionName"
                      xpath="gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" />
-                <key label="contactInformation" required="false" tooltip="gmd:contactInformation"
+                <key label="contactInformation" required="false" tooltip="gmd:contactInstructions"
                      xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
-                    gmd:CI_Contact/gmd:contactInformation/gmx:Anchor" />
+                    gmd:CI_Contact/gmd:contactInstructions/gmx:Anchor" />
               </values>
               <snippet>
                 <gmd:pointOfContact>
