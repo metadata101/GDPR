@@ -5,7 +5,7 @@
                  xmlns:gmd="http://www.isotc211.org/2005/gmd"
                  xmlns:gmx="http://www.isotc211.org/2005/gmx">
    <gmd:fileIdentifier>
-      <gco:CharacterString>gdpr</gco:CharacterString>
+      <gco:CharacterString></gco:CharacterString>
    </gmd:fileIdentifier>
    <gmd:language>
       <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
