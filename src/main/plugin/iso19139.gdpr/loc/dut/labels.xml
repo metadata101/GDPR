@@ -80,12 +80,6 @@
     <description>bestaat uit</description>
   </element>
   <!-- ==================================================== -->
-  <element name="gmd:Country">
-    <label>Land</label>
-    <description>Land</description>
-    <example>Italie</example>
-  </element>
-  <!-- ==================================================== -->
   <element name="gmd:dataSetURI">
     <label>dataSetURI</label>
     <description>dataSetURI</description>
@@ -558,13 +552,6 @@
   <element name="gmd:contactInfo">
     <label>Contact info</label>
     <description>Adres van de verantwoordelijke partij.</description>
-  </element>
-  <!-- ==================================================== -->
-  <element name="gmd:contactInstructions">
-    <label>Contact instructies</label>
-    <description>Aanvullende informatie over de wijze of tijdstip waarmee
-      contact kan worden opgenomen met de organisatie of persoon.
-    </description>
   </element>
   <!-- ==================================================== -->
   <element name="gmd:contentInfo">
@@ -1349,11 +1336,6 @@
     <label>Taal</label>
     <description>Taal waarin de (meta)data is beschreven.</description>
     <condition>conditional</condition>
-  </element>
-  <!-- ==================================================== -->
-  <element name="gmd:languageCode">
-    <label>Taalcode</label>
-    <description>Taal die wordt gebruikt om normale tekst te ontsluiten.</description>
   </element>
   <!-- ==================================================== -->
   <element name="gmd:lensDistortionInformationAvailability">
