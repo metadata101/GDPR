@@ -42,7 +42,6 @@
     <for name="gmd:evaluationMethodDescription" use="textarea"/>
     <for name="gmd:explanation" use="textarea"/>
     <for name="gmd:handlingDescription" use="textarea"/>
-    <for name="gmd:maintenanceNote" use="textarea"/>
     <for name="gmd:measureDescription" use="textarea"/>
     <for name="gmd:purpose" use="textarea"/>
     <for name="gmd:orderingInstructions" use="textarea"/>
@@ -52,13 +51,27 @@
     <for name="gmd:specificUsage" use="textarea"/>
     <for name="gmd:userNote" use="textarea"/>
     <for name="gmd:useLimitation" use="textarea"/>
-
-
+    
     <for name="gco:Distance" use="number"/>
     <for name="gco:Decimal" use="number"/>
     <for name="gco:Integer" use="number"/>
     <for name="gco:Real" use="number"/>
     <for name="gco:Boolean" use="checkbox"/>
+
+    <!-- gdpr -->
+    <for name="gdpr:explanation" use="textarea"/>
+    <for name="gdpr:abstract" use="textarea"/>
+    <for name="gdpr:name" use="textarea"/>
+    <for name="gdpr:goal" use="textarea"/>
+    <for name="gdpr:required" use="textarea"/>
+    <for name="gdpr:description" use="textarea"/>
+    <for name="gdpr:logic" use="textarea"/>
+    <for name="gdpr:importanceAndConsequences" use="textarea"/>
+    <for name="gdpr:externalAccessDetails" use="textarea"/>
+    <for name="gdpr:outsideEUDetails" use="textarea"/>
+    <for name="gdpr:responsibilityDivision" use="textarea"/>
+    <for name="gmd:environmentDescription" use="textarea" />
+    <for name="gmd:supplementalInformation" use="textarea" />
 
     <for name="gco:Boolean"
          xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:hasSecurity"
@@ -162,6 +175,13 @@
     <for name="gco:Date" use="data-gn-date-picker"/>
     <for name="gco:DateTime" use="data-gn-date-picker"/>
 
+    <for name="gmd:maintenanceNote" use="data-gn-keyword-picker">
+      <directiveAttributes
+        data-thesaurus-key="external.theme.grondslag-bewaring"
+        data-order-by-id="true"
+        data-display-definition="true"
+        data-thesaurus-concept-id-attribute="xlinkCOLONhref"/>
+    </for>
 
     <!-- gmx:FileName/@src attribute -->
     <for name="src" use="data-gn-logo-selector"/>
@@ -179,11 +199,6 @@
        Example of data-gn-field-upload-div directive:
        data-allow-modify-xlink="true": allows to modify the xlink href (defaults to false)
     -->
-    <for name="gdpr:abstract" use="textarea" />
-    <for name="gdpr:explanation" use="textarea" />
-    <for name="gdpr:outsideEUDetails" use="textarea" />
-    <for name="gmd:environmentDescription" use="textarea" />
-    <for name="gmd:supplementalInformation" use="textarea" />
 
     <for name="gdpr:piaUrl" use="data-gn-field-upload-div">
       <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />

@@ -54,6 +54,16 @@
         Datum waarop de dataset vernietigd of overgedragen dient te worden, ook wel beslisjaar genoemd.
       </description>
     </entry>
+    <entry>
+			<code>archival</code>
+			<label>archivering</label>
+			<description>Datum waarop de dataset wordt gearchiveerd.</description>
+		</entry>
+		<entry>
+			<code>removal</code>
+			<label>verwijdering</label>
+			<description>Datum waarop de dataset uit het archief verwijderd wordt.</description>
+		</entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
   </codelist>
   <!-- ==================================================== -->
