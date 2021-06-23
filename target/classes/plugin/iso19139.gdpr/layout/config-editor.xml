@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2001-2016 Food and Agriculture Organization of the
+  ~ United Nations (FAO-UN), United Nations World Food Programme (WFP)
+  ~ and United Nations Environment Programme (UNEP)
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or (at
+  ~ your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but
+  ~ WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  ~ General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+  ~
+  ~ Contact: Jeroen Ticheler - FAO - Viale delle Terme di Caracalla 2,
+  ~ Rome - Italy. email: geonetwork@osgeo.org
+  -->
+
+<editor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:gn="http://www.fao.org/geonetwork"
+        xmlns:gco="http://www.isotc211.org/2005/gco"
+        xmlns:gmd="http://www.isotc211.org/2005/gmd"
+        xmlns:gmx="http://www.isotc211.org/2005/gmx"
+        xmlns:srv="http://www.isotc211.org/2005/srv"
+        xmlns:gml="http://www.opengis.net/gml"
+        xmlns:gdpr="https://metadata101.github.io/GDPR"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xsi:noNamespaceSchemaLocation="../../../../../../config-editor.xsd">
+
+  <!-- Form field type configuration. Default is text. -->
+  <fields>
+    <for name="gmd:abstract" use="textarea"/>
+    <for name="gmd:checkPointDescription" use="textarea"/>
+    <for name="gmd:credit" use="textarea"/>
+    <for name="gmd:description" use="textarea"/>
+    <for name="gmd:evaluationMethodDescription" use="textarea"/>
+    <for name="gmd:explanation" use="textarea"/>
+    <for name="gmd:handlingDescription" use="textarea"/>
+    <for name="gmd:maintenanceNote" use="textarea"/>
+    <for name="gmd:measureDescription" use="textarea"/>
+    <for name="gmd:purpose" use="textarea"/>
+    <for name="gmd:orderingInstructions" use="textarea"/>
+    <for name="gmd:otherConstraints" use="textarea"/>
+    <for name="gmd:statement" use="textarea"/>
+    <!--<for name="gmd:supplementalInformation" use="textarea"/>-->
+    <for name="gmd:specificUsage" use="textarea"/>
+    <for name="gmd:userNote" use="textarea"/>
+    <for name="gmd:useLimitation" use="textarea"/>
+
+
+    <for name="gco:Distance" use="number"/>
+    <for name="gco:Decimal" use="number"/>
+    <for name="gco:Integer" use="number"/>
+    <for name="gco:Real" use="number"/>
+    <for name="gco:Boolean" use="checkbox"/>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:hasSecurity"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:hasSecurity"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+             xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:transmitPrivateNetwork"
+             use="data-gn-checkbox-with-nilreason">
+          <directiveAttributes
+            data-tag-name="gdpr:transmitPrivateNetwork"
+            data-nilreason="eval#@gco:nilReason"
+            data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:transmitPublicNetwork"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:transmitPublicNetwork"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:encryptedTransmit"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:encryptedTransmit"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:encryptedStorage"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:encryptedStorage"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:pseudonimization"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:pseudonimization"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security/gdpr:MD_Security/gdpr:inControl"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:inControl"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+        xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:pia/gdpr:MD_Pia/gdpr:requiresPIA"
+        use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:requiresPIA"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:transmission/gdpr:MD_Transmission/gdpr:outsideEU"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:outsideEU"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:transmission/gdpr:MD_Transmission/gdpr:appropriateProtectionLevel"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:appropriateProtectionLevel"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Boolean"
+         xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:automaticDecisionMaking/gdpr:MD_AutomaticDecisionMaking/gdpr:hasAutomaticDecisionMaking"
+         use="data-gn-checkbox-with-nilreason">
+      <directiveAttributes
+        data-tag-name="gdpr:hasAutomaticDecisionMaking"
+        data-nilreason="eval#@gco:nilReason"
+        data-labels='{"true": "true", "false": "false", "unknown": "unknown"}'/>
+    </for>
+
+    <for name="gco:Date" use="data-gn-date-picker"/>
+    <for name="gco:DateTime" use="data-gn-date-picker"/>
+
+
+    <!-- gmx:FileName/@src attribute -->
+    <for name="src" use="data-gn-logo-selector"/>
+
+    <for name="gmd:electronicMailAddress" use="email"/>
+
+    <for name="gmd:language" use="data-gn-language-picker"/>
+    <for name="gmd:languageCode" use="data-gn-language-picker"/>
+
+    <for name="gmd:country" use="data-gn-country-picker"/>
+
+    <for name="gmd:referenceSystemInfo" addDirective="data-gn-crs-selector"/>
+
+    <!-- 
+       Example of data-gn-field-upload-div directive:
+       data-allow-modify-xlink="true": allows to modify the xlink href (defaults to false)
+    -->
+    <for name="gdpr:abstract" use="textarea" />
+    <for name="gdpr:explanation" use="textarea" />
+    <for name="gdpr:outsideEUDetails" use="textarea" />
+    <for name="gmd:environmentDescription" use="textarea" />
+    <for name="gmd:supplementalInformation" use="textarea" />
+
+    <for name="gdpr:piaUrl" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+    <for name="gdpr:responsibilityDivision" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+    <for name="gdpr:processorAgreement" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+
+    <for name="gmd:contactInstructions" use="data-gn-field-upload-div">
+      <directiveAttributes data-allow-modify-xlink="true" data-link-href="eval#gmx:Anchor/@xlink:href" />
+    </for>
+
+    <!--
+    Enable the following to use subtemplates for extent type.
+    <for name="gmd:extent" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-template-type="extent"
+        data-filter='{"_root": "gmd:EX_Extent"}'
+        data-insert-modes=""/>
+    </for>
+
+    for formats:
+    <for name="gmd:resourceFormat" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="false"
+              data-search-action="true"
+              data-popup-action="true"
+              data-template-type="format"
+              data-filter='{"_root": "gmd:MD_Format"}'
+              data-insert-modes="xlink"/>
+    </for>
+    <for name="gmd:distributionFormat" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="false"
+              data-search-action="true"
+              data-popup-action="true"
+              data-template-type="format"
+              data-filter='{"_root": "gmd:MD_Format"}'
+              data-insert-modes="xlink"/>
+    </for>
+    -->
+
+    <for name="gmd:contact" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-template-type="contact"
+        data-insert-modes=""
+        data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="gmd:pointOfContact" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-template-type="contact"
+        data-insert-modes=""
+        data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="gmd:distributorContact" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-template-type="contact"
+        data-insert-modes=""
+        data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="gmd:processor" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-template-type="contact"
+        data-insert-modes=""
+        data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="gmd:citedResponsibleParty" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-template-type="contact"
+        data-insert-modes=""
+        data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="gmd:report" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="true"
+        data-filter='{"_root": "gmd:DQ_DomainConsistency"}'
+        data-insert-modes=""
+        data-template-type="report"/>
+    </for>
+
+
+    <!-- Example configuration: Add onLine source from subtemplate
+    <for name="gmd:onLine" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-template-type="onLine"
+              data-filter='{"_root": "gmd:CI_OnlineResource"}'/>
+    </for>
+    -->
+
+
+    <for name="gmd:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
+      <!--
+      Example of configuration to disable free text keywords in the thesaurus selector
+      <directiveAttributes data-allow-free-text-keywords="false" />
+
+      To restrict the list of thesaurus allowed, set the include attribute
+      for the directive:
+      <directiveAttributes data-include="external.theme.inspire-theme,external.place.regions"/>
+
+      Exclude a thesaurus:
+      <directiveAttributes data-include="-external.place.regions"/>
+
+      Exclude all thesaurus already used in the metadata:
+      -->
+      <directiveAttributes data-include="xpath::string-join(gmd:MD_Metadata/gmd:identificationInfo
+                                          //gmd:thesaurusName/*/gmd:identifier/*/
+                                            gmd:code/gmx:Anchor/
+                                              concat('-', substring-after(text()[. != ''], 'geonetwork.thesaurus.')), ',')"/>
+    </for>
+  </fields>
+
+
+  <fieldsWithFieldset>
+    <name>gmd:MD_Metadata</name>
+    <name>gmd:identificationInfo</name>
+    <name>gmd:distributionInfo</name>
+    <name>gmd:portrayalCatalogueInfo</name>
+    <name>gmd:portrayalCatalogueCitation</name>
+    <name>gmd:thesaurusName</name>
+    <name>gmd:resourceConstraints</name>
+    <name>gmd:spatialRepresentationInfo</name>
+    <name>gmd:pointOfContact</name>
+    <name>gmd:contact</name>
+    <name>gmd:graphicOverview</name>
+    <name>gmd:citedResponsibleParty</name>
+    <name>gmd:dataQualityInfo</name>
+    <name>gmd:contentInfo</name>
+    <name>gmd:distributionFormat</name>
+    <name>gmd:referenceSystemInfo</name>
+    <name>gmd:spatialResolution</name>
+    <name>gmd:offLine</name>
+    <name>gmd:onLine</name>
+    <name>gmd:address</name>
+    <name>gmd:projection</name>
+    <name>gmd:ellipsoid</name>
+    <name>gmd:attributes</name>
+    <name>gmd:geographicBox</name>
+    <name>gmd:EX_TemporalExtent</name>
+    <name>gmd:EX_VerticalExtent</name>
+    <name>gmd:MD_Distributor</name>
+    <name>srv:containsOperations</name>
+    <name>srv:SV_Parameter</name>
+    <name>srv:connectPoint</name>
+    <name>srv:SV_CoupledResource</name>
+    <name>gmd:metadataConstraints</name>
+    <name>gmd:aggregationInfo</name>
+    <name>gmd:processStep</name>
+    <name>gmd:lineage</name>
+    <name>gmd:centerPoint</name>
+    <name>gml:verticalCS</name>
+    <name>gml:verticalDatum</name>
+    <name>gmd:axisDimensionProperties</name>
+    <name>gmd:identifier</name>
+    <name>gmd:topicCategory</name>
+    <!-- gdpr -->
+    <name>gdpr:involves</name>
+    <name>gdpr:purpose</name>
+    <name>gdpr:provision</name>
+    <name>gdpr:automaticDecisionMaking</name>
+    <name>gdpr:pia</name>
+    <name>gdpr:security</name>
+    <name>gdpr:transmission</name>
+  </fieldsWithFieldset>
+
+  <multilingualFields>
+    <!-- In multilingual mode, define which mode
+    the widget should have. If expanded, then one
+    field per language is displayed. -->
+    <expanded>
+      <name>gmd:title</name>
+      <name>gmd:abstract</name>
+    </expanded>
+    <!-- All fields in ISO could be multilingual.
+    Define element to exclude.
+
+      The name element can optionally have ancestor, child or parent attributes to
+      further restrict the exclusion.  For example if some gmd:code elements are
+      multilingual but others are not then adding a parent/child/parent attribute
+      can restrict the exclude to only some elements.
+
+      For example:
+        <name ancestor="gmd:thesaurusName">gmd:code</name>
+        or
+        <name child="gmx:Anchor">gmd:code</name>
+    -->
+    <exclude>
+      <name>gmd:identifier</name>
+      <name>gmd:metadataStandardName</name>
+      <name>gmd:metadataStandardVersion</name>
+      <name>gmd:hierarchyLevelName</name>
+      <name>gmd:dataSetURI</name>
+      <name>gmd:postalCode</name>
+      <name>gmd:city</name>
+      <name>gmd:language</name>
+      <name>gmd:administrativeArea</name>
+      <name>gmd:voice</name>
+      <name>gmd:facsimile</name>
+      <name>gmd:dataset</name>
+      <name>gmd:other</name>
+      <name>gmd:hoursOfService</name>
+      <name>gmd:applicationProfile</name>
+      <name>gmd:page</name>
+      <name>gmd:date</name>
+      <name>gmd:linkage</name>
+      <name>gmd:fileName</name>
+      <name>gmd:protocol</name>
+      <name>gmd:fileType</name>
+      <name>gmd:unitsOfDistribution</name>
+      <name>gmd:amendmentNumber</name>
+      <name>gmd:specification</name>
+      <name>gmd:fileDecompressionTechnique</name>
+      <name>gmd:turnaround</name>
+      <name>gmd:fees</name>
+      <name>gmd:userDeterminedLimitations</name>
+      <name>gmd:codeSpace</name>
+      <name>gmd:version</name>
+      <name>gmd:edition</name>
+      <name>gmd:ISBN</name>
+      <name>gmd:ISSN</name>
+      <name>gmd:errorStatistic</name>
+      <name>gmd:schemaAscii</name>
+      <name>gmd:softwareDevelopmentFileFormat</name>
+      <name>gmd:shortName</name>
+      <name>gmd:condition</name>
+      <name>gmd:maximumOccurence</name>
+      <name>gmd:domainValue</name>
+      <name>gmd:minimumValue</name>
+      <name>gmd:maximumValue</name>
+      <name>gmd:densityUnits</name>
+      <name>gmd:descriptor</name>
+      <name>gmd:denominator</name>
+      <name>gmd:classificationSystem</name>
+      <name>gmd:checkPointDescription</name>
+      <name>gmd:transformationDimensionDescription</name>
+      <name>gmd:orientationParameterDescription</name>
+      <name>gmd:distance</name>
+      <name>srv:name</name>
+      <name>srv:invocationName</name>
+      <name>srv:serviceTypeVersion</name>
+      <name>srv:operationName</name>
+      <name>srv:identifier</name>
+      <name>srv:serviceType</name>
+      <name ancestor="gmd:thesaurusName">gmd:code</name>
+      <name ancestor="gmd:aggregateDataSetIdentifier">gmd:code</name>
+      <name ancestor="gmd:CI_Citation">gmd:code</name>
+    </exclude>
+  </multilingualFields>
+
+  <tableFields>
+    <table for="gmd:CI_ResponsibleParty">
+      <header>
+        <!-- TODO: Add label from strings.xml / label with context-->
+        <col label="gmd:organisationName"/>
+        <col label="gmd:individualName"/>
+        <col label="gmd:electronicMailAddress"/>
+        <col label="gmd:contactInformation"/> 
+        <col label="gmd:role"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="gmd:organisationName"/>
+        <col xpath="gmd:individualName"/>
+        <col xpath="gmd:contactInfo/*/gmd:address/*/gmd:electronicMailAddress"/>
+        <col xpath="gmd:contactInfo/*/gmd:contactInformation"/>
+        <col xpath="gmd:role"/>
+        <col del=".."/>
+      </row>
+    </table>
+    <table for="gmd:CI_OnlineResource">
+      <header>
+        <col label="gmd:protocol"/>
+        <col label="gmd:linkage"/>
+        <col label="gmd:name"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="gmd:protocol"/>
+        <col xpath="gmd:linkage"/>
+        <col xpath="gmd:name"/>
+        <col del=".."/>
+      </row>
+    </table>
+    <table for="srv:SV_OperationMetadata">
+      <header>
+        <col label="srv:operationName"/>
+        <col label="srv:DCP"/>
+        <col label="srv:connectPoint"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="srv:operationName"/>
+        <col xpath="srv:DCP"/>
+        <col xpath="srv:connectPoint/gmd:CI_OnlineResource/gmd:linkage"/>
+        <col del=".."/>
+        <section xpath="srv:SV_OperationMetadata/srv:parameters"
+                 or="parameters" in="srv:SV_OperationMetadata"/>
+      </row>
+    </table>
+    <table for="srv:SV_CoupledResource">
+      <header>
+        <col label="srv:operationName"/>
+        <col label="gco:ScopedName"/>
+        <col label="srv:identifier"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="srv:operationName"/>
+        <col xpath="gco:ScopedName"/>
+        <col xpath="srv:identifier"/>
+        <col del=".."/>
+      </row>
+    </table>
+    <table for="gmd:MD_Format">
+      <header>
+        <col label="gmd:name"/>
+        <col label="gmd:version"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="gmd:name"/>
+        <col xpath="gmd:version"/>
+        <col del=".."/>
+      </row>
+    </table>
+    <table for="gmd:PT_Locale">
+      <header>
+        <col label="gmd:languageCode"/>
+        <col label="gmd:characterEncoding"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="gmd:languageCode"/>
+        <col xpath="gmd:characterEncoding"/>
+        <col del=".."/>
+      </row>
+    </table>
+  </tableFields>
+
+  <!-- View configuration -->
+  <views>
+
+    <view name="default"
+      hideTimeInCalendar="true" upAndDownControlHidden="true"
+      displayTooltips="true" displayTooltipsMode="icon">
+
+      <thesaurusList>
+        <thesaurus key="local.theme.automatic-decision" maxtags="1" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.data-security" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.data-transfer-outside-EU" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.rechtsgrond" maxtags="1" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.security-measures" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.categoriesofpersonaldata" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.type_privacy_data" widgetMode="checkboxes"/>
+        <thesaurus key="local.theme.users-with-data-access" widgetMode="checkboxes"/>
+      </thesaurusList>
+
+      <sidePanel>
+        <directive data-gn-validation-report=""/>
+        <directive data-gn-suggestion-list=""/>
+      </sidePanel>
+
+      <!-- scherm 1
+      ttl_intro
+      txt_intro-->
+
+      <tab id="default" default="true" mode="flat">
+
+        <text ref="ttl_intro"/>
+        <text ref="txt_intro"/>
+
+        <section name="gdpr">
+
+          <!-- ds-registratienummer -->
+          <field xpath="/gmd:MD_Metadata/gmd:fileIdentifier" />
+
+          <!--
+          titel ds-->
+
+          <!--Naamverwerking-->
+          <field in="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation"
+                 or="title"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation/gmd:title"/>
+
+          <!--Samenvatting-->
+          <field xpath="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:abstract" />
+
+          <!--
+          (dienst)
+          version-->
+          <field del="."
+                 in="/gmd:MD_Metadata/gmd:identificationInfo/*/gmd:citation/gmd:CI_Citation"
+                 or="edition"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:edition" />
+
+          <!--
+          (type primary/secundary)
+          -->
+          <field del="."
+                 xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:ProcesType" />
+
+          <action type="add"
+                  if="count(gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:ProcesType) = 0"
+                  btnLabel="addProcessType"
+                  name="ProcesType" or="ProcesType" forceLabel="true"
+                  in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo">
+            <template>
+              <snippet>
+                <gdpr:ProcesType>
+                   <gdpr:CI_ProcesTypeCode codeListValue="primary"
+                                            codeList="http://standaarden.overheid.nl/#CI_ProcesType"/>
+                </gdpr:ProcesType>
+              </snippet>
+            </template>
+          </action>
+
+          <field
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints[gmd:MD_SecurityConstraints]"/>
+
+          <action type="add"
+                  btnLabel="addSecurityConstraints"
+                  name="securityConstraints" or="resourceConstraints"
+                  forceLabel="true"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
+                  if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:resourceConstraints/gmd:MD_SecurityConstraints)=0">
+            <template>
+              <snippet>
+                <gmd:resourceConstraints>
+                  <gmd:MD_SecurityConstraints>
+                    <gmd:classification>
+                      <gmd:MD_ClassificationCode codeListValue="unclassified" codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ClassificationCode" codeSpace="dut">
+                      </gmd:MD_ClassificationCode>
+                    </gmd:classification>
+                    <gmd:userNote>
+                      <gco:CharacterString></gco:CharacterString>
+                    </gmd:userNote>
+                  </gmd:MD_SecurityConstraints>
+                </gmd:resourceConstraints>
+              </snippet>
+            </template>
+          </action>
+
+        </section> <!-- name="gdpr" -->
+      </tab>  <!-- id="intro" -->
+
+
+      <!-- scherm 2
+      ttl_responsible
+      txt_responsible-->
+      <tab id="responsible">
+
+        <text ref="ttl_responsible"/>
+        <text ref="txt_responsible"/>
+
+        <section name="responsible">
+
+          <field name="responsible"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[contains(gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue,'owner')]"
+                 templateModeOnly="true" notDisplayedIfMissing="true"
+                 del="."
+                 if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            <template>
+              <values readonlyIf="count(@xlink:href) > 0">
+                <key label="organisationName" required="true" tooltip="gmd:organisationName"
+                     xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+                <key label="electronicMailAddress" tooltip="gmd:electronicMailAddress"
+                     xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
+                    gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
+                     use="email" required="true"/>
+                <key label="positionName" required="false" tooltip="gmd:positionName"
+                     xpath="gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" />
+              </values>
+              <snippet>
+                <gmd:pointOfContact>
+                  <gmd:CI_ResponsibleParty>
+                    <gn:copy select="gmd:individualName"/>
+                    <gmd:organisationName>
+                      <gco:CharacterString>{{organisationName}}</gco:CharacterString>
+                      <gn:copy select="gmd:PT_FreeText"/>
+                    </gmd:organisationName>
+                    <gmd:positionName><gco:CharacterString>{{positionName}}</gco:CharacterString></gmd:positionName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gn:copy select="gmd:phone"/>
+                        <gmd:address>
+                          <gmd:CI_Address>
+                            <gn:copy select="gmd:deliveryPoint"/>
+                            <gn:copy select="gmd:city"/>
+                            <gn:copy select="gmd:administrativeArea"/>
+                            <gn:copy select="gmd:postalCode"/>
+                            <gn:copy select="gmd:country"/>
+                            <gmd:electronicMailAddress>
+                              <gco:CharacterString>{{electronicMailAddress}}</gco:CharacterString>
+                              <gn:copy select="gmd:PT_FreeText"/>
+                            </gmd:electronicMailAddress>
+                          </gmd:CI_Address>
+                        </gmd:address>
+                        <gn:copy select="gmd:onlineResource"/>
+                        <gn:copy select="gmd:hoursOfService"/>
+                        <gn:copy select="gmd:contactInstructions"/>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gn:copy select="gmd:role"/>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:pointOfContact>
+              </snippet>
+            </template>
+          </field>
+
+          <action type="add"
+                  btnLabel="addResponsible"
+                  or="pointOfContact"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+            <template>
+              <snippet>
+                <gmd:pointOfContact>
+                  <gmd:CI_ResponsibleParty>
+                    <gmd:organisationName><gco:CharacterString></gco:CharacterString></gmd:organisationName>
+                    <gmd:positionName><gco:CharacterString></gco:CharacterString></gmd:positionName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gmd:address>
+                          <gmd:CI_Address>
+                            <gmd:electronicMailAddress><gco:CharacterString/></gmd:electronicMailAddress>
+                          </gmd:CI_Address>
+                        </gmd:address>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gmd:role><gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="owner"/></gmd:role>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:pointOfContact>
+              </snippet>
+            </template>
+          </action>
+
+          <!--
+          verantwoordelijken
+          text rolverdeling
+          -->
+          <field del="."
+                 in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"
+                 or="responsibilityDivision"
+                 xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:responsibilityDivision" />
+        </section> <!-- name="responsible" -->
+      </tab> <!-- id="responsible" -->
+
+
+      <!-- scherm 3
+      ttl_processors
+      txt_processors-->
+      <tab id="processors">
+
+        <text ref="ttl_processors"/>
+        <text ref="txt_processors"/>
+
+        <section name="processors">
+
+          <field name="processor"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[contains(gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue,'processor')]"
+                 templateModeOnly="true" notDisplayedIfMissing="true"
+                 del="."
+                 if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            <template>
+              <values readonlyIf="count(@xlink:href) > 0">
+                <key label="organisationName" required="true" tooltip="gmd:organisationName"
+                     xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+                <key label="electronicMailAddress" tooltip="gmd:electronicMailAddress"
+                     xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
+                    gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
+                     use="email" required="true"/>
+                <key label="positionName" required="false" tooltip="gmd:positionName"
+                     xpath="gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" />
+                <key label="contactInformation" required="false" tooltip="gmd:contactInstructions"
+                     xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
+                    gmd:CI_Contact/gmd:contactInstructions/gmx:Anchor" />
+              </values>
+              <snippet>
+                <gmd:pointOfContact>
+                  <gmd:CI_ResponsibleParty>
+                    <gn:copy select="gmd:individualName"/>
+                    <gmd:organisationName>
+                      <gco:CharacterString>{{organisationName}}</gco:CharacterString>
+                      <gn:copy select="gmd:PT_FreeText"/>
+                    </gmd:organisationName>
+                    <gmd:positionName><gco:CharacterString>{{positionName}}</gco:CharacterString></gmd:positionName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gn:copy select="gmd:phone"/>
+                        <gmd:address>
+                          <gmd:CI_Address>
+                            <gn:copy select="gmd:deliveryPoint"/>
+                            <gn:copy select="gmd:city"/>
+                            <gn:copy select="gmd:administrativeArea"/>
+                            <gn:copy select="gmd:postalCode"/>
+                            <gn:copy select="gmd:country"/>
+                            <gmd:electronicMailAddress>
+                              <gco:CharacterString>{{electronicMailAddress}}</gco:CharacterString>
+                              <gn:copy select="gmd:PT_FreeText"/>
+                            </gmd:electronicMailAddress>
+                          </gmd:CI_Address>
+                        </gmd:address>
+                        <gn:copy select="gmd:onlineResource"/>
+                        <gn:copy select="gmd:hoursOfService"/>
+                        <gn:copy select="gmd:contactInstructions"/>
+                        <gmd:contactInstructions><gmx:Anchor xlink:href="">{{contactInformation}}</gmx:Anchor></gmd:contactInstructions>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gn:copy select="gmd:role"/>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:pointOfContact>
+              </snippet>
+            </template>
+          </field>
+
+          <action type="add"
+                  btnLabel="addProcessor"
+                  or="pointOfContact"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+            <template>
+              <snippet>
+                <gmd:pointOfContact>
+                  <gmd:CI_ResponsibleParty>
+                    <gmd:organisationName><gco:CharacterString></gco:CharacterString></gmd:organisationName>
+                    <gmd:positionName><gco:CharacterString></gco:CharacterString></gmd:positionName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gmd:address>
+                          <gmd:CI_Address>
+                            <gmd:electronicMailAddress><gco:CharacterString/></gmd:electronicMailAddress>
+                          </gmd:CI_Address>
+                        </gmd:address>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gmd:role><gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="processor"/></gmd:role>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:pointOfContact>
+              </snippet>
+            </template>
+          </action>
+
+         <field name="subprocessor"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact[contains(gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode/@codeListValue,'subprocessor')]"
+                 templateModeOnly="true" notDisplayedIfMissing="true"
+                 del="."
+                 if="count(gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification) > 0">
+            <template>
+              <values readonlyIf="count(@xlink:href) > 0">
+                <key label="organisationName" required="true" tooltip="gmd:organisationName"
+                     xpath="gmd:CI_ResponsibleParty/gmd:organisationName/gco:CharacterString"/>
+                <key label="electronicMailAddress" tooltip="gmd:electronicMailAddress"
+                     xpath="gmd:CI_ResponsibleParty/gmd:contactInfo/
+                    gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress/gco:CharacterString"
+                     use="email" required="true"/>
+                <key label="positionName" required="false" tooltip="gmd:positionName"
+                     xpath="gmd:CI_ResponsibleParty/gmd:positionName/gco:CharacterString" />
+              </values>
+              <snippet>
+                <gmd:pointOfContact>
+                  <gmd:CI_ResponsibleParty>
+                    <gn:copy select="gmd:individualName"/>
+                    <gmd:organisationName>
+                      <gco:CharacterString>{{organisationName}}</gco:CharacterString>
+                      <gn:copy select="gmd:PT_FreeText"/>
+                    </gmd:organisationName>
+                    <gmd:positionName><gco:CharacterString>{{positionName}}</gco:CharacterString></gmd:positionName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gn:copy select="gmd:phone"/>
+                        <gmd:address>
+                          <gmd:CI_Address>
+                            <gn:copy select="gmd:deliveryPoint"/>
+                            <gn:copy select="gmd:city"/>
+                            <gn:copy select="gmd:administrativeArea"/>
+                            <gn:copy select="gmd:postalCode"/>
+                            <gn:copy select="gmd:country"/>
+                            <gmd:electronicMailAddress>
+                              <gco:CharacterString>{{electronicMailAddress}}</gco:CharacterString>
+                              <gn:copy select="gmd:PT_FreeText"/>
+                            </gmd:electronicMailAddress>
+                          </gmd:CI_Address>
+                        </gmd:address>
+                        <gn:copy select="gmd:onlineResource"/>
+                        <gn:copy select="gmd:hoursOfService"/>
+                        <gn:copy select="gmd:contactInstructions"/>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gn:copy select="gmd:role"/>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:pointOfContact>
+              </snippet>
+            </template>
+          </field>
+
+          <action type="add"
+                  btnLabel="addSubProcessor"
+                  or="pointOfContact"
+                  in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification">
+            <template>
+              <snippet>
+                <gmd:pointOfContact>
+                  <gmd:CI_ResponsibleParty>
+                    <gmd:organisationName><gco:CharacterString></gco:CharacterString></gmd:organisationName>
+                    <gmd:positionName><gco:CharacterString></gco:CharacterString></gmd:positionName>
+                    <gmd:contactInfo>
+                      <gmd:CI_Contact>
+                        <gmd:address>
+                          <gmd:CI_Address>
+                            <gmd:electronicMailAddress><gco:CharacterString/></gmd:electronicMailAddress>
+                          </gmd:CI_Address>
+                        </gmd:address>
+                      </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gmd:role><gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="subprocessor"/></gmd:role>
+                  </gmd:CI_ResponsibleParty>
+                </gmd:pointOfContact>
+              </snippet>
+            </template>
+          </action>
+        </section> <!-- name="subprocessors" -->
+
+      </tab> <!-- id="processors" -->
+
+
+      <!-- scherm 4
+      ttl_purpose
+      txt_purpose-->
+      <tab id="purpose">
+        <text ref="ttl_purpose"/>
+        <text ref="txt_purpose"/>
+
+        <section name="purpose">
+          <field or="purpose" in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"
+                 xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:purpose"/>
+        </section> <!-- name="purpose" -->
+      </tab> <!-- id="purpose" -->
+
+
+      <!-- scherm 5
+      ttl_involves
+      txt_involves-->
+      <tab id="involves">
+        <text ref="ttl_involves"/>
+        <text ref="txt_involves"/>
+
+        <section name="involves">
+          <field name="involves" or="involves" in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"
+                 xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:involves"/>
+        </section> <!-- name="involves" -->
+      </tab> <!-- id="involves" -->
+
+
+      <!--scherm 6
+
+      ttl_decision
+      txt_decision-->
+      <tab id="decision">
+        <text ref="ttl_decision"/>
+        <text ref="txt_decision"/>
+
+        <section name="decision">
+          <field
+            xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:automaticDecisionMaking"
+            or="automaticDecisionMaking" in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"/>
+        </section> <!-- name="decision" -->
+      </tab> <!-- id="decision" -->
+
+
+      <!--scherm 7
+
+      ttl_provision
+      txt_provision-->
+      <tab id="provision">
+        <text ref="ttl_provision"/>
+        <text ref="txt_provision"/>
+
+        <section name="provision">
+          <field del="."
+                 xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:provision"
+                 or="provision" in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"/>
+        </section> <!-- name="provision" -->
+      </tab> <!-- id="provision" -->
+
+
+      <!--scherm 8
+
+      ttl_system
+      txt_system-->
+      <tab id="system">
+        <text ref="ttl_system"/>
+        <text ref="txt_system"/>
+
+        <section name="system">
+          <field or="environmentDescription" in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:environmentDescription"/>
+        </section> <!-- name="system" -->
+      </tab> <!-- id="system" -->
+
+
+      <!--scherm 9
+      ttl_security
+      txt_security-->
+      <tab id="security">
+        <text ref="ttl_security"/>
+        <text ref="txt_security"/>
+
+        <section> <!-- name="security" --> <!-- no name as the field is already boxed -->
+          <field or="security" in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"
+                 xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:security" />
+        </section>
+      </tab> <!-- id="security" -->
+
+
+      <!--scherm 10
+      ttl_transmision
+      txt_transmision
+      -->
+      <tab id="transmision">
+        <text ref="ttl_transmision"/>
+        <text ref="txt_transmision"/>
+
+        <section> <!-- name="transmision" --> <!-- no name as the field is already boxed -->
+            <field xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:transmission"
+                   or="transmission" in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo"/>
+        </section>
+      </tab> <!-- id="transmision" -->
+
+      <!--scherm 11
+
+      ttl_pia
+      txt_pia
+      -->
+      <tab id="pia">
+        <text ref="ttl_pia"/>
+        <text ref="txt_pia"/>
+
+        <section name="pia"> <!-- name="pia" --> <!-- no name as the field is already boxed -->
+            <field  name="pia" xpath="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo/gdpr:pia" or="pia"
+                    in="/gmd:MD_Metadata/gmd:contentInfo/gdpr:MD_ContentInfo" del="."/>
+        </section> <!-- name="pia" -->
+      </tab> <!-- id="pia" -->
+
+
+      <!--scherm 13
+      ttl_slot
+      txt_slot
+      -->
+      <tab id="slot">
+        <text ref="ttl_slot"/>
+        <text ref="txt_slot"/>
+
+        <!--
+        supplemental information
+        -->
+        <section name="slot">
+          <field or="supplementalInformation"
+                 in="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification"
+                 xpath="/gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:supplementalInformation"/>
+        </section>
+      </tab>
+
+      <flatModeExceptions>
+        <for name="gdpr:involves"/>
+        <for name="gdpr:purpose"/>
+        <for name="gdpr:measures"/>
+        <for name="gdpr:transmission"/>
+        <for name="gdpr:provision"/>
+        <for name="gdpr:automaticDecisionMaking"/>
+        <for name="gdpr:pia"/>
+        <for name="gdpr:security"/>
+      </flatModeExceptions>
+
+    </view> <!-- name="gdpr-vw" -->
+
+    <view name="advanced">
+      <sidePanel>
+        <directive data-gn-onlinesrc-list=""/>
+        <directive gn-geo-publisher=""
+                   data-ng-if="gnCurrentEdit.geoPublisherConfig"
+                   data-config="{{gnCurrentEdit.geoPublisherConfig}}"
+                   data-lang="lang"/>
+        <directive data-gn-validation-report=""/>
+        <directive data-gn-suggestion-list=""/>
+        <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
+      </sidePanel>
+
+      <tab id="identificationInfo" default="true">
+        <section xpath="/gmd:MD_Metadata/gmd:identificationInfo" or="identificationInfo"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="distributionInfo">
+        <section xpath="/gmd:MD_Metadata/gmd:distributionInfo" or="distributionInfo"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="dataQualityInfo">
+        <section xpath="/gmd:MD_Metadata/gmd:dataQualityInfo" or="dataQualityInfo"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="spatialRepresentationInfo">
+        <section xpath="/gmd:MD_Metadata/gmd:spatialRepresentationInfo"
+                 or="spatialRepresentationInfo" in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="referenceSystemInfo">
+        <section xpath="/gmd:MD_Metadata/gmd:referenceSystemInfo" or="referenceSystemInfo"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="contentInfo" toggle="true">
+        <section xpath="/gmd:MD_Metadata/gmd:contentInfo" or="contentInfo" in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="portrayalCatalogueInfo" toggle="true">
+        <section xpath="/gmd:MD_Metadata/gmd:portrayalCatalogueInfo" or="portrayalCatalogueInfo"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="metadata">
+        <section name="metadata">
+          <field xpath="/gmd:MD_Metadata/gmd:fileIdentifier"/>
+          <field xpath="/gmd:MD_Metadata/gmd:language" or="language" in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:locale" or="locale" in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:characterSet"/>
+          <field xpath="/gmd:MD_Metadata/gmd:parentIdentifier" or="parentIdentifier"
+                 in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevel" or="hierarchyLevel"
+                 in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:hierarchyLevelName" or="hierarchyLevelName"
+                 in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:dateStamp"/>
+          <field xpath="/gmd:MD_Metadata/gmd:metadataStandardName"/>
+          <field xpath="/gmd:MD_Metadata/gmd:metadataStandardVersion"/>
+          <field xpath="/gmd:MD_Metadata/gmd:contact" or="contact" in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:dataSetURI" or="dataSetURI" in="/gmd:MD_Metadata"/>
+          <field xpath="/gmd:MD_Metadata/gmd:series"/>
+          <field xpath="/gmd:MD_Metadata/gmd:describes"/>
+          <field xpath="/gmd:MD_Metadata/gmd:propertyType"/>
+          <field xpath="/gmd:MD_Metadata/gmd:featureType"/>
+          <field xpath="/gmd:MD_Metadata/gmd:featureAttribute"/>
+        </section>
+      </tab>
+      <tab id="metadataConstraints" toggle="true">
+        <section xpath="/gmd:MD_Metadata/gmd:metadataConstraints" or="metadataConstraints"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="metadataMaintenance" toggle="true">
+        <section xpath="/gmd:MD_Metadata/gmd:metadataMaintenance" or="metadataMaintenance"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+      <tab id="applicationSchemaInfo" toggle="true">
+        <section xpath="/gmd:MD_Metadata/gmd:applicationSchemaInfo" or="applicationSchemaInfo"
+                 in="/gmd:MD_Metadata"/>
+      </tab>
+    </view>
+    <view name="xml">
+      <sidePanel>
+        <directive data-gn-onlinesrc-list=""/>
+        <directive gn-geo-publisher=""
+                   data-ng-if="gnCurrentEdit.geoPublisherConfig"
+                   data-config="{{gnCurrentEdit.geoPublisherConfig}}"
+                   data-lang="lang"/>
+        <directive data-gn-validation-report=""/>
+        <directive data-gn-suggestion-list=""/>
+        <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
+      </sidePanel>
+      <tab id="xml" default="true"/>
+    </view>
+  </views>
+  <batchEditing>
+    <section name="identification">
+      <!-- Update existing title in metadata record -->
+      <field name="title"
+             xpath="gmd:identificationInfo/*/gmd:citation/*/gmd:title"
+             insertMode="gn_replace"
+             indexField="title">
+        <template><![CDATA[<gco:CharacterString xmlns:gco='http://www.isotc211.org/2005/gco'>{{value}}</gco:CharacterString>]]></template>
+      </field>
+
+      <!-- Insert a new keyword in the first gmd:descriptiveKeywords found.
+      Warning: The section may contains a thesaurusName reference and
+      the keyword may not be part of it.
+      Warning: Duplicates may be inserted.
+      -->
+      <field name="keyword"
+             xpath="gmd:identificationInfo/gmd:MD_DataIdentification/
+                      gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword"
+             indexField="keyword"
+             insertMode="gn_create">
+        <template>
+          <![CDATA[<gco:CharacterString xmlns:gco='http://www.isotc211.org/2005/gco'>{{value}}</gco:CharacterString>]]></template>
+      </field>
+
+      <!-- Insert a new topic category
+      Warning: Duplicates may be inserted.
+      -->
+      <field name="topicCats"
+             xpath="gmd:identificationInfo/*/
+                      gmd:topicCategory"
+             use="data-gn-codelist-picker"
+             codelist="gmd:MD_TopicCategoryCode"
+             indexField="topicCat"
+             insertMode="gn_create">
+        <template>
+          <![CDATA[<gmd:MD_TopicCategoryCode xmlns:gmd='http://www.isotc211.org/2005/gmd'>{{value}}</gmd:MD_TopicCategoryCode>]]></template>
+      </field>
+
+      <!-- Insert a new extent
+      Warning: Duplicates may be inserted.
+      -->
+      <field name="extent"
+             xpath="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:extent"
+             use="data-gn-draw-bbox"
+             insertMode="gn_create"/>
+
+      <!-- Insert a new resource language
+      Warning: Duplicates may be inserted.
+      -->
+      <field name="language"
+             xpath="gmd:identificationInfo/*/
+                      gmd:language"
+             use="data-gn-language-picker"
+             insertMode="gn_replace"
+             removable="true">
+        <template>
+          <![CDATA[<gmd:LanguageCode xmlns:gmd='http://www.isotc211.org/2005/gmd' codeListValue='{{value}}'/>]]></template>
+      </field>
+
+      <!-- Insert, or replace if existing, the parent identifier.
+      Warning: Duplicates may be inserted.
+      -->
+      <field name="parentIdentifier"
+             xpath="gmd:parentIdentifier"
+             use="data-gn-metadata-picker"
+             insertMode="gn_replace"
+             removable="true">
+        <template>
+          <![CDATA[<gco:CharacterString xmlns:gco='http://www.isotc211.org/2005/gco'>{{value}}</gco:CharacterString>]]></template>
+      </field>
+
+      <field name="resourceStatus"
+             xpath="gmd:identificationInfo/*/
+                      gmd:status"
+             use="data-gn-codelist-picker"
+             codelist="gmd:MD_ProgressCode"
+             insertMode="gn_replace"
+             removable="true">
+        <template>
+          <![CDATA[<gmd:MD_ProgressCode xmlns:gmd='http://www.isotc211.org/2005/gmd' codeListValue='{{value}}'/>]]></template>
+      </field>
+    </section>
+
+    <section name="resourceConstraints">
+      <!-- Insert a new access contraints
+            Warning: Duplicates may be inserted.
+      -->
+      <field name="legalConstraints"
+             xpath="gmd:identificationInfo/*/
+                      gmd:resourceConstraints/gmd:MD_LegalConstraints/
+                        gmd:accessConstraints"
+             use="data-gn-codelist-picker"
+             codelist="gmd:MD_RestrictionCode"
+             insertMode="gn_create"
+             removable="true">
+        <template>
+          <![CDATA[<gmd:MD_RestrictionCode xmlns:gmd='http://www.isotc211.org/2005/gmd' codeListValue='{{value}}'/>]]></template>
+      </field>
+
+      <!-- Insert a new other contraints
+            Warning: Duplicates may be inserted.
+      -->
+      <field name="otherConstraints"
+             xpath="gmd:identificationInfo/*/
+                      gmd:resourceConstraints/gmd:MD_LegalConstraints/
+                        gmd:otherConstraints"
+             use="textarea"
+             insertMode="gn_create"
+             removable="true">
+        <template>
+          <![CDATA[<gco:CharacterString xmlns:gco='http://www.isotc211.org/2005/gco'>{{value}}</gco:CharacterString>]]></template>
+      </field>
+    </section>
+
+
+    <!-- Replace current lineage or insert a new one.
+          Warning: Duplicates may be inserted.
+    -->
+    <section name="quality">
+      <field name="lineage"
+             xpath="gmd:dataQualityInfo/gmd:DQ_DataQuality/
+                      gmd:lineage/gmd:LI_Lineage/gmd:statement"
+             use="textarea"
+             insertMode="gn_replace"
+             removable="true">
+        <template>
+          <![CDATA[<gco:CharacterString xmlns:gco='http://www.isotc211.org/2005/gco'>{{value}}</gco:CharacterString>]]></template>
+      </field>
+    </section>
+
+    <section name="contact">
+      <field name="resourceContact"
+             xpath="gmd:identificationInfo/gmd:MD_DataIdentification/gmd:pointOfContact"
+             use="data-gn-directory-entry-selector"
+             insertMode="gn_create"/>
+      <field name="distributor"
+             xpath="gmd:distributionInfo/gmd:MD_Distribution/gmd:distributor/gmd:MD_Distributor/gmd:distributorContact"
+             use="data-gn-directory-entry-selector"
+             insertMode="gn_create"/>
+      <field name="mdContact"
+             xpath="gmd:contact"
+             use="data-gn-directory-entry-selector"
+             insertMode="gn_create"/>
+    </section>
+
+    <section name="metadata">
+      <field name="mdLanguage"
+             xpath="gmd:language"
+             use="data-gn-language-picker"
+             removable="true">
+        <template>
+          <![CDATA[<gmd:LanguageCode xmlns:gmd='http://www.isotc211.org/2005/gmd' codeListValue='{{value}}'/>]]></template>
+      </field>
+    </section>
+  </batchEditing>
+</editor>

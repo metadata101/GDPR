@@ -37,37 +37,29 @@
  in local node and needs to be displayed in view mode).
 
  By default, this attribute is not used.
-
- * editorMode attribute allows to configure the editor form field.
-
- * - not set -: simple combo box
- * radio : radio button in one line
- * radio_linebreak : radio button with line break
- * radio_withdesc : radion button with line break and codelist entry description
- * select : select box with size set to the number of items if lower than 7 entries.
-
 -->
-<codelists xmlns:gmd="http://www.isotc211.org/2005/gmd"
-  xmlns:gdpr="https://metadata101.github.io/GDPR">
+<codelists xmlns:gmd="http://www.isotc211.org/2005/gmd">
   <!-- ==================================================== -->
   <codelist name="gmd:CI_DateTypeCode">
     <entry>
       <code>creation</code>
-      <label>Creation</label>
-      <description>Date identifies when the resource was brought into existence</description>
+      <label>Etablering</label>
+      <description>Dato som identifiserer når et datasett/tjeneste ble etablert (skapt)
+      </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>publication</code>
-      <label>Publication</label>
-      <description>Date identifies when the resource was issued</description>
+      <label>Publisering</label>
+      <description>Dato som identifiserer når et datasett/tjeneste ble publisert første gang
+      </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>revision</code>
-      <label>Revision</label>
-      <description>Date identifies when the resource was examined or re-examined and improved or
-        amended
+      <label>Dato endret</label>
+      <description>Dato som identifiserer når et datasett/tjeneste ble revidert
+        (oppdatert/forbedret)
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -76,37 +68,33 @@
   <codelist name="gmd:CI_OnLineFunctionCode" alias="function">
     <entry>
       <code>download</code>
-      <label>Download</label>
-      <description>Online instructions for transferring data from one storage device or system to
-        another
-      </description>
+      <label>Nedlasting</label>
+      <description>Gir instruksjoner for overføring av data mellom systemer</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>information</code>
-      <label>Information</label>
-      <description>Online information about the resource</description>
+      <label>Informasjon</label>
+      <description>Gir informasjon om tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>offlineAccess</code>
-      <label>Offline access</label>
-      <description>Online instructions for requesting the resource from the
-        provider
+      <label>Offline tilgang</label>
+      <description>Gir Instruksjon for hvordan etterspørsel etter data/ tjenesten kan skje offline
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>order</code>
-      <label>Order</label>
-      <description>Online order process for obtening the resource</description>
+      <label>Bestilling</label>
+      <description>Bestillingsprosessen for å få tilgang til datasettet/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>search</code>
-      <label>Search</label>
-      <description>Online search interface for seeking out information about the
-        resource
+      <label>Søk</label>
+      <description>Gir mulighet for søking etter informasjon vedrørende datasettet/tjenesten
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -115,7 +103,7 @@
   <codelist name="gmd:CI_PresentationFormCode">
     <entry>
       <code>documentDigital</code>
-      <label>Digital document</label>
+      <label>Digitalt dokument</label>
       <description>Digital representation of a primarily textual item (can contain illustrations
         also)
       </description>
@@ -123,7 +111,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>imageDigital</code>
-      <label>Digital image</label>
+      <label>Digitalt bilde</label>
       <description>Likeness of natural or man-made features, objects, and activities acquired
         through the sensing of visual or any other segment of the electromagnetic spectrum by
         sensors, such as thermal infrared, and high resolution radar and stored in digital
@@ -133,7 +121,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>documentHardcopy</code>
-      <label>Hardcopy document</label>
+      <label>Analogt dokument</label>
       <description>Representation of a primarily textual item (can contain illustrations also) on
         paper, photograhic material, or other media
       </description>
@@ -141,7 +129,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>imageHardcopy</code>
-      <label>Hardcopy image</label>
+      <label>Analogt bilde</label>
       <description>Likeness of natural or man-made features, objects, and activities acquired
         through the sensing of visual or any other segment of the electromagnetic spectrum by
         sensors, such as thermal infrared, and high resolution radar and reproduced on paper,
@@ -151,30 +139,26 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>mapDigital</code>
-      <label>Digital map</label>
-      <description>Map represented in raster or vector form</description>
+      <label>Digitalt kart</label>
+      <description>Kart representert som raster eller vektor</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>mapHardcopy</code>
-      <label>Hardcopy map</label>
-      <description>Map printed on paper, photographic material, or other media for use directly
-        by the human user
-      </description>
+      <label>Analogt kart</label>
+      <description>Papirkart, fotografi eller lignende for menneskelig bruk</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>modelDigital</code>
       <label>Digital model</label>
-      <description>Multi-dimensional digital representation of a feature, process,
-        etc.
-      </description>
+      <description>Flerdimensjonell representasjon av objekt, prosess, etc.</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>modelHardcopy</code>
-      <label>Hardcopy model</label>
-      <description>3-dimensional, physical model</description>
+      <label>Analog model</label>
+      <description>3-dimensjonell, fysisk model</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
@@ -222,90 +206,76 @@
   <codelist name="gmd:CI_RoleCode" alias="roleCode">
     <entry>
       <code>resourceProvider</code>
-      <label>Resource provider</label>
-      <description>Party that supplies the resource</description>
+      <label>Tilbyder</label>
+      <description>Organisasjon som tilbyr datasett/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>custodian</code>
-      <label>Custodian</label>
-      <description>Party that accepts accountability and responsability for the data and ensures
-        appropriate care and maintenance of the resource
+      <label>Bestyrer</label>
+      <description>Organisasjon som tar ansvar for dataene og gir forsikringer om nødvendig
+        oppfølging og vedlikehold av dataene/tjenesten
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>owner</code>
-      <label>Owner</label>
-      <description>Party that owns the resource</description>
+      <label>Eier</label>
+      <description>Organisasjon som eier datasettet/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>user</code>
-      <label>User</label>
-      <description>Party who uses the resource</description>
+      <label>Bruker</label>
+      <description>Organisasjon som bruker datasettet/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>distributor</code>
-      <label>Distributor</label>
-      <description>Party who distributes the resource</description>
+      <label>Distributør</label>
+      <description>Organisasjon som distribuerer datasettet/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>originator</code>
-      <label>Originator</label>
-      <description>Party who created the resource</description>
+      <label>Opphav</label>
+      <description>Organisasjon som opprinnelig lagde datasettet/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>pointOfContact</code>
-      <label>Point of contact</label>
-      <description>Party who can be contacted for acquiring knowledge about or acquisition of the
-        resource
+      <label>Kontakt</label>
+      <description>Kontakt organisasjon for å få nærmere kjennskap til eller anskaffelse av
+        datasettet/tjenesten
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>principalInvestigator</code>
-      <label>Principal investigator</label>
-      <description>Key party responsible for gathering information and conducting
-        research
+      <label>Hovedansvarlig</label>
+      <description>Hovedorganisasjon for datainnsamling/tjenesteutvikling og videre utvikling
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>processor</code>
-      <label>Processor</label>
-      <description>Party wha has processed the data in a manner such that the resource has been
-        modified
+      <label>Bearbeider</label>
+      <description>Organisasjon som har modifisert dataene på en slik måte at datasettet/tjenesten
+        er endret
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
-       <code>subprocessor</code>
-       <label>subprocessor</label>
-       <description>Party that has processed the data as a subcontractor, in such a way that the data has been changed.</description>
-     </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry>
       <code>publisher</code>
-      <label>Publisher</label>
-      <description>Party who published the resource</description>
+      <label>Utgiver</label>
+      <description>Organisasjon som utgir datasettet/tjenesten</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>author</code>
-      <label>Author</label>
+      <label>Forfatter</label>
       <description>Party who authored the resource</description>
     </entry>
-        <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry>
-      <code>controller</code>
-      <label>Controller</label>
-      <description>Data Controller</description>
-    </entry>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- ISO PROFIL CHE ONLY
         <entry>
             <code>editor</code>
@@ -703,25 +673,25 @@
   <codelist name="gmd:MD_ClassificationCode">
     <entry>
       <code>unclassified</code>
-      <label>Unclassified</label>
+      <label>Ugradert</label>
       <description>Available for general disclosure</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>restricted</code>
-      <label>Restricted</label>
+      <label>Begrenset</label>
       <description>Not for general disclosure</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>confidential</code>
-      <label>Confidential</label>
+      <label>Konfidensielt</label>
       <description>Available for someone who can be entrusted with information</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>secret</code>
-      <label>Secret</label>
+      <label>Hemmelig</label>
       <description>Kept or meant to be kept private, unknown, or hidden from all but a select
         group of people
       </description>
@@ -729,7 +699,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>topSecret</code>
-      <label>Top secret</label>
+      <label>Topp hemmelig</label>
       <description>Of the highest secrecy</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -738,7 +708,7 @@
   <codelist name="gmd:MD_CoverageContentTypeCode">
     <entry>
       <code>image</code>
-      <label>Image</label>
+      <label>Bilde</label>
       <description>Meaningful numerical representation of a physical parameter that is not the
         actual value of the physical parameter
       </description>
@@ -746,7 +716,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>thematicClassification</code>
-      <label>Thematic classification</label>
+      <label>Tematisk klassifikasjon</label>
       <description>Code value with no quantitative meaning, used to represent a physical
         quantity
       </description>
@@ -754,7 +724,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>physicalMeasurement</code>
-      <label>Physical measurement</label>
+      <label>Fysiske målinger</label>
       <description>Value in physical units of the quantity being measured</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -794,14 +764,13 @@
     <entry>
       <code>abstractClass</code>
       <label>Abstract class</label>
-      <description>Class that cannot be directly instantiated</description>
+      <description>Klasse som ikke kan benyttes direkte</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>aggregateClass</code>
       <label>Aggregate class</label>
-      <description>Class that is composed of classes it is connected to by an aggregate
-        relationship
+      <description>Klasse som er bygget opp av klasser som den er koblet til i et samleforhold
       </description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -851,19 +820,19 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>characterString</code>
-      <label>Character string</label>
+      <label>Tekststreng</label>
       <description>Free text field</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>integer</code>
-      <label>Integer</label>
+      <label>Heltall</label>
       <description>Numerical field</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>association</code>
-      <label>Association</label>
+      <label>Assosiasjon</label>
       <description>Semantic relationship between two classes that involves connections among
         their instances
       </description>
@@ -874,49 +843,49 @@
   <codelist name="gmd:MD_DimensionNameTypeCode">
     <entry>
       <code>row</code>
-      <label>Row</label>
+      <label>Rad</label>
       <description>Ordinate (y) axis</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>column</code>
-      <label>Column</label>
+      <label>Kolonne</label>
       <description>Abscissa (x) axis</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>vertical</code>
-      <label>Vertical</label>
+      <label>Vertikal</label>
       <description>Vertical (z) axis</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>track</code>
-      <label>Track</label>
+      <label>Skanneretning</label>
       <description>Along the direction of motion of the scan point</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>crossTrack</code>
-      <label>Cross track</label>
+      <label>Normalen</label>
       <description>Perpendicular to the direction of motion of the scan point</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>line</code>
-      <label>Line</label>
+      <label>Linje</label>
       <description>Scan line of a sensor</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>sample</code>
-      <label>Sample</label>
+      <label>Prøve</label>
       <description>Element along a scan line</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>time</code>
-      <label>Time</label>
+      <label>Tid</label>
       <description>Duration</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -925,7 +894,7 @@
   <codelist name="gmd:MD_GeometricObjectTypeCode">
     <entry>
       <code>complex</code>
-      <label>Complex</label>
+      <label>Kompleks</label>
       <description>Set of geometric primitives such that their boundaries can be represented as a
         union of other primitives
       </description>
@@ -933,13 +902,13 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>composite</code>
-      <label>Composite</label>
+      <label>Sammensatt</label>
       <description>Connected set of curves, solids or surfaces</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>curve</code>
-      <label>Curve</label>
+      <label>Kurve</label>
       <description>Bounded, 1-dimensional geometric primitive, representing the continuous image
         of a line
       </description>
@@ -947,7 +916,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>point</code>
-      <label>Point</label>
+      <label>Punkt</label>
       <description>Zero-dimensional geometric primitive, representing a position but not having
         an extent
       </description>
@@ -955,7 +924,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>solid</code>
-      <label>Solid</label>
+      <label>Volum</label>
       <description>Bounded, connected 3-dimensional geometric primitive, representing the
         continuous image of a region of space
       </description>
@@ -963,7 +932,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>surface</code>
-      <label>Surface</label>
+      <label>Falte</label>
       <description>Bounded, connected 2-dimensional geometric primitive, representing the
         continuous image of a region of a plane
       </description>
@@ -974,19 +943,19 @@
   <codelist name="gmd:MD_ImagingConditionCode">
     <entry>
       <code>blurredImage</code>
-      <label>Blurred image</label>
+      <label>Uskarpt bilde</label>
       <description>Portion of the image is blurred</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>cloud</code>
-      <label>Cloud</label>
+      <label>Skyer</label>
       <description>Portion of the image is partially obscured by cloud cover</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>degradingObliquity</code>
-      <label>Degrading obliquity</label>
+      <label>Ekstremskrått opptak</label>
       <description>Acute angle between the plane of the ecliptic (the plane of the Earth s orbit)
         and the plane of the celestial equator
       </description>
@@ -994,13 +963,13 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fog</code>
-      <label>Fog</label>
+      <label>Tåke</label>
       <description>Portion of the image is partially obscured by fog</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>heavySmokeOrDust</code>
-      <label>Heavy smoke or dust</label>
+      <label>Røyk eller støv</label>
       <description>Portion of the image is partially obscured by heavy smoke or
         dust
       </description>
@@ -1008,19 +977,19 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>night</code>
-      <label>Night</label>
+      <label>Natt</label>
       <description>Image was taken at night</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>rain</code>
-      <label>Rain</label>
+      <label>Regn</label>
       <description>Image was taken during rainfall</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>semiDarkness</code>
-      <label>Semi darkness</label>
+      <label>Skumring</label>
       <description>Image was taken during semi-dark conditions -- twilight
         conditions
       </description>
@@ -1028,19 +997,19 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>shadow</code>
-      <label>Shadow</label>
+      <label>Skygge</label>
       <description>Portion of the image is obscured by shadow</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>snow</code>
-      <label>Snow</label>
+      <label>Snø</label>
       <description>Portion of the image is obscured by snow</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>terrainMasking</code>
-      <label>Terrain masking</label>
+      <label>Terrengmaskering</label>
       <description>The absence of collection data of a given point or area caused by the relative
         location of topographic features which obstruct the collection path between the
         collector(s) and the subject(s) of interest
@@ -1052,7 +1021,7 @@
   <codelist name="gmd:MD_KeywordTypeCode">
     <entry>
       <code>discipline</code>
-      <label>Discipline</label>
+      <label>Fagområde</label>
       <description>Keyword identifies a branch of instruction or specialized
         learning
       </description>
@@ -1060,101 +1029,101 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>place</code>
-      <label>Place</label>
+      <label>Sted</label>
       <description>Keyword identifies a location</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>stratum</code>
-      <label>Stratum</label>
+      <label>Lag</label>
       <description>Keyword identifies the layer(s) of any deposited substance</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>temporal</code>
-      <label>Temporal</label>
+      <label>Midlertidig</label>
       <description>Keyword identifies a time period related to the dataset</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>theme</code>
-      <label>Theme</label>
+      <label>Tema</label>
       <description>Keyword identifies a particular subject or topic</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
   </codelist>
   <!-- ==================================================== -->
-  <codelist name="gmd:MD_MaintenanceFrequencyCode" sort="fixed">
+  <codelist name="gmd:MD_MaintenanceFrequencyCode">
     <entry>
       <code>continual</code>
-      <label>Continual</label>
+      <label>Kontinuerlig</label>
       <description>Data is repeatedly and frequently updated</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>daily</code>
-      <label>Daily</label>
+      <label>Daglig</label>
       <description>Data is updated each day</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>weekly</code>
-      <label>Weekly</label>
+      <label>Ukentlig</label>
       <description>Data is updated on a weekly basis</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fortnightly</code>
-      <label>Fortnightly</label>
+      <label>Hver 14. dag</label>
       <description>Data is updated every two weeks</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>monthly</code>
-      <label>Monthly</label>
+      <label>Månedlig</label>
       <description>Data is updated each month</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>quarterly</code>
-      <label>Quarterly</label>
+      <label>Kvartalsvis</label>
       <description>Data is updated every three months</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>biannually</code>
-      <label>Biannually</label>
+      <label>Halvårlig</label>
       <description>Data is updated twice each year</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>annually</code>
-      <label>Annually</label>
+      <label>Årlig</label>
       <description>Data is updated every year</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>asNeeded</code>
-      <label>As needed</label>
-      <description>Data is updated as deemed necessary</description>
+      <label>Ved behov</label>
+      <description>data oppdateres ved behov</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>irregular</code>
-      <label>Irregular</label>
-      <description>Data is updated in intervals that are uneven in duration</description>
+      <label>Uregelmessig</label>
+      <description>data oppdateres diskontinuerlig</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>notPlanned</code>
-      <label>Not planned</label>
-      <description>There are no plans to update the data</description>
+      <label>Ikke planlagt</label>
+      <description>Det foreligger ingen planer om oppdatering</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>unknown</code>
-      <label>Unknown</label>
-      <description>Frequency of maintenance for the data is not known</description>
+      <label>Ukjent</label>
+      <description>Oppdateringsfrekvens er ukjent</description>
     </entry>
     <!-- ISO PROFIL CHE ONLY
         <entry>
@@ -1169,37 +1138,37 @@
     <entry>
       <code>cpio</code>
       <label>CPIO</label>
-      <description>CoPy In / Out (UNIX file format and command)</description>
+      <description>Unix filformat for dataoveføring</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>tar</code>
       <label>TAR</label>
-      <description>Tape ARchive</description>
+      <description>Arkivformat</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>highSierra</code>
       <label>High sierra</label>
-      <description>High sierra file system</description>
+      <description>high sierra filsystem for CDROM</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>iso9660</code>
       <label>ISO9660</label>
-      <description>Information processing volume and file structure of CD-ROM</description>
+      <description>voluminformasjon og filstruktur for CD-ROM</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>iso9660RockRidge</code>
       <label>ISO9660 Rock Ridge</label>
-      <description>Rock ridge interchange protocol (UNIX)</description>
+      <description>Rock ridge overføringsprotokoll (for Unix systemer)</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>iso9660AppleHFS</code>
       <label>ISO9660 Apple HFS</label>
-      <description>Hierarchical file system (Macintosh)</description>
+      <description>Macintosh hierarkisk filsystem</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
   </codelist>
@@ -1207,110 +1176,110 @@
   <codelist name="gmd:MD_MediumNameCode">
     <entry>
       <code>cdRom</code>
-      <label>CDROM</label>
-      <description>Read-only optical disk</description>
+      <label>CD-ROM</label>
+      <description>CD-ROM</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>dvd</code>
       <label>DVD</label>
-      <description>Digital versatile disk</description>
+      <description>DVD</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>dvdRom</code>
-      <label>DVDROM</label>
-      <description>Digital versatile disk, read only</description>
+      <label>DVD-ROM</label>
+      <description>DVD-ROM, kun leserettighet</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>3halfInchFloppy</code>
-      <label>3 Half Inch Floppy</label>
+      <label>3,5 tommer diskett</label>
       <description>3,5 inch magnetic disk</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>5quarterInchFloppy</code>
-      <label>5 Quarter Inch Floppy</label>
+      <label>5,25 tommer diskett</label>
       <description>5,25 inch magnetic disk</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>7trackTape</code>
-      <label>7 Track tape</label>
+      <label>7 spor magnetbånd</label>
       <description>7 track magnetic tape</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>9trackTape</code>
-      <label>9 track tape</label>
+      <label>9 spor magnetbånd</label>
       <description>9 track magnetic tape</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>3480Cartridge</code>
-      <label>3480 Cartridge</label>
+      <label>3480 båndkassett</label>
       <description>3480 cartridge tape drive</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>3490Cartridge</code>
-      <label>3490 Cartridge</label>
+      <label>3490 båndkassett</label>
       <description>3490 cartridge tape drive</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>3580Cartridge</code>
-      <label>3580 Cartridge</label>
+      <label>3580 båndkassett</label>
       <description>3580 cartridge tape drive</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>4mmCartridgeTape</code>
-      <label>4 mm Cartridge tape</label>
+      <label>4 mm båndkassett</label>
       <description>4 millimetre magnetic tape</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>8mmCartridgeTape</code>
-      <label>8 mm Cartridge tape</label>
+      <label>8 mm båndkassett</label>
       <description>8 millimetre magnetic tape</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>1quarterInchCartridgeTape</code>
-      <label>1 Quarter inch cartridge tape</label>
+      <label>1/4 tomers magnetbånd</label>
       <description>0,25 inch magnetic tape</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>digitalLinearTap</code>
-      <label>Digital linear tape</label>
+      <label>½ tommer DLT kassett</label>
       <description>Half inch cartridge streaming tape drive</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>onLine</code>
       <label>Online</label>
-      <description>Direct computer linkage</description>
+      <description>Direktekobling med datamaskin</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>satellite</code>
-      <label>Satellite</label>
-      <description>Linkage through a satellite communication system</description>
+      <label>Satellitt</label>
+      <description>Oppkobling via satelitt</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>telephoneLink</code>
-      <label>Telephone link</label>
-      <description>Communication through a telephone network</description>
+      <label>Telefon</label>
+      <description>Oppkobling via telefonlinjer</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>hardcopy</code>
-      <label>Hardcopy</label>
-      <description>Pamphlet or leaflet giving descriptive information</description>
+      <label>Papirkopi</label>
+      <description>Trykksak</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- ISO PROFIL CHE ONLY
@@ -1345,19 +1314,19 @@
   <codelist name="gmd:MD_ObligationCode">
     <entry>
       <code>mandatory</code>
-      <label>Mandatory</label>
+      <label>Påkrevet</label>
       <description>Element is always required</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>optional</code>
-      <label>Optional</label>
+      <label>Opsjonell</label>
       <description>Element is not required</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>conditional</code>
-      <label>Conditional</label>
+      <label>Betinget</label>
       <description>Element is required when a specific condition is met</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1366,7 +1335,7 @@
   <codelist name="gmd:MD_PixelOrientationCode">
     <entry>
       <code>center</code>
-      <label>Center</label>
+      <label>Senter</label>
       <description>Point halfway between the lower left and the upper right of the
         pixel
       </description>
@@ -1374,7 +1343,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>lowerLeft</code>
-      <label>Lower left</label>
+      <label>Nedre venstre</label>
       <description>The corner in the pixel closest to the origin of the SRS; if two are at the
         same distance from the origin, the one with the smallest x-value
       </description>
@@ -1382,19 +1351,19 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>lowerRight</code>
-      <label>Lower right</label>
+      <label>Nedre høyre</label>
       <description>Next corner counterclockwise from the lower left</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>upperRight</code>
-      <label>Upper right</label>
+      <label>Øvre høyre</label>
       <description>Next corner counterclockwise from the lower right</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>upperLeft</code>
-      <label>Upper left</label>
+      <label>Øvre venstre</label>
       <description>Next corner counterclockwise from the upper right</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1403,31 +1372,31 @@
   <codelist name="gmd:MD_ProgressCode">
     <entry>
       <code>completed</code>
-      <label>Completed</label>
+      <label>Ferdig</label>
       <description>Production of the data has been completed</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>historicalArchive</code>
-      <label>Historical archive</label>
+      <label>Historisk arkiv</label>
       <description>Data has been stored in an offline storage facility</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>obsolete</code>
-      <label>Obsolete</label>
+      <label>Foreldet</label>
       <description>Data is no longer relevant</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>onGoing</code>
-      <label>On going</label>
+      <label>Kontinuerlig oppdatering</label>
       <description>Data is continually being updated</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>planned</code>
-      <label>Planned</label>
+      <label>Planlagt</label>
       <description>Fixed date has been established upon or by which the data will be created or
         updated
       </description>
@@ -1435,27 +1404,22 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>required</code>
-      <label>Required</label>
+      <label>Behov for oppdatering</label>
       <description>Data needs to be generated or updated</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>underDevelopment</code>
-      <label>Under development</label>
+      <label>Under produksjon</label>
       <description>Data is currently in the process of being created</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <entry hideInEditMode="true">
-      <code>notobsolete</code>
-      <label>Not obsolete</label>
-      <description></description>
-    </entry>
   </codelist>
   <!-- ==================================================== -->
   <codelist name="gmd:MD_RestrictionCode">
     <entry>
       <code>copyright</code>
-      <label>Copyright</label>
+      <label>Kopibeskyttet</label>
       <description>Exclusive right to the publication, production, or sale of the rights to a
         literary, dramatic, musical, or artistic work, or to the use of a commercial print or
         label, granted by law for a specified period of time to an author, composer, artist,
@@ -1465,7 +1429,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>patent</code>
-      <label>Patent</label>
+      <label>Patentert</label>
       <description>Government has granted exclusive right to make, sell, use or license an
         invention or discovery
       </description>
@@ -1473,13 +1437,13 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>patentPending</code>
-      <label>Pending patent</label>
+      <label>Påvente av patent</label>
       <description>Produced or sold information awaiting a patent</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>trademark</code>
-      <label>Trademark</label>
+      <label>Registrert varemerke</label>
       <description>A name, symbol, or other device identifying a product, officially registered
         and legally restricted to the use of the owner or manufacturer
       </description>
@@ -1487,13 +1451,13 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>license</code>
-      <label>License</label>
+      <label>Lisens</label>
       <description>Formal permission to do something</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>intellectualPropertyRights</code>
-      <label>Intellectual property rights</label>
+      <label>Åndsverk</label>
       <description>Rights to financial benefit from and control of distribution of non-tangible
         property that is a result of creativity
       </description>
@@ -1501,13 +1465,13 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>restricted</code>
-      <label>Restricted</label>
+      <label>Beskyttet</label>
       <description>Withheld from general circulation or disclosure</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>otherRestrictions</code>
-      <label>Other restrictions</label>
+      <label>Andre restriksjoner</label>
       <description>Limitation not listed</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1516,74 +1480,74 @@
   <codelist name="gmd:MD_ScopeCode">
     <entry>
       <code>attribute</code>
-      <label>Attribute</label>
+      <label>Egenskap</label>
       <description>Information applies to the attribute class</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>attributeType</code>
-      <label>Attribute type</label>
+      <label>Egenskapstype</label>
       <description>Information applies to the characteristic of a feature</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>collectionHardware</code>
-      <label>Collection hardware</label>
+      <label>Maskinvare</label>
       <description>Information applies to the collection hardware class</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>collectionSession</code>
-      <label>Collection session</label>
+      <label>datainnsamling</label>
       <description>Information applies to the collection session</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>dataset</code>
-      <label>Dataset</label>
+      <label>Datasett</label>
       <description>Information applies to the dataset</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>series</code>
-      <label>Series</label>
+      <label>Datasettserie</label>
       <description>Information applies to the series</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>nonGeographicDataset</code>
-      <label>Non geographic dataset</label>
+      <label>Ikke-stedfestede data</label>
       <description>Information applies to non-geographic data</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>dimensionGroup</code>
-      <label>Dimension group</label>
+      <label>Gruppe</label>
       <description>Information applies to a dimension group</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>feature</code>
-      <label>Feature</label>
+      <label>Objekt</label>
       <description>Information applies to a feature</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>featureType</code>
-      <label>Feature type</label>
+      <label>Objekttype</label>
       <description>Information applies to a feature type</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>propertyType</code>
-      <label>Property type</label>
-      <description>Information applies to a property type</description>
+      <label>Eierforholdtype</label>
+      <description>Metadata er gitt på typer av eieforhold</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fieldSession</code>
-      <label>Field session</label>
-      <description>Information applies to a field session</description>
+      <label>Kolonnegruppering</label>
+      <description>Metadata er gitt for en gruppe felt/kolonner i en tabell</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
@@ -1594,7 +1558,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>service</code>
-      <label>Service</label>
+      <label>Tjeneste</label>
       <description>Information applies to a capability which a service provider entity makes
         available to a service user entity through a set of interfaces that define a behaviour,
         such as a use case
@@ -1603,7 +1567,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>model</code>
-      <label>Model</label>
+      <label>Modell</label>
       <description>Information applies to a copy or imitation of an existing or hypothetical
         object
       </description>
@@ -1611,7 +1575,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>tile</code>
-      <label>Tile</label>
+      <label>Flis</label>
       <description>Information applies to a tile, a spatial subset of geographic
         data
       </description>
@@ -1649,39 +1613,24 @@
       <label>Interactive map</label>
       <description></description>
     </entry>
-    <entry hideInEditMode="true">
-      <code>featureCatalog</code>
-      <label>Feature catalog</label>
-      <description></description>
-    </entry>
-  </codelist>
-  <codelist name="gmd:MD_ScopeCode" displayIf="/ancestor::node()[name()='gmd:MD_Metadata']/gmd:identificationInfo/srv:SV_ServiceIdentification">
-    <entry>
-      <code>service</code>
-      <label>Service</label>
-      <description>Information applies to a capability which a service provider entity makes
-        available to a service user entity through a set of interfaces that define a behaviour,
-        such as a use case
-      </description>
-    </entry>
   </codelist>
   <!-- ==================================================== -->
   <codelist name="gmd:MD_SpatialRepresentationTypeCode">
     <entry>
       <code>vector</code>
-      <label>Vector</label>
+      <label>Vektor</label>
       <description>Vector data is used to represent geographic data</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>grid</code>
-      <label>Grid</label>
+      <label>Rasterbilde</label>
       <description>Grid data is used to represent geographic data</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>textTable</code>
-      <label>Text, table</label>
+      <label>Teksttabel</label>
       <description>Textual or tabular data is used to represent geographic data</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1693,7 +1642,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>stereoModel</code>
-      <label>Stereo model</label>
+      <label>Stereomodell</label>
       <description>Three-dimensional view formed by the intersecting homologous rays of an
         overlapping pair of images
       </description>
@@ -1715,7 +1664,7 @@
   <codelist name="gmd:MD_TopicCategoryCode" alias="topicCategory">
     <entry>
       <code>farming</code>
-      <label>Farming</label>
+      <label>Jord/skogbruk</label>
       <description>Rearing of animals and/or cultivation of plants. Examples: agriculture,
         irrigation, aquaculture, plantations, herding, pests and diseases affecting crops and
         livestock
@@ -1724,7 +1673,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>biota</code>
-      <label>Biota</label>
+      <label>Biologisk mangfold</label>
       <description>Flora and/or fauna in natural environment. Examples: wildlife, vegetation,
         biological sciences, ecology, wilderness, sealife, wetlands, habitat
       </description>
@@ -1732,7 +1681,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>boundaries</code>
-      <label>Boundaries</label>
+      <label>Administrative grenser</label>
       <description>Legal land descriptions. Examples: political and administrative
         boundaries
       </description>
@@ -1740,7 +1689,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>climatologyMeteorologyAtmosphere</code>
-      <label>Climatology, meteorology, atmosphere</label>
+      <label>Klima, metorologi og atmosfære</label>
       <description>Processes and phenomena of the atmosphere. Examples: cloud cover, weather,
         climate, atmospheric conditions, climate change, precipitation
       </description>
@@ -1748,7 +1697,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>economy</code>
-      <label>Economy</label>
+      <label>Økonomi</label>
       <description>Economic activities, conditions and employment. Examples: production, labour,
         revenue, commerce, industry, tourism and ecotourism, forestry, fisheries, commercial or
         subsistence hunting, exploration and exploitation of resources such as minerals, oil and
@@ -1758,7 +1707,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>elevation</code>
-      <label>Elevation</label>
+      <label>Høydedata</label>
       <description>Height above or below sea level. Examples: altitude, bathymetry, digital
         elevation models, slope, derived products
       </description>
@@ -1766,7 +1715,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>environment</code>
-      <label>Environment</label>
+      <label>Miljødata</label>
       <description>Environmental resources, protection and conservation. Examples: environmental
         pollution, waste storage and treatment, environmental impact assessment, monitoring
         environmental risk, nature reserves, landscape
@@ -1775,7 +1724,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>geoscientificInformation</code>
-      <label>Geoscientific information</label>
+      <label>Geovitenskapelig informasjon</label>
       <description>Information pertaining to earth sciences. Examples: geophysical features and
         processes, geology, minerals, sciences dealing with the composition, structure and
         origin of the earth s rocks, risks of earthquakes, volcanic activity, landslides,
@@ -1785,7 +1734,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>health</code>
-      <label>Health</label>
+      <label>Helse</label>
       <description>Health, health services, human ecology, and safety. Examples: disease and
         illness, factors affecting health, hygiene, substance abuse, mental and physical health,
         health services
@@ -1794,7 +1743,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>imageryBaseMapsEarthCover</code>
-      <label>Imagery base maps earth cover</label>
+      <label>Basisdata</label>
       <description>Base maps. Examples: land cover, topographic maps, imagery, unclassified
         images, annotations
       </description>
@@ -1802,7 +1751,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>intelligenceMilitary</code>
-      <label>Intelligence military</label>
+      <label>Militære data</label>
       <description>Military bases, structures, activities. Examples: barracks, training grounds,
         military transportation, information collection
       </description>
@@ -1810,7 +1759,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>inlandWaters</code>
-      <label>Inland waters</label>
+      <label>Innsjø og vassdrag</label>
       <description>Inland water features, drainage systems and their characteristics. Examples:
         rivers and glaciers, salt lakes, water utilization plans, dams, currents, floods, water
         quality, hydrographic charts
@@ -1819,7 +1768,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>location</code>
-      <label>Location</label>
+      <label>Posisjonsbestemmende data</label>
       <description>Positional information and services. Examples: addresses, geodetic networks,
         control points, postal zones and services, place names
       </description>
@@ -1827,7 +1776,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>oceans</code>
-      <label>Oceans</label>
+      <label>Kyst og sjø</label>
       <description>Features and characteristics of salt water bodies (excluding inland waters).
         Examples: tides, tidal waves, coastal information, reefs
       </description>
@@ -1835,7 +1784,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>planningCadastre</code>
-      <label>Planning cadastre</label>
+      <label>Planlegging og eiendom</label>
       <description>Information used for appropriate actions for future use of the land. Examples:
         land use maps, zoning maps, cadastral surveys, land ownership
       </description>
@@ -1843,7 +1792,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>society</code>
-      <label>Society</label>
+      <label>Samfunn og kultur</label>
       <description>Characteristics of society and cultures. Examples: settlements, anthropology,
         archaeology, education, traditional beliefs, manners and customs, demographic data,
         recreational areas and activities, social impact assessments, crime and justice, census
@@ -1853,7 +1802,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>structure</code>
-      <label>Structure</label>
+      <label>Konstruksjoner</label>
       <description>Man-made construction. Examples: buildings, museums, churches, factories,
         housing, monuments, shops, towers
       </description>
@@ -1861,7 +1810,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>transportation</code>
-      <label>Transportation</label>
+      <label>Transport</label>
       <description>Means and aids for conveying persons and/or goods. Examples: roads,
         airports/airstrips, shipping routes, tunnels, nautical charts, vehicle or vessel
         location, aeronautical charts, railways
@@ -1870,7 +1819,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>utilitiesCommunication</code>
-      <label>Utilities communication</label>
+      <label>Ledningsinformasjon</label>
       <description>Energy, water and waste systems and communications infrastructure and
         services. Examples: hydroelectricity, geothermal, solar and nuclear sources of energy,
         water purification and distribution, sewage collection and disposal, electricity and gas
@@ -1884,7 +1833,7 @@
   <codelist name="gmd:MD_TopologyLevelCode">
     <entry>
       <code>geometryOnly</code>
-      <label>Geometry only</label>
+      <label>Kun geometri</label>
       <description>Geometry objects without any additional structure which describes
         topology
       </description>
@@ -1892,7 +1841,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>topology1D</code>
-      <label>Topology 1D</label>
+      <label>Topologi 1D</label>
       <description>1-dimensional topological complex -- commonly called chain-node
         topology
       </description>
@@ -1900,7 +1849,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>planarGraph</code>
-      <label>Planar graph</label>
+      <label>Planar graf</label>
       <description>1-dimensional topological complex that is planar. (A planar graph is a graph
         that can be drawn in a plane in such a way that no two edges intersect except at a
         vertex.)
@@ -1909,7 +1858,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fullPlanarGraph</code>
-      <label>Full planar graph</label>
+      <label>Full planar graf</label>
       <description>2-dimensional topological complex that is planar. (A 2-dimensional topological
         complex is commonly called full topology in a cartographic 2D
         environment.)
@@ -1918,7 +1867,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>surfaceGraph</code>
-      <label>Surface graph</label>
+      <label>Flate graf</label>
       <description>1-dimensional topological complex that is isomorphic to a subset of a surface.
         (A geometric complex is isomorphic to a topological complex if their elements are in a
         one-to-one, dimensional-and boundry-preserving correspondence to one
@@ -1928,7 +1877,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fullSurfaceGraph</code>
-      <label>Full surface graph</label>
+      <label>Full flate graf</label>
       <description>2-dimensional topological complex that is isomorphic to a subset of a
         surface
       </description>
@@ -1936,7 +1885,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>topology3D</code>
-      <label>Topology 3D</label>
+      <label>Topologi 3D</label>
       <description>3-dimensional topological complex. (A topological complex is a collection of
         topological primitives that are closed under the boundary operations.)
       </description>
@@ -1944,14 +1893,14 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fullTopology3D</code>
-      <label>Full topology 3D</label>
+      <label>Full topologi 3D</label>
       <description>Complete coverage of a 3D Euclidean coordinate space</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>abstract</code>
-      <label>Abstract</label>
-      <description>Topological complex without any specified geometric realisation</description>
+      <label>Abstrakt</label>
+      <description>Topologi kompleks uten en spesifisert geometrisk realisasjon</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
   </codelist>
@@ -1959,85 +1908,85 @@
   <codelist name="gmd:MX_ScopeCode">
     <entry>
       <code>attribute</code>
-      <label>Attribute</label>
+      <label>Egenskap</label>
       <description>Information applies to the attribute class</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>attributeType</code>
-      <label>Attribute type</label>
+      <label>Egenskapstype</label>
       <description>Information applies to the characteristic of a feature</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>collectionHardware</code>
-      <label>Collection hardware</label>
+      <label>Maskinvare</label>
       <description>Information applies to the collection hardware class</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>collectionSession</code>
-      <label>Collection session</label>
+      <label>Datainnsamling</label>
       <description>Information applies to the collection session</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>dataset</code>
-      <label>Dataset</label>
+      <label>Datasett</label>
       <description>Information applies to the dataset</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>series</code>
-      <label>Series</label>
+      <label>Datasettserie</label>
       <description>Information applies to the series</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>nonGeographicDataset</code>
-      <label>Non geographic dataset</label>
+      <label>Ikke-stedfestede data</label>
       <description>Information applies to non-geographic data</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>dimensionGroup</code>
-      <label>Dimension group</label>
+      <label>Gruppe</label>
       <description>Information applies to a dimension group</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>feature</code>
-      <label>Feature</label>
+      <label>Objekt</label>
       <description>Information applies to a feature</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>featureType</code>
-      <label>Feature type</label>
+      <label>Objekttype</label>
       <description>Information applies to a feature type</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>propertyType</code>
-      <label>Property type</label>
+      <label>Eierforholdtype</label>
       <description>Information applies to a property type</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>fieldSession</code>
-      <label>Field session</label>
+      <label>Kolonnegruppering</label>
       <description>Information applies to a field session</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>software</code>
-      <label>Software</label>
+      <label>Programvare</label>
       <description>Information applies to a computer program or routine</description>
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>service</code>
-      <label>Service</label>
+      <label>Tjeneste</label>
       <description>Information applies to a capability which a service provider entity makes
         available to a service user entity through a set of interfaces that define a behaviour,
         such as a use case
@@ -2046,7 +1995,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>model</code>
-      <label>Model</label>
+      <label>Modell</label>
       <description>Information applies to a copy or imitation of an existing or hypothetical
         object
       </description>
@@ -2054,7 +2003,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>tile</code>
-      <label>Tile</label>
+      <label>Flis</label>
       <description>Information applies to a tile, a spatial subset of geographic
         data
       </description>
@@ -2062,7 +2011,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>initiative</code>
-      <label>Initiative</label>
+      <label>Spesiell aktivitet</label>
       <description>The referencing entity applies to a transfer aggregate which was originally
         identified as an initiative (DS_Initiative)
       </description>
@@ -2070,7 +2019,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>stereomate</code>
-      <label>Stereo mate</label>
+      <label>Bildepar</label>
       <description>The referencing entity applies to a transfer aggregate which was originally
         identified as a stereo mate (DS_StereoMate)
       </description>
@@ -2086,7 +2035,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>platformSeries</code>
-      <label>Platform series</label>
+      <label>Platformserie</label>
       <description>The referencing entity applies to a transfer aggregate which was originally
         identified as a platform series (DS_PlatformSeries)
       </description>
@@ -2094,7 +2043,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>sensorSeries</code>
-      <label>Sensor series</label>
+      <label>Sensorserie</label>
       <description>The referencing entity applies to a transfer aggregate which was originally
         identified as a sensor series (DS_SensorSeries)
       </description>
@@ -2102,7 +2051,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>productionSeries</code>
-      <label>Production series</label>
+      <label>Produsjonsserie</label>
       <description>The referencing entity applies to a transfer aggregate which was originally
         identified as a production series (DS_ProductionSeries)
       </description>
@@ -2110,7 +2059,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>transferAggregate</code>
-      <label>Transfer aggregate</label>
+      <label>Overføringsrelasjon</label>
       <description>The referencing entity applies to a transfer aggregate which has no existence
         outside of the transfer context
       </description>
@@ -2118,7 +2067,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>otherAggregate</code>
-      <label>Other aggregate</label>
+      <label>Generell assosiasjon</label>
       <description>The referencing entity applies to a transfer aggregate which has an existence
         outside of the transfer context, but which does not pertains to a specific aggregate
         type.
@@ -2163,18 +2112,18 @@
   <codelist name="srv:SV_CouplingType">
     <entry>
       <code>tight</code>
-      <label>Tight</label>
+      <label>Tett</label>
       <description>Tightly coupled: data associated</description>
     </entry>
     <entry>
       <code>mixed</code>
-      <label>Mixed</label>
+      <label>Blandet</label>
       <description>Mixed coupled: data associated; in addition, external data might be processed
       </description>
     </entry>
     <entry>
       <code>loose</code>
-      <label>Loose</label>
+      <label>Løs</label>
       <description>Loosely coupled: no data associated</description>
     </entry>
   </codelist>
@@ -2192,574 +2141,4 @@
       <label>Input/output</label>
     </entry>
   </codelist>
-
-  <!-- INSPIRE SDS  ================================================== -->
-
-  <codelist name="SDS_category">
-    <entry>
-      <code>http://inspire.ec.europa.eu/metadata-codelist/Category/harmonised</code>
-      <label>harmonised</label>
-      <description>Harmonised</description>
-    </entry>
-    <entry>
-      <code>http://inspire.ec.europa.eu/metadata-codelist/Category/interoperable</code>
-      <label>interoperable</label>
-      <description>Interoperable</description>
-    </entry>
-    <entry>
-      <code>http://inspire.ec.europa.eu/metadata-codelist/Category/invocable</code>
-      <label>invocable</label>
-      <description>Invocable</description>
-    </entry>
-  </codelist>
-
-  <codelist name="SDS_DCP">
-    <entry>
-      <code>xml</code>
-      <label>XML</label>
-      <description>XML</description>
-    </entry>
-    <entry>
-      <code>corba</code>
-      <label>CORBA</label>
-      <description>CORBA</description>
-    </entry>
-    <entry>
-      <code>java</code>
-      <label>JAVA</label>
-      <description>JAVA</description>
-    </entry>
-    <entry>
-      <code>com</code>
-      <label>COM</label>
-      <description>COM</description>
-    </entry>
-    <entry>
-      <code>sql</code>
-      <label>SQL</label>
-      <description>SQL</description>
-    </entry>
-    <entry>
-      <code>webServices</code>
-      <label>Web Services</label>
-      <description>Web Services</description>
-    </entry>
-  </codelist>
-
-  <codelist name="gco:nilReason">
-    <entry>
-      <code>missing</code>
-      <label>Missing</label>
-    </entry>
-    <entry>
-      <code>inapplicable</code>
-      <label>Inapplicable</label>
-    </entry>
-    <entry>
-      <code>template</code>
-      <label>Template</label>
-    </entry>
-    <entry>
-      <code>unknown</code>
-      <label>Unknown</label>
-    </entry>
-    <entry>
-      <code>withheld</code>
-      <label>With held</label>
-    </entry>
-  </codelist>
-
-  <codelist name="indeterminatePosition">
-    <entry>
-      <code>after</code>
-      <label>After</label>
-    </entry>
-    <entry>
-      <code>before</code>
-      <label>Before</label>
-    </entry>
-    <entry>
-      <code>now</code>
-      <label>Now</label>
-    </entry>
-    <entry>
-      <code>unknown</code>
-      <label>Unknown</label>
-    </entry>
-  </codelist>
-
-  <codelist name="gdpr:CI_LegalBasisCode">
-     <entry>
-       <code>permission-person-concerned</code>
-       <label>Permission data subject</label>
-     </entry>
-     <entry>
-       <code>implementation-agreement</code>
-       <label>Execution of agreement</label>
-     </entry>
-     <entry>
-       <code>legal-obligation</code>
-       <label>Legal obligation</label>
-     </entry>
-     <entry>
-       <code>vital-interest</code>
-       <label>Vital importance of data subject</label>
-     </entry>
-     <entry>
-       <code>common interest</code>
-       <label>Job of public interest</label>
-     </entry>
-     <entry>
-       <code>justified-interest</code>
-       <label>Legitimate interest of controller</label>
-     </entry>
-   </codelist>
-  <codelist name="gdpr:CI_SpecialDataCode">
-    <entry>
-      <code>none</code>
-      <label>None</label>
-    </entry>
-    <entry>
-      <code>ethnical-data</code>
-      <label>Personal data showing racial or ethnic origin</label>
-    </entry>
-    <entry>
-      <code>political-data</code>
-      <label>Personal data showing political views</label>
-    </entry>
-    <entry>
-      <code>religous-data</code>
-      <label>Personal data showing religious or philosophical beliefs</label>
-    </entry>
-    <entry>
-      <code>union-membership-data</code>
-      <label>Personal data showing a union member</label>
-    </entry>
-    <entry>
-      <code>genetic-data</code>
-      <label>Genetic data</label>
-    </entry>
-    <entry>
-      <code>biometric data</code>
-      <label>Biometric data to uniquely identify a person</label>
-    </entry>
-    <entry>
-      <code>health-data</code>
-      <label>Health data</label>
-    </entry>
-    <entry>
-      <code>sexual-data</code>
-      <label>Data related to a person's sexual behavior or sexual orientation</label>
-    </entry>
-    <entry>
-      <code>crime-data</code>
-      <label>Data related to criminal convictions and offenses</label>
-    </entry>
-  </codelist>
-  <codelist name="gdpr:CI_StoragePeriodCode">
-    <entry>
-      <code>1month</code>
-      <label>01. V1 1 month</label>
-    </entry>
-    <entry>
-      <code>1year</code>
-      <label>02. V1 1 year</label>
-    </entry>
-    <entry>
-      <code>2years</code>
-      <label>03. V2 2 years</label>
-    </entry>
-    <entry>
-      <code>3years</code>
-      <label>04. V3 3 years</label>
-    </entry>
-    <entry>
-      <code>5years</code>
-      <label>05. V5 5 years</label>
-    </entry>
-    <entry>
-      <code>7years</code>
-      <label>06. V7 7 years</label>
-    </entry>
-    <entry>
-      <code>10years</code>
-      <label>07. V10 10 years</label>
-    </entry>
-    <entry>
-      <code>15years</code>
-      <label>08. V15 15 years</label>
-    </entry>
-    <entry>
-      <code>20years</code>
-      <label>09. V20 20 years</label>
-    </entry>
-    <entry>
-      <code>40years</code>
-      <label>10. V40 40 years</label>
-    </entry>
-    <entry>
-      <code>110years</code>
-      <label>11. V110 110 years</label>
-    </entry>
-    <entry>
-      <code>permanent</code>
-      <label>12. B Permanent</label>
-    </entry>
-  </codelist>
-  <codelist name="gdpr:CI_GroundForStorageCode">
-    <entry>
-      <code>1</code>
-      <label>Preparing, developing, evaluating and advising on policy</label>
-    </entry>
-    <entry>
-      <code>1.1</code>
-      <label>Giving of policy advice / setting up executive organization</label>
-    </entry>
-    <entry>
-      <code>1.2</code>
-      <label>Advising enforcement of laws and regulations</label>
-    </entry>
-    <entry>
-      <code>1.3</code>
-      <label>Drafting long-term (research) programs</label>
-    </entry>
-    <entry>
-      <code>1.4</code>
-      <label>Develop standards, methods, protocols, indicators etc.</label>
-    </entry>
-    <entry>
-      <code>1.5</code>
-      <label>Meeting in which RIVM is chairman and / or secretary</label>
-    </entry>
-    <entry>
-      <code>1.6</code>
-      <label>Answering parliament questions and questions / complaints that (can) lead to policy changes</label>
-    </entry>
-    <entry>
-      <code>1.7</code>
-      <label>Meeting in which RIVM is not a chairman and / or secretary</label>
-    </entry>
-    <entry>
-      <code>2</code>
-      <label>Implementing policy	</label>
-    </entry>
-    <entry>
-      <code>2.1</code>
-      <label>Coordinating nationwide, conducting directives (eg Population surveys, National vaccination program, monitoring networks)</label>
-    </entry>
-    <entry>
-      <code>2.2</code>
-      <label>End products of information campaigns and content of websites</label>
-    </entry>
-    <entry>
-      <code>2.3</code>
-      <label>Other products of information campaigns and content of websites</label>
-    </entry>
-    <entry>
-      <code>3</code>
-      <label>Conducting research</label>
-    </entry>
-    <entry>
-      <code>3.1</code>
-      <label>Initiate research, determine design research design and results</label>
-    </entry>
-    <entry>
-      <code>3.2</code>
-      <label>Testing research plans (with people and test animals)</label>
-    </entry>
-    <entry>
-      <code>3.3</code>
-      <label>Reporting and publishing of (interim) results</label>
-    </entry>
-    <entry>
-      <code>3.4</code>
-      <label>Testing research questions / advising on the execution of research</label>
-    </entry>
-    <entry>
-      <code>4</code>
-      <label>Support implementation of policy and research</label>
-    </entry>
-    <entry>
-      <code>4.1</code>
-      <label>Granting of subsidies</label>
-    </entry>
-    <entry>
-      <code>4.2</code>
-      <label>Granting permits and exemptions</label>
-    </entry>
-    <entry>
-      <code>4.3</code>
-      <label>Setting and awarding prizes (eg Innovation Prize)</label>
-    </entry>
-    <entry>
-      <code>4.4</code>
-      <label>Provide education and information to professionals</label>
-    </entry>
-    <entry>
-      <code>4.5</code>
-      <label>Periodic collection of data</label>
-    </entry>
-    <entry>
-      <code>4.6</code>
-      <label>Periodic collection of data for file formation / treatment contact with patients and customers</label>
-    </entry>
-    <entry>
-      <code>4.7</code>
-      <label>Receiving and managing materials for future research (eg Blood and food samples)</label>
-    </entry>
-    <entry>
-      <code>5</code>
-      <label>Enforcement of policy</label>
-    </entry>
-    <entry>
-      <code>5.1</code>
-      <label>Perform checks / keep supervision</label>
-    </entry>
-    <entry>
-      <code>5.2</code>
-      <label>Complaints and reports about possible abuses</label>
-    </entry>
-    <entry>
-      <code>5.3</code>
-      <label>Construction and management of registers (eg of diseases, hazardous substances)</label>
-    </entry>
-    <entry>
-      <code>6</code>
-      <label>Handling of crises and disasters</label>
-    </entry>
-    <entry>
-      <code>6.1</code>
-      <label>Preparing for crises and disasters</label>
-    </entry>
-    <entry>
-      <code>6.2</code>
-      <label>Preparing and executing crisis communication</label>
-    </entry>
-    <entry>
-      <code>6.3</code>
-      <label>Advice on dealing in case of crises and disasters for decisionmaking</label>
-    </entry>
-    <entry>
-      <code>6.4</code>
-      <label>Perform measurements to determine crisis situations</label>
-    </entry>
-    <entry>
-      <code>6.5</code>
-      <label>Preparing overviews and prognoses</label>
-    </entry>
-    <entry>
-      <code>6.6</code>
-      <label>Conduct research after crises and disasters to determine long-term consequences</label>
-    </entry>
-    <entry>
-      <code>6.7</code>
-      <label>Operational preparation for crises and disasters</label>
-    </entry>
-    <entry>
-      <code>7</code>
-      <label>Focusing, organizing and justifying the organization</label>
-    </entry>
-    <entry>
-      <code>7.1</code>
-      <label>Setting, changing or canceling organizational units, committees, working and steering groups</label>
-    </entry>
-    <entry>
-      <code>7.2</code>
-      <label>Recording and reporting on objectives, tasks and organization (eg Annual accounts, annual plan, annual report)</label>
-    </entry>
-    <entry>
-      <code>7.3</code>
-      <label>Developing policies on quality assurance and international cooperation</label>
-    </entry>
-    <entry>
-      <code>7.4</code>
-      <label>Develop, establish, certify and maintain procedures and regulations with regard to safe working</label>
-    </entry>
-    <entry>
-      <code>7.5</code>
-      <label>Consultation on RIVM / sector / domain level</label>
-    </entry>
-    <entry>
-      <code>7.6</code>
-      <label>Housing (eg Requirements and building history)</label>
-    </entry>
-    <entry>
-      <code>7.7</code>
-      <label>Consultation with / by the Personnel Representatives</label>
-    </entry>
-    <entry>
-      <code>7.8</code>
-      <label>Meeting at the center / project / team / department level</label>
-    </entry>
-    <entry>
-      <code>7.9</code>
-      <label>Save, transfer, destroy and alienate information</label>
-    </entry>
-    <entry>
-      <code>8</code>
-      <label>Supporting the organization</label>
-    </entry>
-    <entry>
-      <code>8.1</code>
-      <label>Execute the budget (eg purchasing, payments etc)</label>
-    </entry>
-    <entry>
-      <code>8.2</code>
-      <label>Providing information, answering public questions, handling complaints</label>
-    </entry>
-    <entry>
-      <code>8.3</code>
-      <label>Monthly, quarterly and progress reports</label>
-    </entry>
-    <entry>
-      <code>8.4</code>
-      <label>Internal information provision (internal news reports, personnel magazines etc)</label>
-    </entry>
-    <entry>
-      <code>8.5</code>
-      <label>Drawing up work plans, internal project plans and annual plans at the center / department level)</label>
-    </entry>
-    <entry>
-      <code>8.6</code>
-      <label>Permits / exemptions / third party permissions</label>
-    </entry>
-    <entry>
-      <code>8.7</code>
-      <label>Evaluating work and research</label>
-    </entry>
-    <entry>
-      <code>8.8</code>
-      <label>Develop, establish, certify, maintain and accredit procedures, rules, regulations and instruments to implement the organization policy</label>
-    </entry>
-    <entry>
-      <code>8.9</code>
-      <label>Check and improve compliance with regulations, regulations and regulations / carry out audits</label>
-    </entry>
-    <entry>
-      <code>8.10</code>
-      <label>Conducting facility services, personnel processes and secretarial support</label>
-    </entry>
-    <entry>
-      <code>8.11</code>
-      <label>Conducting legal proceedings / representing the Secretary in international proceedings</label>
-    </entry>
-    <entry>
-      <code>8.12</code>
-      <label>The conclusion of financial agreements</label>
-    </entry>
-    <entry>
-      <code>8.13</code>
-      <label>Executing PIOFACH management</label>
-    </entry>
-    <entry>
-      <code>9</code>
-      <label>Recording special working conditions</label>
-    </entry>
-    <entry>
-      <code>9.1</code>
-      <label>Reporting / applying for exemption or dispensation / intentions regarding work with hazardous substances</label>
-    </entry>
-    <entry>
-      <code>9.2</code>
-      <label>to report in writing information about working with hazardous substances</label>
-    </entry>
-    <entry>
-      <code>9.3</code>
-      <label>Establish and maintain a register of persons who work / come into contact with hazardous substances</label>
-    </entry>
-    <entry>
-      <code>9.4</code>
-      <label>Identify / evaluate hazards that employees are exposed to hazardous substances or biological agents</label>
-    </entry>
-
-    <entry>
-      <code>10</code>
-      <label>Not archiveworthy</label>
-    </entry>
-  </codelist>
-
-  <codelist name="gdpr:CI_ProcesTypeCode">
-    <entry>
-      <code>primary</code>
-      <label>Primary</label>
-    </entry>
-    <entry>
-      <code>secondary</code>
-      <label>Secondary</label>
-    </entry>
-  </codelist>
-  <codelist name="gdpr:CI_ReceiverTypeCode">
-     <entry>
-       <code>co-worker</code>
-       <label>1. Own employees</label>
-     </entry>
-     <entry>
-       <code>processor</code>
-       <label>2. Processors</label>
-     </entry>
-     <entry>
-       <code>external</code>
-       <label>3. Third parties</label>
-     </entry>
-   </codelist>
-  <codelist name="gdpr:CI_SecurityMeasuresCode">
-    <entry>
-      <code>access-control-policy</code>
-      <label>01. Adopted security policies also implemented</label>
-    </entry>
-    <entry>
-      <code>physical-access-control</code>
-      <label>02. Physical access security measures, including organizational control</label>
-    </entry>
-    <entry>
-      <code>burglary alarm</code>
-      <label>03. Burglar alarm</label>
-    </entry>
-    <entry>
-      <code>vault</code>
-      <label>04. Vault for storing data files</label>
-    </entry>
-    <entry>
-      <code>key-access-control</code>
-      <label>05. Logical access control using something someone knows (password or PIN)</label>
-    </entry>
-    <entry>
-      <code>token-access-control</code>
-      <label>06. Logical access control using something someone carries (pass)</label>
-    </entry>
-    <entry>
-      <code>biometrical access control</code>
-      <label>07. Logical access control using something that belongs to someone (biometric characteristic)</label>
-    </entry>
-    <entry>
-      <code>other-access-control</code>
-      <label>08. Other logical access control</label>
-    </entry>
-    <entry>
-      <code>access logs</code>
-      <label>09. Automatic logging of access to data, including a verification procedure</label>
-    </entry>
-    <entry>
-      <code>authorization-control</code>
-      <label>10. Control of permissions granted</label>
-    </entry>
-    <entry>
-      <code>other measures</code>
-      <label>11. Other security measures</label>
-    </entry>
-  </codelist>
-  <codelist name="gdpr:CI_AccessPartyCode">
-     <entry>
-       <code>co-worker</code>
-       <label>1. Personnel under the direction of the person in charge</label>
-     </entry>
-     <entry>
-       <code>processor</code>
-       <label>2. Personnel under the direction of the processor</label>
-     </entry>
-     <entry>
-       <code>external</code>
-       <label>3. Third parties</label>
-     </entry>
-   </codelist>
 </codelists>

@@ -1,0 +1,316 @@
+<gmd:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco" 
+                 xmlns:gdpr="https://metadata101.github.io/GDPR"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:gml="http://www.opengis.net/gml"
+                 xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                 xmlns:gmx="http://www.isotc211.org/2005/gmx">
+   <gmd:fileIdentifier>
+      <gco:CharacterString></gco:CharacterString>
+   </gmd:fileIdentifier>
+   <gmd:language>
+      <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+   </gmd:language>
+   <gmd:characterSet>
+      <gmd:MD_CharacterSetCode codeListValue="utf8"
+                               codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"/>
+  </gmd:characterSet>
+   <gmd:hierarchyLevel>
+      <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ScopeCode"
+                        codeListValue="dataset"/>
+   </gmd:hierarchyLevel>
+   <gmd:contact>
+      <gmd:CI_ResponsibleParty>
+         <gmd:organisationName gco:nilReason="missing">
+            <gco:CharacterString/>
+         </gmd:organisationName>
+         <gmd:contactInfo>
+            <gmd:CI_Contact>
+               <gmd:phone>
+                  <gmd:CI_Telephone/>
+               </gmd:phone>
+               <gmd:address>
+                  <gmd:CI_Address>
+                     <gmd:electronicMailAddress gco:nilReason="missing">
+                        <gco:CharacterString/>
+                     </gmd:electronicMailAddress>
+                  </gmd:CI_Address>
+               </gmd:address>
+            </gmd:CI_Contact>
+         </gmd:contactInfo>
+         <gmd:role>
+            <gmd:CI_RoleCode codeListValue="pointOfContact"
+                             codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_RoleCode"/>
+         </gmd:role>
+      </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+   <gmd:dateStamp>
+      <gco:Date>2018-03-01</gco:Date>
+   </gmd:dateStamp>
+   <gmd:metadataStandardName>
+      <gco:CharacterString>ISO 19115</gco:CharacterString>
+   </gmd:metadataStandardName>
+   <gmd:metadataStandardVersion>
+      <gco:CharacterString>GDPR</gco:CharacterString>
+   </gmd:metadataStandardVersion>
+   <gmd:referenceSystemInfo>
+      <gmd:MD_ReferenceSystem>
+         <gmd:referenceSystemIdentifier>
+            <gmd:RS_Identifier>
+               <gmd:code>
+                  <gco:CharacterString>WGS84</gco:CharacterString>
+               </gmd:code>
+            </gmd:RS_Identifier>
+         </gmd:referenceSystemIdentifier>
+      </gmd:MD_ReferenceSystem>
+  </gmd:referenceSystemInfo>
+   <gmd:identificationInfo>
+      <gmd:MD_DataIdentification>
+         <gmd:citation>
+            <gmd:CI_Citation>
+               <gmd:title>
+                  <gco:CharacterString>Template for GDPR</gco:CharacterString>
+               </gmd:title>
+               <gmd:date>
+                  <gmd:CI_Date>
+                     <gmd:date>
+                        <gco:Date/>
+                     </gmd:date>
+                     <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_DateTypeCode"
+                                             codeListValue="publication"/>
+                     </gmd:dateType>
+                  </gmd:CI_Date>
+               </gmd:date>
+               <gmd:edition gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:edition>
+               <gmd:presentationForm>
+                  <gmd:CI_PresentationFormCode codeListValue="mapDigital"
+                                               codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_PresentationFormCode"/>
+               </gmd:presentationForm>
+            </gmd:CI_Citation>
+         </gmd:citation>
+         <gmd:abstract>
+            <gco:CharacterString></gco:CharacterString>
+         </gmd:abstract>
+         <gmd:pointOfContact>
+            <gmd:CI_ResponsibleParty>
+               <gmd:organisationName gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:organisationName>
+               <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                     <gmd:phone>
+                        <gmd:CI_Telephone/>
+                     </gmd:phone>
+                     <gmd:address>
+                        <gmd:CI_Address>
+                           <gmd:electronicMailAddress gco:nilReason="missing">
+                              <gco:CharacterString/>
+                           </gmd:electronicMailAddress>
+                        </gmd:CI_Address>
+                     </gmd:address>
+                  </gmd:CI_Contact>
+               </gmd:contactInfo>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeListValue="pointOfContact"
+                                   codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_RoleCode"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+         <gmd:pointOfContact>
+            <gmd:CI_ResponsibleParty>
+               <gmd:organisationName gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:organisationName>
+               <gmd:positionName gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:positionName>
+               <gmd:contactInfo>
+                  <gmd:CI_Contact>
+                     <gmd:address>
+                        <gmd:CI_Address>
+                           <gmd:electronicMailAddress gco:nilReason="missing">
+                              <gco:CharacterString/>
+                           </gmd:electronicMailAddress>
+                        </gmd:CI_Address>
+                     </gmd:address>
+                  </gmd:CI_Contact>
+               </gmd:contactInfo>
+               <gmd:role>
+                  <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#CI_RoleCode"
+                                   codeListValue="owner"/>
+               </gmd:role>
+            </gmd:CI_ResponsibleParty>
+         </gmd:pointOfContact>
+         <gmd:descriptiveKeywords>
+            <gmd:MD_Keywords>
+               <gmd:keyword gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeListValue="place"
+                                          codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_KeywordTypeCode"/>
+               </gmd:type>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <gmd:spatialResolution>
+            <gmd:MD_Resolution>
+               <gmd:equivalentScale>
+                  <gmd:MD_RepresentativeFraction>
+                     <gmd:denominator>
+                        <gco:Integer/>
+                     </gmd:denominator>
+                  </gmd:MD_RepresentativeFraction>
+               </gmd:equivalentScale>
+            </gmd:MD_Resolution>
+         </gmd:spatialResolution>
+         <gmd:language>
+            <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+         </gmd:language>
+         <gmd:topicCategory>
+            <gmd:MD_TopicCategoryCode/>
+         </gmd:topicCategory>
+         <gmd:environmentDescription gco:nilReason="missing">
+            <gco:CharacterString/>
+         </gmd:environmentDescription>
+         <gmd:extent>
+            <gmd:EX_Extent>
+               <gmd:geographicElement>
+                  <gmd:EX_GeographicBoundingBox>
+                     <gmd:westBoundLongitude>
+                        <gco:Decimal/>
+                     </gmd:westBoundLongitude>
+                     <gmd:eastBoundLongitude>
+                        <gco:Decimal/>
+                     </gmd:eastBoundLongitude>
+                     <gmd:southBoundLatitude>
+                        <gco:Decimal/>
+                     </gmd:southBoundLatitude>
+                     <gmd:northBoundLatitude>
+                        <gco:Decimal/>
+                     </gmd:northBoundLatitude>
+                  </gmd:EX_GeographicBoundingBox>
+               </gmd:geographicElement>
+               <gmd:temporalElement>
+                  <gmd:EX_TemporalExtent>
+                     <gmd:extent>
+                        <gml:TimeInstant gml:id="d17414e182a1052958">
+                           <gml:timePosition/>
+                        </gml:TimeInstant>
+                     </gmd:extent>
+                  </gmd:EX_TemporalExtent>
+               </gmd:temporalElement>
+            </gmd:EX_Extent>
+         </gmd:extent>
+         <gmd:supplementalInformation gco:nilReason="missing">
+            <gco:CharacterString/>
+         </gmd:supplementalInformation>
+      </gmd:MD_DataIdentification>
+   </gmd:identificationInfo>
+   <gmd:contentInfo>
+      <gdpr:MD_ContentInfo>
+         <gdpr:purpose>
+            <gdpr:MD_Purpose>
+               <gdpr:abstract gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gdpr:abstract>
+               <gdpr:legalBasis>
+                  <gdpr:CI_LegalBasisCode codeListValue="" codeList="http://metadata101.org/gdpr/#CI_LegalBasis"/>
+               </gdpr:legalBasis>
+            </gdpr:MD_Purpose>
+         </gdpr:purpose>
+         <gdpr:involves>
+            <gdpr:MD_Involved>
+               <gdpr:name gco:nilReason="missing">
+                  <gco:CharacterString/>
+               </gdpr:name>
+               <gdpr:data>
+                  <gdpr:MD_Data>
+                     <gdpr:name gco:nilReason="missing">
+                        <gco:CharacterString/>
+                     </gdpr:name>
+                     <gdpr:goal gco:nilReason="missing">
+                        <gco:CharacterString/>
+                     </gdpr:goal>
+                     <gdpr:storagePeriod>
+                        <gdpr:CI_StoragePeriodCode codeListValue="" codeList="http://metadata101.org/gdpr/#CI_StoragePeriod"/>
+                     </gdpr:storagePeriod>
+                     <gdpr:source gco:nilReason="missing">
+                        <gco:CharacterString/>
+                     </gdpr:source>
+                     <gdpr:required gco:nilReason="missing">
+                        <gco:CharacterString/>
+                     </gdpr:required>
+                     <gdpr:specialData>
+                        <gdpr:CI_SpecialDataCode codeListValue="" codeList="http://metadata101.org/gdpr/#CI_SpecialData"/>
+                     </gdpr:specialData>
+                  </gdpr:MD_Data>
+               </gdpr:data>
+            </gdpr:MD_Involved>
+         </gdpr:involves>
+        <gdpr:pia>
+          <gdpr:MD_Pia>
+            <gdpr:requiresPIA>
+              <gco:Boolean></gco:Boolean>
+            </gdpr:requiresPIA>
+            <gdpr:piaUrl gco:nilReason="missing">
+              <gco:CharacterString/>
+            </gdpr:piaUrl>
+          </gdpr:MD_Pia>
+        </gdpr:pia>
+        <gdpr:security>
+          <gdpr:MD_Security>
+            <gdpr:hasSecurity>
+              <gco:Boolean/>
+            </gdpr:hasSecurity>
+            <gdpr:securityMeasures>
+              <gdpr:CI_SecurityMeasuresCode codeListValue="" codeList="http://metadata101.org/gdpr/#CI_SecurityMeasures"/>
+            </gdpr:securityMeasures>
+            <gdpr:accessParty>
+              <gdpr:CI_AccessPartyCode codeListValue="" codeList="http://metadata101.org/gdpr/#CI_AccessParty"/>
+            </gdpr:accessParty>
+            <gdpr:externalAccessDetails gco:nilReason="missing">
+              <gco:CharacterString/>
+            </gdpr:externalAccessDetails>
+            <gdpr:transmitPrivateNetwork>
+              <gco:Boolean/>
+            </gdpr:transmitPrivateNetwork>
+            <gdpr:transmitPublicNetwork>
+              <gco:Boolean/>
+            </gdpr:transmitPublicNetwork>
+            <gdpr:encryptedTransmit>
+              <gco:Boolean/>
+            </gdpr:encryptedTransmit>
+            <gdpr:encryptedStorage>
+              <gco:Boolean/>
+            </gdpr:encryptedStorage>
+            <gdpr:pseudonimization>
+              <gco:Boolean/>
+            </gdpr:pseudonimization>
+          </gdpr:MD_Security>
+        </gdpr:security>
+        <gdpr:transmission>
+          <gdpr:MD_Transmission>
+            <gdpr:outsideEU>
+              <gco:Boolean/>
+            </gdpr:outsideEU>
+            <gdpr:outsideEUDetails gco:nilReason="missing">
+              <gco:CharacterString/>
+            </gdpr:outsideEUDetails>
+            <gdpr:appropriateProtectionLevel>
+              <gco:Boolean/>
+            </gdpr:appropriateProtectionLevel>
+          </gdpr:MD_Transmission>
+        </gdpr:transmission>
+         <gdpr:ProcesType>
+            <gdpr:CI_ProcesTypeCode codeListValue="primary"
+                                    codeList="http://metadata101.org/gdpr/#CI_ProcesType"/>
+         </gdpr:ProcesType>
+      </gdpr:MD_ContentInfo>
+   </gmd:contentInfo>
+   <gmd:distributionInfo>
+      <gmd:MD_Distribution>
+      </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+</gmd:MD_Metadata>

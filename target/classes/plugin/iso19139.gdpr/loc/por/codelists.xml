@@ -1,0 +1,2076 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  ~ Copyright (C) 2001-2016 Food and Agriculture Organization of the
+  ~ United Nations (FAO-UN), United Nations World Food Programme (WFP)
+  ~ and United Nations Environment Programme (UNEP)
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or (at
+  ~ your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but
+  ~ WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  ~ General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+  ~
+  ~ Contact: Jeroen Ticheler - FAO - Viale delle Terme di Caracalla 2,
+  ~ Rome - Italy. email: geonetwork@osgeo.org
+  -->
+<codelists xmlns:gmd="http://www.isotc211.org/2005/gmd">
+  <!-- ==================================================== -->
+
+  <codelist name="gmd:CI_DateTypeCode">
+    <entry>
+      <code>criation</code>
+      <label>Cria��o</label>
+      <description>A data identifica quando o recurso foi criado</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>publication</code>
+      <label>Publica��o</label>
+      <description>A data identifica quando o recurso foi emitido</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>revision</code>
+      <label>Revis�o</label>
+      <description>A data identifica quando o recurso foi examinado ou re-examinado e melhorado ou
+        retificado
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:CI_OnLineFunctionCode">
+    <entry>
+      <code>download</code>
+      <label>Download</label>
+      <description>Instru��es online para transferir dados duma mem�ria ou sistema a uma outra
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>information</code>
+      <label>Informa��o</label>
+      <description>Informa��o online sobre o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>offlineAccess</code>
+      <label>Acesso offline</label>
+      <description>Instru��es online para solicitar o recurso do provider</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>order</code>
+      <label>Pedido</label>
+      <description>Processo online de pedido para obter o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>search</code>
+      <label>Pesquisa</label>
+      <description>Interface online de pesquisa para encontrar informa��o sobre o recurso
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:CI_PresentationFormCode">
+    <entry>
+      <code>documentDigital</code>
+      <label>Documento digital</label>
+      <description>Visualiza��o digital dum item principalmente escrito (tamb�m possa conter
+        ilustra��es)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>imageDigital</code>
+      <label>Imagem digital</label>
+      <description>Imagem de caracter�sticas, objectos e actividades naturais ou artificiais,
+        adquirido
+        pelo sensoriamento de espectro eletromagn�tico (tanto o segmento vis�vel como os outros
+        segmentos)
+        por sensores, tais como de infravermelho, e radar de alta resolu��o e afinal gravado num
+        formato digital
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>documentHardcopy</code>
+      <label>Impress�o de documento</label>
+      <description>Visualiza��o dum item principalmente escrito (tamb�m possa conter ilustra��es)
+        em papel, material fotogr�fico ou outras m�dias
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>imageHardcopy</code>
+      <label>Impress�o de imagem</label>
+      <description>Imagem de caracter�sticas, objectos e actividades naturais ou artificiais,
+        adquirido
+        pelo sensoriamento de espectro eletromagn�tico (tanto o segmento vis�vel como os outros
+        segmentos)
+        por sensores, tais como de infravermelho, e radar de alta resolu��o e afinal reproduzido em
+        papel,
+        material fotogr�fico ou outras m�dias para o uso imediato pelo utilizador humano
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>mapDigital</code>
+      <label>Mapa digital</label>
+      <description>Mapa visualizado em forma de raster ou vector</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>mapHardcopy</code>
+      <label>Impress�o de mapa</label>
+      <description>Mapa impresso em papel, material fotogr�fico ou outras m�dias para
+        o uso imediato pelo utilizador humano
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>modelDigital</code>
+      <label>Modelo digital</label>
+      <description>Representa��o digital e multidimensional duma caracter�stica, dum processo,
+        etc.
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>modelHardcopy</code>
+      <label>Impress�o de modelo</label>
+      <description>Modelo f�sico de tr�s dimens�es</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>profileDigital</code>
+      <label>Perfil digital</label>
+      <description>Sec��o plana em forma digital</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>profileHardcopy</code>
+      <label>Impress�o de perfil</label>
+      <description>Sec��o plana impressa em papel, etc.</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>tableDigital</code>
+      <label>Tabela digital</label>
+      <description>Apresenta��o sistematica (em colunas) de factos ou n�meros em forma digital
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>tableHardcopy</code>
+      <label>Impress�o de tabela</label>
+      <description>Apresenta��o sistematica (em colunas) de factos ou n�meros
+        impressos em papel, material fotogr�fico ou outras m�dias
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>videoDigital</code>
+      <label>V�deo digital</label>
+      <description>Grava��o de v�deo digital</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>videoHardcopy</code>
+      <label>Hardcopy de v�deo</label>
+      <description>Grava��o de v�deo em filme</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:CI_RoleCode" alias="roleCode">
+    <entry>
+      <code>resourceProvider</code>
+      <label>Fornecedor de recurso</label>
+      <description>Parte que proporciona o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>custodian</code>
+      <label>Deposit�rio</label>
+      <description>Parte que assume a presta��o de contas e a responsabilidade dos dados
+        e assegura o cuidado adequado, assim como a manuten��o do recurso
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>owner</code>
+      <label>Dono</label>
+      <description>Parte que possui o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>user</code>
+      <label>Utilizador</label>
+      <description>Parte que usa o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>distributor</code>
+      <label>Distribuidor</label>
+      <description>Parte que distribui o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>originator</code>
+      <label>Originador</label>
+      <description>Parte que criou o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>pointOfContact</code>
+      <label>Ponto de contacto</label>
+      <description>Parte que pode ser contactado para obter conhecimento sobre (a aquisi��o) de
+        recurso
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>principalInvestigator</code>
+      <label>Investigador principal</label>
+      <description>Parte-chave que � respons�vel para colher informa��o e dirigir a pesquisa
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>processor</code>
+      <label>Organizador</label>
+      <description>Parte que tratou os dados numa maneira que modificou o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>publisher</code>
+      <label>Publicador</label>
+      <description>Parte que publicou o recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>author</code>
+      <label>Autor</label>
+      <description>Parte que � o autor do recurso</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:DQ_EvaluationMethodTypeCode">
+    <entry>
+      <code>directInternal</code>
+      <label>Avalia��o directo interno</label>
+      <description>M�todo de avaliar a qualidade dum conjunto de dados, baseado em inspec��es de
+        pormenores dentro
+        do conjunto de dados, de modo que n�o � necess�rio considerar dados de fora do conjunto
+        avaliado
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>directExternal</code>
+      <label>Avalia��o directo externo</label>
+      <description>M�todo de avaliar a qualidade dum conjunto de dados, baseado em inspec��es de
+        pormenores dentro
+        do conjunto de dados, aqueles s�o avaliado atrav�s uma compara��o com dados de refer�ncia
+        externos
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>indirect</code>
+      <label>Avalia��o indirecto</label>
+      <description>M�todo de avalia��o da qualidade dum conjunto de dados, baseado em conhecimento
+        externo
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:DS_AssociationTypeCode" alias="associationType">
+    <entry>
+      <code>crossReference</code>
+      <label>Refer�ncia cruzada</label>
+      <description>Refer�ncia dum conjunto de dados a um outro</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>largerWorkCitation</code>
+      <label>Cita��o dum trabalho maior</label>
+      <description>Refer�ncia a um conjunto de dados principal, naquele este faz parte</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>partOfSeamlessDatabase</code>
+      <label>Parte dum banco de dados incons�til</label>
+      <description>Parte do mesmo banco de dados estruturado, mantido num computador</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>source</code>
+      <label>Fonte</label>
+      <description>Informac�es cartogr�ficas e tabelares de quais o conte�do de conjunto de dados
+        origina-se
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>stereoMate</code>
+      <label>Stereo mate</label>
+      <description>Parte dum conjunto de imagens, quais, se utilizados juntos, constituem imagens
+        tridimensionais
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:DS_InitiativeTypeCode" alias="initiativeType">
+    <entry>
+      <code>campaign</code>
+      <label>Campanha</label>
+      <description>S�rie de ac��es organizadas e planeadas</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>collection</code>
+      <label>Colec��o</label>
+      <description>Acumula��o de conjuntos de dados, compostos para um prop�sito espec�fico
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>exercise</code>
+      <label>Exerc�cio</label>
+      <description>Performance espec�fica duma fun��o ou dum grupo de fun��es</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>experiment</code>
+      <label>Experimento</label>
+      <description>Processo desenhado para descobrir se alguma coisa � efectiva ou v�lida
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>investigation</code>
+      <label>Investiga��o</label>
+      <description>Pesquisa ou inqu�rito sistem�tico</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>mission</code>
+      <label>Miss�o</label>
+      <description>Opera��o espec�fica dum sistema de colec��o dos dados</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>sensor</code>
+      <label>Sensor</label>
+      <description>Dispositivo ou parte do equipamento, qual detecta ou grava</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>operation</code>
+      <label>Opera��o</label>
+      <description>Ac��o que faz parte numa s�rie das ac��es</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>platform</code>
+      <label>Plataforma</label>
+      <description>Ve�culo ou outra base de apoio que disp�e dum sensor</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>process</code>
+      <label>Processo</label>
+      <description>M�todo de fazer alguma coisa envolvendo uma s�rie de passos</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>program</code>
+      <label>Programa</label>
+      <description>Actividade espec�fica e planeada</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>project</code>
+      <label>Projecto</label>
+      <description>Empreendimento, investiga��o ou desenvolvimento organizado/a</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>study</code>
+      <label>Estudo</label>
+      <description>Examina��o ou investiga��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>task</code>
+      <label>Tarefa</label>
+      <description>Pe�a de trabalho</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>trial</code>
+      <label>Experi�ncia</label>
+      <description>Processo de teste para descobrir ou demonstrar alguma coisa</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_CellGeometryCode">
+    <entry>
+      <code>point</code>
+      <label>Ponto</label>
+      <description>Cada c�lula representa um ponto</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>area</code>
+      <label>�rea</label>
+      <description>Cada c�lula representa uma �rea</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_CharacterSetCode">
+    <entry>
+      <code>ucs2</code>
+      <label>UCS2</label>
+      <description>16-bit Conjunto Universal de Caracteres (UCS) de tamanho fixo, baseado em ISO/IEC
+        10646
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>ucs4</code>
+      <label>UCS4</label>
+      <description>32-bit Conjunto Universal de Caracteres (UCS) de tamanho fixo, baseado em ISO/IEC
+        10646
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>utf7</code>
+      <label>UTF7</label>
+      <description>7-bit UCS Transfer Format de tamanho vari�vel, baseado em ISO/IEC 10646
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>utf8</code>
+      <label>UTF8</label>
+      <description>8-bit UCS Transfer Format de tamanho vari�vel, baseado em ISO/IEC 10646
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>utf16</code>
+      <label>UTF16</label>
+      <description>16-bit UCS Transfer Format de tamanho vari�vel, baseado em ISO/IEC 10646
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part1</code>
+      <label>8859 Part 1</label>
+      <description>ISO/IEC 8859-1, Information technology - 8-bit single byte coded graphic
+        character sets - Part 1 : Latin alphabet No.1
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part2</code>
+      <label>8859 Part 2</label>
+      <description>ISO/IEC 8859-2, Information technology - 8-bit single byte coded graphic
+        character sets - Part 2 : Latin alphabet No.2
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part3</code>
+      <label>8859 Part 3</label>
+      <description>ISO/IEC 8859-3, Information technology - 8-bit single byte coded graphic
+        character sets - Part 3 : Latin alphabet No.3
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part4</code>
+      <label>8859 Part 4</label>
+      <description>ISO/IEC 8859-4, Information technology - 8-bit single byte coded graphic
+        character sets - Part 4 : Latin alphabet No.4
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part5</code>
+      <label>8859 Part 5</label>
+      <description>ISO/IEC 8859-5, Information technology - 8-bit single byte coded graphic
+        character sets - Part 5 : Latin/Cyrillic alphabet
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part6</code>
+      <label>8859 Part 6</label>
+      <description>ISO/IEC 8859-6, Information technology - 8-bit single byte coded graphic
+        character sets - Part 6 : Latin/Arabic alphabet
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part7</code>
+      <label>8859 Part 7</label>
+      <description>ISO/IEC 8859-7, Information technology - 8-bit single byte coded graphic
+        character sets - Part 7 : Latin/Greek alphabet
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part8</code>
+      <label>8859 Part 8</label>
+      <description>ISO/IEC 8859-8, Information technology - 8-bit single byte coded graphic
+        character sets - Part 8 : Latin/Hebrew alphabet
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part9</code>
+      <label>8859 Part 9</label>
+      <description>ISO/IEC 8859-9, Information technology - 8-bit single byte coded graphic
+        character sets - Part 9 : Latin alphabet No.5
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part10</code>
+      <label>8859 Part 10</label>
+      <description>ISO/IEC 8859-10, Information technology - 8-bit single byte coded graphic
+        character sets - Part 10 : Latin alphabet No.6
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part11</code>
+      <label>8859 Part 11</label>
+      <description>ISO/IEC 8859-11, Information technology - 8-bit single byte coded graphic
+        character sets - Part 11 : Latin/Thai alphabet
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part13</code>
+      <label>8859 Part 13</label>
+      <description>ISO/IEC 8859-13, Information technology - 8-bit single byte coded graphic
+        character sets - Part 13 : Latin alphabet No.7
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part14</code>
+      <label>8859 Part 14</label>
+      <description>ISO/IEC 8859-14, Information technology - 8-bit single byte coded graphic
+        character sets - Part 14 : Latin alphabet No.8 (Celtic)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part15</code>
+      <label>8859 Part 15</label>
+      <description>ISO/IEC 8859-15, Information technology - 8-bit single byte coded graphic
+        character sets - Part 15 : Latin alphabet No.9
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8859part16</code>
+      <label>8859 Part 16</label>
+      <description>ISO/IEC 8859-16, Information technology - 8-bit single byte coded graphic
+        character sets - Part 16 : Latin alphabet No.10
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>jis</code>
+      <label>JIS</label>
+      <description>Japanese code set used for electronic transmission</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>shiftJIS</code>
+      <label>Shift JIS</label>
+      <description>Japanese code set used on MS-DOS machines</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>eucJP</code>
+      <label>EUC JP</label>
+      <description>Japanese code set used on UNIX based machines</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>usAscii</code>
+      <label>US ASCII</label>
+      <description>United States ASCII code set (ISO 646 US)</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>ebcdic</code>
+      <label>EBCDIC</label>
+      <description>IBM mainframe code set</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>eucKR</code>
+      <label>EUC KR</label>
+      <description>Korean code set</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>big5</code>
+      <label>Big 5</label>
+      <description>Traditional Chinese code set used in Taiwan, Hong Kong of China and other
+        areas
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>GB2312</code>
+      <label>GB2312</label>
+      <description>Simplified Chinese code set</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_ClassificationCode">
+    <entry>
+      <code>unclassified</code>
+      <label>N�o classificado</label>
+      <description>Dispon�vel para a divulga��o geral</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>restricted</code>
+      <label>Restrito</label>
+      <description>N�o para a divulga��o geral</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>confidential</code>
+      <label>Confidencial</label>
+      <description>Dispon�vel para algu�m, a quem informa��o pode ser confiada</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>secret</code>
+      <label>Secreto</label>
+      <description>Mantido ou destinado a ser mantido privado, desconhecido ou escondido de todos,
+        al�m dum grupo de pessoas seleccionadas
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>topSecret</code>
+      <label>Estritamente sigiloso</label>
+      <description>De alt�ssimo sigilo</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_CoverageContentTypeCode">
+    <entry>
+      <code>image</code>
+      <label>Imagem</label>
+      <description>Representa��o n�merica elucidativa dum par�metro f�sico,
+        que n�o � o valor actual do par�metro f�sico
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>thematicClassification</code>
+      <label>Classifica��o tem�tica</label>
+      <description>Valor de c�digo sem significado quantitativo, usado para representar uma
+        quantidade f�sica
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>physicalMeasurement</code>
+      <label>Medi��o f�sica</label>
+      <description>Valor em unidades f�sicas da quantidade medida</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_DatatypeCode">
+    <entry>
+      <code>class</code>
+      <label>Classe</label>
+      <description>Descriptor dum conjunto de objctivos que partilham os mesmos
+        atributos, opera��es, m�todos, rela��es e comportamento
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>codelist</code>
+      <label>Lista de c�digos</label>
+      <description>Descriptor dum conjunto de objctivos que partilham os mesmos
+        atributos, opera��es, m�todos, rela��es e comportamento
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>enumeration</code>
+      <label>Numera��o</label>
+      <description>Tipo de dados cujos casos formam uma lista de valores nomeados e literais, n�o
+        extens�veis
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>codelistElement</code>
+      <label>Elemento da lista de c�digos</label>
+      <description>Valor permiss�vel para uma lista de c�digos ou uma numera��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>abstractClass</code>
+      <label>Classe abstracta</label>
+      <description>Classe que n�o pode ser instanciado directamente</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>aggregateClass</code>
+      <label>Classe agregada</label>
+      <description>Classe composta por classes, a quais � ligado por uma rela��o de agrega��o
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>specifiedClass</code>
+      <label>Classe espec�ficada</label>
+      <description>Subclasse que possa substituir a sua superclasse</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>datatypeClass</code>
+      <label>Classe de tipo de dados</label>
+      <description>Classe com poucas ou sem opera��es, cujas fun��o principal � manter o estado
+        abstracto
+        duma outra classe, para transmiss�o, armazenamento, codifica��o ou armazenamento persistente
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>interfaceClass</code>
+      <label>Classe de interface</label>
+      <description>Conjunto nomeado de opera��es que caracterizam o comportamento dum elemento
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>unionClass</code>
+      <label>Classe de uni�o</label>
+      <description>Classe que descreve uma selec��o de um dos tipos espec�ficados</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>metaClass</code>
+      <label>Meta-classe</label>
+      <description>Classe cujas casos s�o classes</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>typeClass</code>
+      <label>Classe de tipos</label>
+      <description>Classe usada para a espec�fica��o dum �mbito de casos (objectos), � aplic�vel aos
+        objectos em conjunto com as opera��es. Um tipo possa ter atributos e associac�es
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>characterString</code>
+      <label>String (corda) de caracteres</label>
+      <description>Campo de texto livre</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>integer</code>
+      <label>N�mero inteiro</label>
+      <description>Campo n�merico</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>association</code>
+      <label>Associa��o</label>
+      <description>Rela��o sem�ntica entre duas classes, aquela envolve liga��es entre seus casos
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_DimensionNameTypeCode">
+    <entry>
+      <code>row</code>
+      <label>Fila</label>
+      <description>Eixo de (y) ordenada</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>column</code>
+      <label>Coluna</label>
+      <description>Eixo de (x) abcissa</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>vertical</code>
+      <label>Vertical</label>
+      <description>Eixo (z) vertical</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>track</code>
+      <label>Tra�o</label>
+      <description>Ao longo da direc��o de movimento do ponto de scan</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>crossTrack</code>
+      <label>Tra�o cruzado</label>
+      <description>Perpendicular ao direc��o de movimento do ponto de scan</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>line</code>
+      <label>Linha</label>
+      <description>Linha de scan dum sensor</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>sample</code>
+      <label>Apalpa��o</label>
+      <description>Elemento ao longo duma linha de scan</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>time</code>
+      <label>Tempo</label>
+      <description>Dura��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_GeometricObjectTypeCode">
+    <entry>
+      <code>complex</code>
+      <label>Complexo</label>
+      <description>Conjunto de 'primitivos geom�tricos' (geometric primitives) tal que os limites
+        deles podem ser
+        representado como uma uni�o de outros 'primitivos'
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>composite</code>
+      <label>Composi��o</label>
+      <description>Conjunto conectado de curvas, s�lidos ou superf�cies</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>curve</code>
+      <label>Curva</label>
+      <description>'Primitivo geom�trico' limitado e monodimensional, a representar a imagem
+        cont�nua duma linha
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>point</code>
+      <label>Ponto</label>
+      <description>'Primitivo geom�trico' sem dimens�o, a representar uma posi��o, sem ter uma
+        expans�o
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>solid</code>
+      <label>S�lido</label>
+      <description>'Primitivo geom�trico' limitado, conectado e tridimensional,
+        a representar a imagem cont�nua duma regi�o de espa�o
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>surface</code>
+      <label>Superf�cie</label>
+      <description>'Primitivo geom�trico' limitado, conectado e bidimensional,
+        a representar a imagem cont�nua duma regi�o de plano
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_ImagingConditionCode">
+    <entry>
+      <code>blurredImage</code>
+      <label>Imagem desfocada</label>
+      <description>Porc�o da foto � desfocada</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>cloud</code>
+      <label>Nuvem</label>
+      <description>A foto � parcialmente coberta por nuvens</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>degradingObliquity</code>
+      <label>Obliquidade degradando</label>
+      <description>�ngulo agudo entre o plano da ecl�ptica (plano da �rbita da terra) e o plano do
+        equador celeste
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fog</code>
+      <label>Nevoeiro</label>
+      <description>A foto � parcialmente coberta por nevoeiro</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>heavySmokeOrDust</code>
+      <label>Fuma�a ou p�</label>
+      <description>A foto � parcialmente coberta por fuma�a ou p�</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>night</code>
+      <label>Noite</label>
+      <description>A foto foi tirado durante a noite</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>rain</code>
+      <label>Chuva</label>
+      <description>A foto foi tirado durante choveu</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>semiDarkness</code>
+      <label>Lusco-fusco</label>
+      <description>A foto foi tirado durante lusco-fusco</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>shadow</code>
+      <label>Sombra</label>
+      <description>A foto � parcialmente coberta por sombra</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>snow</code>
+      <label>Neve</label>
+      <description>A foto � parcialmente coberta por neve</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>terrainMasking</code>
+      <label>Cobertura de relevo</label>
+      <description>A aus�ncia de dados coligidos dum ponto ou duma �rea dado, causado pela
+        localiza��o relativa de caracter�sticas topogr�ficas, quais obstruem
+        o atalho de recolha entre o(s) colector(es) e o(s) sujeito(s) de interesse
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_KeywordTypeCode">
+    <entry>
+      <code>discipline</code>
+      <label>Disciplina</label>
+      <description>Palavra-chave identifica um ramo de instru��o ou aprendizagem especilizada
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>place</code>
+      <label>Lugar</label>
+      <description>Palavra-chave identifica uma localiza��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>stratum</code>
+      <label>Estrato</label>
+      <description>Palavra-chave identifica a(s) camada(s) de qualquer subst�ncia depositada
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>temporal</code>
+      <label>Temporal</label>
+      <description>Palavra-chave identifica um per�odo relacionado ao conjunto de dados
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>theme</code>
+      <label>Tema</label>
+      <description>Palavra-chave identifica um sujeito ou assunto particular</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_MaintenanceFrequencyCode">
+    <entry>
+      <code>continual</code>
+      <label>Cont�nuo</label>
+      <description>Os dados s�o actualizados repetidamente e frequentemente</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>daily</code>
+      <label>Di�rio</label>
+      <description>Os dados s�o actualizados todos os dias</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>weekly</code>
+      <label>Semanal</label>
+      <description>Os dados s�o actualizados uma vez por semana</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fortnightly</code>
+      <label>Quinzenal</label>
+      <description>Os dados s�o actualizados de duas em duas semanas</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>monthly</code>
+      <label>Mensal</label>
+      <description>Os dados s�o actualizados uma vez por m�s</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>quarterly</code>
+      <label>Trimestral</label>
+      <description>Os dados s�o actualizados de tr�s em tr�s meses</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>biannually</code>
+      <label>Semestral</label>
+      <description>Os dados s�o actualizados duas vezes por ano</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>annually</code>
+      <label>Anual</label>
+      <description>Os dados s�o actualizados uma vez por ano</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>asNeeded</code>
+      <label>Quando necess�rio</label>
+      <description>Os dados s�o actualizados quando � considerado como necess�rio</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>irregular</code>
+      <label>Irregular</label>
+      <description>Os dados s�o actualizados em intervalos alternantes</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>notPlanned</code>
+      <label>N�o planeado</label>
+      <description>N�o h� planos para actualizar os dados</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>unknown</code>
+      <label>Desconhecido</label>
+      <description>A frequ�ncia da manuten��o de dados � desconhecida</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_MediumFormatCode">
+    <entry>
+      <code>cpio</code>
+      <label>CPIO</label>
+      <description>CoPy In / Out (UNIX file format and command)</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>tar</code>
+      <label>TAR</label>
+      <description>Tape ARchive</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>highSierra</code>
+      <label>High sierra</label>
+      <description>High sierra file system</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>iso9660</code>
+      <label>ISO9660</label>
+      <description>Information processing volume and file structure of CD-ROM</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>iso9660RockRidge</code>
+      <label>ISO9660 Rock Ridge</label>
+      <description>Rock ridge interchange protocol (UNIX)</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>iso9660AppleHFS</code>
+      <label>ISO9660 Apple HFS</label>
+      <description>Hierarchical file system (Macintosh)</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_MediumNameCode">
+    <entry>
+      <code>cdRom</code>
+      <label>CDROM</label>
+      <description>Read-only optical disk</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>dvd</code>
+      <label>DVD</label>
+      <description>Digital versatile disk</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>dvdRom</code>
+      <label>DVDROM</label>
+      <description>Digital versatile disk, read only</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>3halfInchFloppy</code>
+      <label>3 Half Inch Floppy</label>
+      <description>3,5 inch magnetic disk</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>5quarterInchFloppy</code>
+      <label>5 Quarter Inch Floppy</label>
+      <description>5,25 inch magnetic disk</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>7trackTape</code>
+      <label>7 Track tape</label>
+      <description>7 track magnetic tape</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>9trackType</code>
+      <label>9 Track type</label>
+      <description>9 track magnetic tape</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>3480Cartridge</code>
+      <label>3480 Cartridge</label>
+      <description>3480 cartridge tape drive</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>3490Cartridge</code>
+      <label>3490 Cartridge</label>
+      <description>3490 cartridge tape drive</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>3580Cartridge</code>
+      <label>3580 Cartridge</label>
+      <description>3580 cartridge tape drive</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>4mmCartridgeTape</code>
+      <label>4mm Cartridge tape</label>
+      <description>4 millimetre magnetic tape</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>8mmCartridgeTape</code>
+      <label>8mm Cartridge tape</label>
+      <description>8 millimetre magnetic tape</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>1quarterInchCartridgeTape</code>
+      <label>1 Quarter inch cartridge tape</label>
+      <description>0,25 inch magnetic tape</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>digitalLinearTap</code>
+      <label>Digital linear tape</label>
+      <description>Half inch cartridge streaming tape drive</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>onLine</code>
+      <label>Online</label>
+      <description>Liga��o directa de computador</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>satellite</code>
+      <label>Sat�lite</label>
+      <description>Liga��o por uma sistema de comunica��o de sat�lite</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>telephoneLink</code>
+      <label>Telefone</label>
+      <description>Comunica��o por uma rede de telefone</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>hardcopy</code>
+      <label>C�pia</label>
+      <description>Brochura ou folheto cont�m informa��o descritiva</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_ObligationCode">
+    <entry>
+      <code>mandatory</code>
+      <label>Obrigat�rio</label>
+      <description>O elemento � sempre necess�rio</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>optional</code>
+      <label>Opcional</label>
+      <description>O elemento n�o � obrigat�rio</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>conditional</code>
+      <label>Condicional</label>
+      <description>O elemento necess�rio quando uma condi��o espec�fica ocorrer</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_PixelOrientationCode">
+    <entry>
+      <code>center</code>
+      <label>Centro</label>
+      <description>O ponto no meio entre o canto inferior esquerdo e o canto superior direito do
+        pixel
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>lowerLeft</code>
+      <label>Inferior esquerdo</label>
+      <description>O canto do pixel mais perto da origem de SRS; se h� dois na
+        mesma dist�ncia da origem, seria aquele com o valor menor de x
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>lowerRight</code>
+      <label>Inferior direito</label>
+      <description>O canto a seguir �quele inferior esquerdo no sentido contr�rio dos ponteiros do
+        rel�gio
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>upperRight</code>
+      <label>Superior direito</label>
+      <description>O canto a seguir �quele inferior direito no sentido contr�rio dos ponteiros do
+        rel�gio
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>upperLeft</code>
+      <label>Superior esquerdo</label>
+      <description>O canto a seguir �quele superior direito no sentido contr�rio dos ponteiros do
+        rel�gio
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_ProgressCode">
+    <entry>
+      <code>completed</code>
+      <label>Conclu�do</label>
+      <description>Produ��o dos dados conclu�da</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>historicalArchive</code>
+      <label>Arquivo antigo</label>
+      <description>Os dados foram gravados numa instala��o de armazenamento offline</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>obsolete</code>
+      <label>Obsoleto</label>
+      <description>Os dados n�o s�o mais relevantes</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>onGoing</code>
+      <label>Cont�nuo</label>
+      <description>Os dados s�o actualizados continuamente</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>planned</code>
+      <label>Planeado</label>
+      <description>Data fixa estabelecida, a partir da qual, os dados foram ou ser�o criados ou
+        actualizados
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>required</code>
+      <label>Necess�rio</label>
+      <description>Os dados precisam de ser gerado ou actualizado</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>underDevelopment</code>
+      <label>Em desenvolvimento</label>
+      <description>Os dados est�o no processo de cria��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_RestrictionCode">
+    <entry>
+      <code>copyright</code>
+      <label>Direitos de reprodu��o</label>
+      <description>Direitos em exlusivo � publica��o, produ��o ou venda dos direitos para uma
+        obra liter�ria, dram�tica, musical ou art�stica, ou para o uso numa impress�o comercial ou
+        num r�tulo,
+        s�o concedido pela lei a um autor, compositor, artista ou distribuidor durante um per�odo
+        especificado
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>patent</code>
+      <label>Patente</label>
+      <description>O governo concedeu o direito exclusivo para fazer, vender, usar
+        ou dar licen�as (d)uma inven��o ou descoberta
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>patentPending</code>
+      <label>Patente pendente</label>
+      <description>Informa��o produzida ou vendida a espera duma patente</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>trademark</code>
+      <label>Marca registada</label>
+      <description>Um nome, s�mbolo ou uma outra marca que identifica um produto; registado
+        oficialmente
+        e restrito legalmente ao uso pelo propriet�rio ou fabricante
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>license</code>
+      <label>Licen�a</label>
+      <description>Permiss�o formal para fazer alguma coisa</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>intellectualPropertyRights</code>
+      <label>Direitos de propriedade intelectual</label>
+      <description>Direitos de controlar a distribui��o e lucrar financeiramente de
+        propriedade n�o-palp�vel que � um resultado de criatividade
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>restricted</code>
+      <label>Restrito</label>
+      <description>Retido da circula��o ou divulga��o geral</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>otherRestrictions</code>
+      <label>Outras restri��es</label>
+      <description>Limita��o n�o listado</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_ScopeCode">
+    <entry>
+      <code>attribute</code>
+      <label>Atributo</label>
+      <description>Informa��o aplica-se � classe de atributos</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>attributeType</code>
+      <label>Tipo de atributo</label>
+      <description>Informa��o aplica-se � particularidade duma caracter�stica</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>collectionHardware</code>
+      <label>Hardware de colec��o</label>
+      <description>Informa��o aplica-se � classe de hardware de colec��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>collectionSession</code>
+      <label>Sess�o de colec��</label>
+      <description>Informa��o aplica-se � sess�o de colec��</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>dataset</code>
+      <label>Conjunto de dados</label>
+      <description>Informa��o aplica-se ao conjunto de dados</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>series</code>
+      <label>S�rie</label>
+      <description>Informa��o aplica-se � s�rie</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>nonGeographicDataset</code>
+      <label>Conjunto de dados n�o-geogr�ficos</label>
+      <description>Informa��o aplica-se a dados n�o-geogr�ficos</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>dimensionGroup</code>
+      <label>Grupo de dimens�o</label>
+      <description>Informa��o aplica-se a um grupo de dimens�o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>feature</code>
+      <label>Caracter�stica</label>
+      <description>Informa��o aplica-se a uma caracter�stica</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>featureType</code>
+      <label>Tipo de caracter�stica</label>
+      <description>Informa��o aplica-se a feature type</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>propertyType</code>
+      <label>Tipo de propriedade</label>
+      <description>Informa��o aplica-se a um tipo de propriedade</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fieldSession</code>
+      <label>Sess�o de campo</label>
+      <description>Informa��o aplica-se a uma sess�o de campo</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>software</code>
+      <label>Software</label>
+      <description>Informa��o aplica-se a uma programa ou rotina de computador</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>service</code>
+      <label>Servi�o</label>
+      <description>Informa��o aplica-se a uma capacidade, qual um provedor de acesso � Internet
+        disponibiliza
+        a um utilizador por um conjunto de interfaces, que define um comportamento, tal como um caso
+        de uso
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>model</code>
+      <label>Modelo</label>
+      <description>Informa��o aplica-se a uma c�pia ou imita�� dum objecto existente ou hipot�tico
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>tile</code>
+      <label>Tile</label>
+      <description>Informa��o aplica-se a um 'tile', um subconjunto espacial de dados geogr�ficos
+      </description>
+    </entry>
+
+    <!-- Used for facet translation only and not displayed in editor -->
+    <entry hideInEditMode="true">
+      <code>map</code>
+      <label>Map</label>
+      <description></description>
+    </entry>
+    <entry hideInEditMode="true">
+      <code>staticMap</code>
+      <label>Static map</label>
+      <description></description>
+    </entry>
+    <entry hideInEditMode="true">
+      <code>interactiveMap</code>
+      <label>Interactive map</label>
+      <description></description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_SpatialRepresentationTypeCode">
+    <entry>
+      <code>vector</code>
+      <label>Vector</label>
+      <description>Informa��o vectorial � usada para representar informa��o geogr�fica</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>grid</code>
+      <label>Grid</label>
+      <description>Informa��o matricial � usada para representar informa��o geogr�fica</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>textTable</code>
+      <label>Tabela de texto</label>
+      <description>Dados textuais ou tabelares s�o usados para representar informa��o geogr�fica
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>tin</code>
+      <label>TIN</label>
+      <description>Triangulated irregular network (rede triangular irregular)</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>stereoModel</code>
+      <label>Modelo estereof�nico</label>
+      <description>Vista tridimensional, que � formada pelos reios hom�logos intersectandos
+        dum par de imagens sobrepostos
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>video</code>
+      <label>V�deo</label>
+      <description>Cena duma grava��o de v�deo</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_TopicCategoryCode" alias="topicCategory">
+    <entry>
+      <code>farming</code>
+      <label>Agricultura, Pesca, Pecu�ria</label>
+      <description>Cria��o de animais e/ou cultivo de esp�cies vegetais. Exemplos: agricultura,
+        irriga��o, aquacultura, planta��es, pecu�ria, pestes e doen�as que afectam as colheitas e o
+        gado
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>biota</code>
+      <label>Biotopos</label>
+      <description>Fauna e flora em habitat natural. Exemplos: vida selvagem, vegeta��o, ci�ncias
+        biol�gicas, ecologia, desertos, vida marinha, zonas h�midas, habitat
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>boundaries</code>
+      <label>Limites Administrativos</label>
+      <description>Limites legais do territ�rio. Exemplos: fronteiras administrativas e pol�ticas
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>climatologyMeteorologyAtmosphere</code>
+      <label>Climatologia, Atmosfera</label>
+      <description>Processos e fen�menos atmosf�ricos. Exemplos: nebulosidade, estado do tempo,
+        clima, condi��es atmosf�ricas, altera��es clim�ticas, precipita��o
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>economy</code>
+      <label>Economia</label>
+      <description>Actividades econ�micas e emprego. Exemplos: produ��o, emprego, rendimentos,
+        com�rcio, ind�stria, turismo e eco-turismo, florestas, pescas, ca�a para fins comerciais ou
+        de subsist�ncia, explora��o e extrac��o de recursos minerais, petr�leo e g�s
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>elevation</code>
+      <label>Altimetria, Batimetria</label>
+      <description>Eleva��o abaixo ou acima do n�vel do mar. Exemplos: altitude, batimetria, modelos
+        digitais do terreno, declives e produtos derivados
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>environment</code>
+      <label>Ambiente</label>
+      <description>Recursos ambientais, protec��o e conserva��o da natureza. Exemplos: polui��o,
+        armazenamento e tratamento de res�duos, avalia��o de impactes ambientais, monitoriza��o do
+        risco ambiental, reservas naturais, paisagem
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>geoscientificInformation</code>
+      <label>Informa��o geocient�fica</label>
+      <description>Informa��o relativa �s ci�ncias da terra. Exemplos: aspectos e processos
+        geof�sicos, geologia, minerais, sismicidade, actividade vulc�nica, derrocadas, informa��o
+        gravim�trica, solos, permafrost, hidrogeologia e eros�o
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>health</code>
+      <label>Sa�de</label>
+      <description>Sa�de, servi�os de sa�de, ecologia humana e seguran�a. Exemplos: doen�as,
+        factores condicionantes da sa�de, higiene, abuso de subst�ncias, sa�de f�sica e mental,
+        servi�os de sa�de
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>imageryBaseMapsEarthCover</code>
+      <label>Mapas de base, Coberturas A�reas, imagens de Sat�lite</label>
+      <description>cartografia de base. Exemplos: mapas topogr�ficos, imagens de sat�lite,
+        coberturas aero-fotogr�ficas
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>intelligenceMilitary</code>
+      <label>Informa��o militar</label>
+      <description>Bases, estruturas e actividades militares. Exemplos: campos de treino,
+        transportes militares, quart�is, casernas
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>inlandWaters</code>
+      <label>�guas interiores</label>
+      <description>Entidades relativas a �guas interiores, sistemas de drenagem e suas
+        caracter�sticas. Exemplos: rios, glaciares, lagos salgados, planos de gest�o da �gua,
+        diques, correntes, cheias, qualidade da �gua, aspectos hidrogr�ficos
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>location</code>
+      <label>Localiza��o</label>
+      <description>Informa��o e servi�os de localiza��o. Exemplos: moradas, redes geod�sicas, pontos
+        de controlo, zonas postais e servi�os, designa��es de lugares
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>oceans</code>
+      <label>Oceanos</label>
+      <description>Entidades e caracter�sticas dos corpos de �gua salgada (excluindo �guas
+        interiores). Exemplos: mar�s, ondula��o e vagas, informa��o costeira, recifes e baixios
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>planningCadastre</code>
+      <label>Planeamento e Cadastro</label>
+      <description>informa��o destinada ao planeamento do uso do territ�rio. Exemplos: mapas de uso
+        do solo, mapas de zonamento, levantamentos cadastrais, registo predial e r�stico
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>society</code>
+      <label>Sociedade e Cultura</label>
+      <description>Caracter�sticas sociais e culturais. Exemplos: resid�ncias e estabelecimentos,
+        antropologia, arqueologia, educa��o, cren�as tradicionais, h�bitos e costumes, dados
+        demogr�ficos, �reas e actividades recreacionais, avalia��o de impactos sociais, crime e
+        justi�a, informa��o dos censos
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>structure</code>
+      <label>Patrim�nio Edificado</label>
+      <description>Constru��o desenvolvida pelo homem. Exemplos: edif�cios, museus, igrejas,
+        f�bricas, habita��o, monumentos, lojas
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>transportation</code>
+      <label>Transporte</label>
+      <description>Meios e formas de desloca��o de pessoas e/ou mercadorias. Exemplos: estradas,
+        aeroportos, rotas de navega��o, t�neis, cartas n�uticas e aeron�uticas, localiza��o de
+        frotas de transporte, caminhos de ferro
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>utilitiesCommunication</code>
+      <label>Infraestruturas e comunica��o</label>
+      <description>Energia, sistemas de �gua e esgoto e infra-estrutura e servi�os de comunica��o.
+        Exemplos: hidroel�ctricidade, fontes da energia geot�rmica, solar e nuclear, purifica��o
+        e distribui��o da �gua, colec��o e disposi��o final de esgotos, distribui��o de
+        electricidade
+        e g�s, tr�fego e transmiss�o de dados, telecomunica��o, r�dio, redes de comunica��o
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MD_TopologyLevelCode">
+    <entry>
+      <code>geometryOnly</code>
+      <label>Apenas geometria</label>
+      <description>Objectos da geometria sem qualquer estrutura adicional, aquela descreve
+        topologia
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>topology1D</code>
+      <label>Topologia 1D</label>
+      <description>Complexo topol�gico monodimensional - comummente chamado topologia de
+        'chain-node'
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>planarGraph</code>
+      <label>Gr�fico plano</label>
+      <description>Complexo topol�gico monodimensional que � plano. (Um gr�fico plano pode ser
+        desenhado
+        numa plan�cie numa maneira que duas arestas n�o se cruzam, excepto num v�rtice.)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fullPlanarGraph</code>
+      <label>Gr�fico plano completo</label>
+      <description>Complexo topol�gico bidimensional que � plano. (Um complexo topol�gico
+        bidimensional
+        � comummente chamado 'topologia completa' num ambiente cartogr�fico bidimensional.)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>surfaceGraph</code>
+      <label>Gr�fico de superf�cie</label>
+      <description>Complexo topol�gico monodimensional que � isom�rfico a um subconjunto duma
+        superf�cie.
+        (Um complexo geom�trico � isom�rfico a um complexo topol�gico se os elementos deles seriam
+        uns aos
+        outros numa correspond�ncia um-para-um e conversando dimens�es e fronteiras.)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fullSurfaceGraph</code>
+      <label>Gr�fico de superf�cie completo</label>
+      <description>Complexo topol�gico bidimensional que � isom�rfico a um subconjunto duma
+        superf�cie.
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>topology3D</code>
+      <label>Topologia 3D</label>
+      <description>Complexo topol�gico tridimensional. (Um complexo topol�gico � uma colec��o de
+        'primitivos topol�gicos' que s�o fechados em baixa de operac�es de fronteira.)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fullTopology3D</code>
+      <label>Topologia 3D completa</label>
+      <description>Cobertura completa dum espa�o coordenado euclidiano tridimensional</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>abstract</code>
+      <label>Resumo</label>
+      <description>Complexo topol�gico sem qualquer realiza��o geom�trica espec�ficada</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="gmd:MX_ScopeCode">
+    <entry>
+      <code>attribute</code>
+      <label>Atributo</label>
+      <description>Informa��o aplica-se � classe de atributos</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>attributeType</code>
+      <label>Tipo de atributo</label>
+      <description>Informa��o aplica-se � particularidade duma caracter�stica</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>collectionHardware</code>
+      <label>Hardware de colec��o</label>
+      <description>Informa��o aplica-se � classe de hardware de colec��o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>collectionSession</code>
+      <label>Sess�o de colec��</label>
+      <description>Informa��o aplica-se � sess�o de colec��</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>dataset</code>
+      <label>Conjunto de dados</label>
+      <description>Informa��o aplica-se ao conjunto de dados</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>series</code>
+      <label>S�rie</label>
+      <description>Informa��o aplica-se � s�rie</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>nonGeographicDataset</code>
+      <label>Conjunto de dados n�o-geogr�ficos</label>
+      <description>Informa��o aplica-se a dados n�o-geogr�ficos</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>dimensionGroup</code>
+      <label>Grupo de dimens�o</label>
+      <description>Informa��o aplica-se a um grupo de dimens�o</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>feature</code>
+      <label>Caracter�stica</label>
+      <description>Informa��o aplica-se a uma caracter�stica</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>featureType</code>
+      <label>Tipo de caracter�stica</label>
+      <description>Informa��o aplica-se a feature type</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>propertyType</code>
+      <label>Tipo de propriedade</label>
+      <description>Informa��o aplica-se a um tipo de propriedade</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>fieldSession</code>
+      <label>Sess�o de campo</label>
+      <description>Informa��o aplica-se a uma sess�o de campo</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>software</code>
+      <label>Software</label>
+      <description>Informa��o aplica-se a uma programa ou rotina de computador</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>service</code>
+      <label>Servi�o</label>
+      <description>Informa��o aplica-se a uma capacidade, que um provedor de acesso � Internet
+        disponibiliza
+        a um utilizador por um conjunto de interfaces, qual define um comportamento, tal como um
+        caso de uso
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>model</code>
+      <label>Modelo</label>
+      <description>Informa��o aplica-se a uma c�pia ou imita�� dum objecto existente ou hipot�tico
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>tile</code>
+      <label>Tile</label>
+      <description>Informa��o aplica-se a um 'tile', um subconjunto espacial de dados geogr�ficos
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>initiative</code>
+      <label>Iniciativa</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que foi
+        identificado originalmente como uma iniciativa (DS_Initiative)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>stereomate</code>
+      <label>Stereo mate</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que foi
+        identificado originalmente como um 'stereo mate' (DS_StereoMate)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>sensor</code>
+      <label>Sensor</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que foi
+        identificado originalmente como um sensor (DS_Sensor)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>platformSeries</code>
+      <label>S�rie de plataforma</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que foi
+        identificado originalmente como uma s�rie de plataforma (DS_PlatformSeries)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>sensorSeries</code>
+      <label>S�rie de sensor</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que foi
+        identificado originalmente como uma s�rie de sensor (DS_SensorSeries)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>productionSeries</code>
+      <label>S�rie de produ��o</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que foi
+        identificado originalmente como uma s�rie de produ��o (DS_ProductionSeries)
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>transferAggregate</code>
+      <label>Agregado de transfer�ncia</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia
+        que n�o existe fora de contexto da transfer�ncia
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>otherAggregate</code>
+      <label>Outro agregado</label>
+      <description>A entidade referenciando aplica-se a um agregado de transfer�ncia que existe
+        fora de contexto da transfer�ncia, mas n�o pertence a um tipo de agregado espec�fico.
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+  </codelist>
+  <!-- ==================================================== -->
+  <codelist name="srv:DCPList">
+    <entry>
+      <description>DCP is XML</description>
+      <code>XML</code>
+      <label>XML</label>
+    </entry>
+    <entry>
+      <description>DCP is CORBA</description>
+      <code>CORBA</code>
+      <label>CORBA</label>
+    </entry>
+    <entry>
+      <description>DCP is JAVA</description>
+      <code>JAVA</code>
+      <label>JAVA</label>
+    </entry>
+    <entry>
+      <description>DCP is COM</description>
+      <code>COM</code>
+      <label>COM</label>
+    </entry>
+    <entry>
+      <description>DCP is SQL</description>
+      <code>SQL</code>
+      <label>SQL</label>
+    </entry>
+    <entry>
+      <description>DCP is WebServices</description>
+      <code>WebServices</code>
+      <label>WebServices</label>
+    </entry>
+  </codelist>
+  <!--=== CouplingType from ISO19119 ===-->
+  <codelist name="srv:SV_CouplingType">
+    <entry>
+      <code>tight</code>
+      <label>Apertado</label>
+      <description>Enla�ado apertadamente: dados associados</description>
+    </entry>
+    <entry>
+      <code>mixed</code>
+      <label>Misto</label>
+      <description>Enla�ado misto: dados associados; dados externos podem ser processados
+        adicionalmente
+      </description>
+    </entry>
+    <entry>
+      <code>loose</code>
+      <label>Frouxo</label>
+      <description>Enla�ado frouxamente: n�o h�o dados associados</description>
+    </entry>
+  </codelist>
+  <codelist name="srv:SV_ParameterDirection">
+    <entry>
+      <code>in</code>
+      <label>Input</label>
+    </entry>
+    <entry>
+      <code>out</code>
+      <label>Output</label>
+    </entry>
+    <entry>
+      <code>in/out</code>
+      <label>Input/output</label>
+    </entry>
+  </codelist>
+</codelists>
