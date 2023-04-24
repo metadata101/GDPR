@@ -283,10 +283,10 @@
     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
-      <code>subprocessor</code>
-      <label>subverwerker</label>
-      <description>Partij die de data als onderaannemer heeft verwerkt, zodanig dat de data is gewijzigd.</description>
-    </entry>
+       <code>subprocessor</code>
+       <label>subprocessor</label>
+       <description>Party that has processed the data as a subcontractor, in such a way that the data has been changed.</description>
+     </entry>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <entry>
       <code>publisher</code>
@@ -299,6 +299,13 @@
       <label>Author</label>
       <description>Party who authored the resource</description>
     </entry>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>controller</code>
+      <label>Controller</label>
+      <description>Data Controller</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- ISO PROFIL CHE ONLY
         <entry>
             <code>editor</code>
@@ -2282,71 +2289,71 @@
   </codelist>
 
   <codelist name="gdpr:CI_LegalBasisCode">
-    <entry>
-      <code>permission-person-concerned</code>
-      <label>Toestemming betrokkene</label>
-    </entry>
-    <entry>
-      <code>implementation-agreement</code>
-      <label>Uitvoering overeenkomst</label>
-    </entry>
-    <entry>
-      <code>legal-obligation</code>
-      <label>Wettelijke verplichting</label>
-    </entry>
-    <entry>
-      <code>vital-interest</code>
-      <label>Vitaal belang betrokkene</label>
-    </entry>
-    <entry>
-      <code>common-interest</code>
-      <label>Taak van algemeen belang</label>
-    </entry>
-    <entry>
-      <code>justified-interest</code>
-      <label>Gerechtvaardigd belang verantwoordelijke</label>
-    </entry>
-  </codelist>
+     <entry>
+       <code>permission-person-concerned</code>
+       <label>Permission data subject</label>
+     </entry>
+     <entry>
+       <code>implementation-agreement</code>
+       <label>Execution of agreement</label>
+     </entry>
+     <entry>
+       <code>legal-obligation</code>
+       <label>Legal obligation</label>
+     </entry>
+     <entry>
+       <code>vital-interest</code>
+       <label>Vital importance of data subject</label>
+     </entry>
+     <entry>
+       <code>common interest</code>
+       <label>Job of public interest</label>
+     </entry>
+     <entry>
+       <code>justified-interest</code>
+       <label>Legitimate interest of controller</label>
+     </entry>
+   </codelist>
   <codelist name="gdpr:CI_SpecialDataCode">
     <entry>
       <code>none</code>
-      <label>Geen</label>
+      <label>None</label>
     </entry>
     <entry>
       <code>ethnical-data</code>
-      <label>Persoonsgegevens waaruit ras of etnische afkomst blijkt</label>
+      <label>Personal data showing racial or ethnic origin</label>
     </entry>
     <entry>
       <code>political-data</code>
-      <label>Persoonsgegevens waaruit politieke opvattingen blijkt</label>
+      <label>Personal data showing political views</label>
     </entry>
     <entry>
       <code>religous-data</code>
-      <label>Persoonsgegevens waaruit religieuze of levensbeschouwelijke overtuiging blijkt</label>
+      <label>Personal data showing religious or philosophical beliefs</label>
     </entry>
     <entry>
       <code>union-membership-data</code>
-      <label>Persoonsgegevens waaruit lid van een vakbond blijkt</label>
+      <label>Personal data showing a union member</label>
     </entry>
     <entry>
       <code>genetic-data</code>
-      <label>Genetische gegevens</label>
+      <label>Genetic data</label>
     </entry>
     <entry>
-      <code>biometric-data</code>
-      <label>Biometrische gegevens met het oog op de unieke identificatie van een persoon</label>
+      <code>biometric data</code>
+      <label>Biometric data to uniquely identify a person</label>
     </entry>
     <entry>
       <code>health-data</code>
-      <label>Gegevens over gezondheid</label>
+      <label>Health data</label>
     </entry>
     <entry>
       <code>sexual-data</code>
-      <label>Gegevens met betrekking tot iemands sexueel gedrag of seksuele geaardheid</label>
+      <label>Data related to a person's sexual behavior or sexual orientation</label>
     </entry>
     <entry>
       <code>crime-data</code>
-      <label>Gegevens betreffende strafrechtelijke veroordelingen en strafbare feiten</label>
+      <label>Data related to criminal convictions and offenses</label>
     </entry>
   </codelist>
   <codelist name="gdpr:CI_StoragePeriodCode">
@@ -2674,85 +2681,85 @@
   <codelist name="gdpr:CI_ProcesTypeCode">
     <entry>
       <code>primary</code>
-      <label>Primair</label>
+      <label>Primary</label>
     </entry>
     <entry>
       <code>secondary</code>
-      <label>Secundair</label>
+      <label>Secondary</label>
     </entry>
   </codelist>
   <codelist name="gdpr:CI_ReceiverTypeCode">
-    <entry>
-      <code>coworker</code>
-      <label>1. Eigen medewerkers</label>
-    </entry>
-    <entry>
-      <code>processor</code>
-      <label>2. Verwerkers</label>
-    </entry>
-    <entry>
-      <code>external</code>
-      <label>3. Derden</label>
-    </entry>
-  </codelist>
+     <entry>
+       <code>co-worker</code>
+       <label>1. Own employees</label>
+     </entry>
+     <entry>
+       <code>processor</code>
+       <label>2. Processors</label>
+     </entry>
+     <entry>
+       <code>external</code>
+       <label>3. Third parties</label>
+     </entry>
+   </codelist>
   <codelist name="gdpr:CI_SecurityMeasuresCode">
     <entry>
       <code>access-control-policy</code>
-      <label>01. Vastgesteld beveiligingsbeleid dat ook is geïmplementeerd</label>
+      <label>01. Adopted security policies also implemented</label>
     </entry>
     <entry>
       <code>physical-access-control</code>
-      <label>02. Fysieke maatregelen voor toegangsbeveiliging, inclusief organisatorische controle</label>
+      <label>02. Physical access security measures, including organizational control</label>
     </entry>
     <entry>
-      <code>burglary-alarm</code>
-      <label>03. Inbraakalarm</label>
+      <code>burglary alarm</code>
+      <label>03. Burglar alarm</label>
     </entry>
     <entry>
       <code>vault</code>
-      <label>04. Kluis voor opslag van gegevensbestanden</label>
+      <label>04. Vault for storing data files</label>
     </entry>
     <entry>
       <code>key-access-control</code>
-      <label>05. Logische toegangscontrole met behulp van iets wat iemand weet (wachtwoord of pincode)</label>
+      <label>05. Logical access control using something someone knows (password or PIN)</label>
     </entry>
     <entry>
       <code>token-access-control</code>
-      <label>06. Logische toegangscontrole met behulp van iets wat iemand bij zich draagt (pasje)</label>
+      <label>06. Logical access control using something someone carries (pass)</label>
     </entry>
     <entry>
-      <code>biometrical-access-control</code>
-      <label>07. Logische toegangscontrole met behulp van iets wat bij iemand hoort (biometrisch kenmerk)</label>
+      <code>biometrical access control</code>
+      <label>07. Logical access control using something that belongs to someone (biometric characteristic)</label>
     </entry>
     <entry>
       <code>other-access-control</code>
-      <label>08. Overige logische toegangscontrole</label>
+      <label>08. Other logical access control</label>
     </entry>
     <entry>
-      <code>access-logs</code>
-      <label>09. Automatische logging van toegang tot gegevens, inclusief een controleprocedure</label>
+      <code>access logs</code>
+      <label>09. Automatic logging of access to data, including a verification procedure</label>
     </entry>
     <entry>
-      <code>authorisation-control</code>
-      <label>10. Controle op toegekende bevoegdheden</label>
+      <code>authorization-control</code>
+      <label>10. Control of permissions granted</label>
     </entry>
     <entry>
-      <code>other-measures</code>
-      <label>11. Overige beveiligingsmaatregelen</label>
+      <code>other measures</code>
+      <label>11. Other security measures</label>
     </entry>
   </codelist>
   <codelist name="gdpr:CI_AccessPartyCode">
-    <entry>
-      <code>coworker</code>
-      <label>1. Personeel dat onder leiding van de verantwoordelijke staat</label>
-    </entry>
-    <entry>
-      <code>processor</code>
-      <label>2. Personeel dat onder leiding van de verwerker staat</label>
-    </entry>
-    <entry>
-      <code>external</code>
-      <label>3. Derden</label>
-    </entry>
-  </codelist>
+     <entry>
+       <code>co-worker</code>
+       <label>1. Personnel under the direction of the person in charge</label>
+     </entry>
+     <entry>
+       <code>processor</code>
+       <label>2. Personnel under the direction of the processor</label>
+     </entry>
+     <entry>
+       <code>external</code>
+       <label>3. Third parties</label>
+     </entry>
+   </codelist>
 </codelists>

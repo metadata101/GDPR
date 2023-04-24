@@ -57,7 +57,7 @@
   <provision>Provision</provision>
   <system>System</system>
   <security>Security</security>
-  <transmision>Transmision</transmision>
+  <transmision>Transmission</transmision>
   <pia>GEB (PIA)</pia>
   <slot>Final</slot>
 
@@ -68,6 +68,7 @@
   <addResponsible>Add responsible</addResponsible>
   <addSecurityConstraints>Add security constraints</addSecurityConstraints>
   <addProcessType>Add process type</addProcessType>
+
   <addMeldingsplichtig>Personal data?</addMeldingsplichtig>
 
   <!-- GDPR -->
@@ -112,10 +113,59 @@
   <ttl_provision><h2>Distributor</h2></ttl_provision>
   <txt_provision>
     <p><br/><br/></p>
+=======
+  <addMeldingsplichtig>Is there personal data?</addMeldingsplichtig>
+
+  <!-- GDPR -->
+  <gdpr-vw>AVG</gdpr-vw>
+  <Meldingsplichtig>Is there personal data?</Meldingsplichtig>
+  <gdpr>AVG</gdpr>
+
+  <!-- GDPR texts -->
+  <ttl_intro><h2>Registration of data processing under GDPR</h2></ttl_intro>
+  <txt_intro>
+    <p><br/>On May 4, 2016, the General Data Protection Regulation was published in the <a href="https://www.autoriteitpersoonsgegevens.nl/sites/default/files/atoms/files/reglement_2016_-_679_definitive.pdf" target="_blank">Official Journal of the European Union</a>. The GDPR will apply from 25 May 2018. This application gives shape to the obligation under the regulation to keep a record of the processing of personal data.</p>
+    <p>Every action you perform with personal data is data processing. Of course you do not have to record all these processing operations separately. Personal data will almost always be processed within a larger set of processing operations that can be functionally regarded as a unit, such as a subsidy administration, a personnel administration, or a financial administration. It is sufficient to describe the larger set of operations as a whole. For example, it is not necessary to provide separate records for the collection, provision to third parties and removal of personnel data, but it is sufficient to describe the whole. <br/></p>
+  </txt_intro>
+
+  <ttl_responsible><h2>Data Controller(s)</h2></ttl_responsible>
+  <txt_responsible>
+    <p><br/>The GDPR defines the controller as 'a natural or legal person, a public authority, a service or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data' (art. 4 under 7 GDPR).</p>
+    <br/>
+  </txt_responsible>
+
+  <ttl_processors><h2>Data Processor(s)</h2></ttl_processors>
+  <txt_processors>
+    <p><br/>A processor is 'a natural or legal person, a public authority, a service or other body that processes personal data on behalf of the controller' (Art. 4 under 8 GDPR). This is often a person or organization to whom the controller has outsourced the data processing, for example an administrative office or a webmaster.</p>
+  </txt_processors>
+
+  <ttl_purpose><h2>Processing Purposes</h2></ttl_purpose>
+  <txt_purpose>
+    <p><br/>The GDPR states that personal data may only be collected for specified, explicit and legitimate purposes (Art. 5(1)(b) GDPR). This means that a good purpose description contributes to the lawfulness of the processing of personal data.
+      <br/></p>
+  </txt_purpose>
+
+  <ttl_involves><h2>Data Subject(s)</h2></ttl_involves>
+  <txt_involves>
+    <p><br/>The identified or identifiable natural person about whom information is processed is called the 'data subject' in the GDPR.
+       The description does not concern the names of individual parties involved, but an indication of the category of those involved, such as employees, temporary workers, job applicants, applicants for a subsidy or suppliers.
+       For each category of data subjects, you must indicate which data about those data subjects are processed and why.<br/></p>
+  </txt_involves>
+
+<ttl_decision><h2>Automated decision making</h2></ttl_decision>
+  <txt_decision>
+    <p><br/>When personal data is used to arrive at a certain decision and this decision is made without significant human input, then this is an automated decision-making process. Profiling is the dividing of persons into categories (profiles) on the basis of their personal data. Decisions are then taken on the basis of these profiles, such as the granting of credit by a financial institution.
+    </p><br/>
+  </txt_decision>
+
+  <ttl_provision><h2>Provision of personal data</h2></ttl_provision>
+  <txt_provision>
+    <p><br/>Providing personal data includes any form of disclosure or making available of personal data, regardless of how this is done. It can be done verbally, in writing or electronically, but also by handing over a magnetic tape with data. Disclosure also applies to the consultation of the data or to persons who have access to the personal data based on their position. Please note that the term 'provision' is part of the more formal legal term 'processing', as defined in the GDPR (Article 4, under 2 GDPR)<br/></p>
   </txt_provision>
 
   <ttl_system><h2>System or application</h2></ttl_system>
   <txt_system>
+
     <p><br/><br/></p>
   </txt_system>
 
@@ -138,6 +188,32 @@
   <txt_slot>
     <p><br/><br/></p>
   </txt_slot>
+
+    <p><br/>From the point of view of optimizing the security of personal data and its possible recovery in the event of (for example) a data breach, it is important to know with which information system or with which application the processing of personal data takes place . Enter the name of the information system or application through which the processing takes place in the text box provided.<br/></p>
+  </txt_system>
+
+  <ttl_security>Security Measures</ttl_security>
+  <txt_security>
+    <p><br/>The controller must take appropriate technical and organizational measures to ensure a level of security appropriate to the risk. The term appropriate implies that the security is in accordance with the state of the art. The term appropriate also indicates a proportionality between the measures and recognized privacy risks. The greater the risks, the more stringent requirements are set for the security of personal data. There is no obligation to always take the heaviest security. The only requirement is that the measures are reasonable in view of the available technology and implementation costs. These measures must bring the risk to an acceptable level.<br/></p>
+  </txt_security>
+
+  <ttl_transmision>Transmission</ttl_transmision>
+  <txt_transmission>
+    <p><br/>The protection of personal data is not the same in all countries. Transferring personal data from the Netherlands to a foreign country is therefore only allowed if a country offers sufficient protection. Different rules apply to the transfer of data to a country within the European Union (EU) than to a transfer to a country outside the EU. Outside the EU, New Zealand, Switzerland and Canada (except Quebec) have an adequate level of protection.</p><p>
+    For more information on the above topic, reference is made to the <a href="https://ec.europa.eu/info/law/law-topic/data-protection_en" target="_blank">EU website</a>.<br/></p>
+  </txt_transmission>
+
+  <ttl_pia><h2>Data Protection Impact Assessment (PIA)</h2></ttl_pia>
+  <txt_pia>
+    <p><br/>In certain cases, a so-called data protection impact assessment must be carried out prior to the processing of personal data. A data protection impact assessment, also referred to in practice as a Privacy Impact Assessment (PIA) or Data Protection Impact Assessment (DPIA), is an assessment of the effects of an intended processing activity on the protection of personal data and the rights and freedoms of data subjects. In other words, a data protection impact assessment provides insight into the impact of the processing on the privacy of data subjects and whether the processing is permitted as intended under the Regulation.
+      On the basis of this, measures are taken to prevent or reduce these effects for those involved. A data protection impact assessment will also demonstrate that the requirements of the Regulation are met for that processing activity.</p><br/>
+  </txt_pia>
+
+  <ttl_slot><h2>Additional information for internal use</h2></ttl_slot>
+  <txt_lock>
+    <p><br/>You can also add comments to the processing. The comments you add relate to the processing in question and are for internal use, i.e. they are not published. This may, for example, concern reminders, announcements and mutation data, but also references to other processing operations, or references to documents such as a PIA, a processing agreement, an established arrangement with several controllers, management measures based on a GEB/PIA, data leaks with the information system and so on.<br/></p>
+  </txt_lock>
+
 
 
 
